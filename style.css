@@ -23,6 +23,7 @@
   --accent-yellow: #FFCA0A;
   --accent-yellow-pale: #FFF8D0;
   --accent-yellow-dark: #8A6A00;
+  --accent-red: #E63946;
   --warm-cream: #FDFAF5;
   --warm-stone: #F4EFE6;
   --text-dark: #0A1F12;
@@ -2306,7 +2307,7 @@ tr:nth-child(even) {
 }
 
 .zone-dot.red {
-  background: var(--accent-blue);
+  background: var(--accent-red);
 }
 
 .vendor-zone-name {
@@ -2986,6 +2987,16 @@ tr:nth-child(even) {
   color: var(--text-dark);
 }
 
+/* V/C comparison */
+.vc-comparison {
+  grid-template-columns:1fr 60px 1fr
+}
+
+.vc-comparison-arrow {
+  flex-direction:column;
+  justify-content: center;
+}
+
 /* Caveat / Penutup */
 .honest-caveat {
   background: var(--white);
@@ -3344,6 +3355,10 @@ tr:nth-child(even) {
     padding: 26px 16px 26px 16px;
   }
 
+  .section-title {
+    font-size: clamp(22px, 5vw, 34px);
+  }
+
   /* Occupation */
   .occupation-top,
   .occupation-list {
@@ -3410,11 +3425,11 @@ tr:nth-child(even) {
 
   /* V/C comparison */
   .vc-comparison {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   .vc-comparison-arrow {
-    flex-direction: row !important;
+    flex-direction: row;
     justify-content: center;
   }
 
