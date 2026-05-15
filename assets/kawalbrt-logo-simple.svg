@@ -1,0 +1,5 @@
+<svg class="logo-svg" width="108" height="90" viewBox="0 0 108 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="18" width="9" height="62" rx="4.5" fill="#00A651"/>
+    <path d="M0 10 L92 0 L92 10 L0 20 Z" fill="#00A651"/>
+    <path d="M0 20 L-5 25 L0 26 Z" fill="#007A3D"/>
+</svg>

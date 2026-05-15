@@ -1,0 +1,30 @@
+{
+"type": "FeatureCollection",
+"name": "terminus_brt",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "No": 1, "Nama": "Cibiru", "Type": "End-Station", "Y": -6.935081, "X": 107.718401, "Wil_Admin": "Kota Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.718401, -6.935081 ] } },
+{ "type": "Feature", "properties": { "No": 2, "Nama": "Ledeng", "Type": "End-Station", "Y": -6.859185, "X": 107.595065, "Wil_Admin": "Kota Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.595065, -6.859185 ] } },
+{ "type": "Feature", "properties": { "No": 3, "Nama": "Leuwipanjang Utara", "Type": "End-Station", "Y": -6.946788, "X": 107.593237, "Wil_Admin": "Kota Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.593237, -6.946788 ] } },
+{ "type": "Feature", "properties": { "No": 4, "Nama": "Leuwipanjang Selatan", "Type": "End-Station", "Y": -6.947017, "X": 107.593187, "Wil_Admin": "Kota Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.593187, -6.947017 ] } },
+{ "type": "Feature", "properties": { "No": 5, "Nama": "Dago", "Type": "End-Station", "Y": -6.868278, "X": 107.620473, "Wil_Admin": "Kota Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.620473, -6.868278 ] } },
+{ "type": "Feature", "properties": { "No": 6, "Nama": "Elang/Cibeureum", "Type": "End-Station", "Y": -6.914061, "X": 107.575486, "Wil_Admin": "Kota Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.575486, -6.914061 ] } },
+{ "type": "Feature", "properties": { "No": 7, "Nama": "Antapani", "Type": "End-Station", "Y": -6.915204, "X": 107.665838, "Wil_Admin": "Kota Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.665838, -6.915204 ] } },
+{ "type": "Feature", "properties": { "No": 8, "Nama": "Padalarang", "Type": "End-Station", "Y": -6.842178, "X": 107.496138, "Wil_Admin": "Kab Bandung Barat", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.496138, -6.842178 ] } },
+{ "type": "Feature", "properties": { "No": 9, "Nama": "Cimahi", "Type": "End-Station", "Y": -6.886285, "X": 107.535854, "Wil_Admin": "Kota Cimahi", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.535854, -6.886285 ] } },
+{ "type": "Feature", "properties": { "No": 10, "Nama": "Cicaheum", "Type": "End-Station", "Y": -6.90236, "X": 107.656685, "Wil_Admin": "Kota Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.656685, -6.90236 ] } },
+{ "type": "Feature", "properties": { "No": 11, "Nama": "Tegalluar", "Type": "End-Station", "Y": -6.963885, "X": 107.715986, "Wil_Admin": "Kab Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.715986, -6.963885 ] } },
+{ "type": "Feature", "properties": { "No": 12, "Nama": "Soreang", "Type": "End-Station", "Y": -7.028157, "X": 107.519968, "Wil_Admin": "Kab Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.519968, -7.028157 ] } },
+{ "type": "Feature", "properties": { "No": 13, "Nama": "Majalaya", "Type": "End-Station", "Y": -7.027689, "X": 107.751571, "Wil_Admin": "Kab Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.751571, -7.027689 ] } },
+{ "type": "Feature", "properties": { "No": 14, "Nama": "Banjaran", "Type": "End-Station", "Y": -7.047992, "X": 107.586658, "Wil_Admin": "Kab Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.586658, -7.047992 ] } },
+{ "type": "Feature", "properties": { "No": 15, "Nama": "BEC", "Type": "End-Station", "Y": -6.907974, "X": 107.609375, "Wil_Admin": "Kota Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.609375, -6.907974 ] } },
+{ "type": "Feature", "properties": { "No": 16, "Nama": "Lembang", "Type": "End-Station", "Y": -6.816955, "X": 107.622538, "Wil_Admin": "Kab Bandung Barat", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.622538, -6.816955 ] } },
+{ "type": "Feature", "properties": { "No": 17, "Nama": "Ciroyom", "Type": "End-Station", "Y": -6.912962, "X": 107.58633, "Wil_Admin": "Kota Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.58633, -6.912962 ] } },
+{ "type": "Feature", "properties": { "No": 18, "Nama": "Jatinangor", "Type": "End-Station", "Y": -6.932472, "X": 107.772887, "Wil_Admin": "Kab Sumedang", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.772887, -6.932472 ] } },
+{ "type": "Feature", "properties": { "No": 19, "Nama": "Dipatiukur", "Type": "End-Station", "Y": -6.892567, "X": 107.618083, "Wil_Admin": "Kota Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.618083, -6.892567 ] } },
+{ "type": "Feature", "properties": { "No": 20, "Nama": "Riau", "Type": "End-Station", "Y": -6.910595, "X": 107.626518, "Wil_Admin": "Kota Bandung", "priority_2026": "yes" }, "geometry": { "type": "Point", "coordinates": [ 107.626518, -6.910595 ] } },
+{ "type": "Feature", "properties": { "No": 21, "Nama": "Sarijadi", "Type": "End-Station", "Y": -6.881337, "X": 107.581378, "Wil_Admin": "Kota Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.581378, -6.881337 ] } },
+{ "type": "Feature", "properties": { "No": 22, "Nama": "Cibaduyut", "Type": "End-Station", "Y": -6.959112, "X": 107.593573, "Wil_Admin": "Kota Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.593573, -6.959112 ] } },
+{ "type": "Feature", "properties": { "No": 23, "Nama": "Tegallega", "Type": "End-Station", "Y": -6.933963, "X": 107.602915, "Wil_Admin": "Kota Bandung", "priority_2026": "no" }, "geometry": { "type": "Point", "coordinates": [ 107.602915, -6.933963 ] } }
+]
+}

@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KawalBRT</title>
+  <meta name="description"
+    content="Semua yang perlu kamu ketahui tentang proyek BRT di Cekungan Bandung ada di situs web KawalBRT, dikelola oleh Komunitas Transport for Bandung.">
+  <meta name="author" content="Transport for Bandung">
+  <meta name="keywords" content="brt, cekungan bandung, bandung raya, metro jabar trans">
+  <link rel="canonical" href="https://kawalbrt.transportforbandung.org/">
+  <meta name="robots" content="index, follow">
+
+  <!-- OpenGraph Meta -->
+  <meta property="og:title" content="KawalBRT">
+  <meta property="og:description"
+    content="Semua yang perlu kamu ketahui tentang proyek BRT di Cekungan Bandung ada di situs web KawalBRT, dikelola oleh Komunitas Transport for Bandung.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://transportforbandung.org/assets/tfb-logo-snippet.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo of Transport for Bandung with white background">
+  <meta property="og:url" content="https://kawalbrt.transportforbandung.org">
+  <meta property="og:site_name" content="KawalBRT">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KawalBRT">
+  <meta name="twitter:description"
+    content="Semua yang perlu kamu ketahui tentang proyek BRT di Cekungan Bandung ada di situs web KawalBRT, dikelola oleh Komunitas Transport for Bandung.">
+  <meta name="twitter:image" content="https://transportforbandung.org/assets/tfb-logo-snippet.png">
+  <meta name="twitter:image:alt" content="Logo of Transport for Bandung with white background">
+  <meta name="twitter:site" content="@tf_bandung">
+  <meta name="twitter:creator" content="@tf_bandung">
+  <meta name="twitter:label1" content="Website">
+  <meta name="twitter:data1" content="https://kawalbrt.transportforbandung.org">
+
+  <link rel="icon" href="assets/kawalbrt-logo-simple.svg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+  <!-- ── Header (loaded from header.html) ── -->
+  <div data-include="header.html"></div>
+
+  <!-- HERO-->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-dot"></span>
+          MASTRAN &middot; BRT Metro Jabar Trans
+        </div>
+        <h1>Semua yang perlu kamu ketahui tentang proyek <em>BRT di Cekungan Bandung</em></h1>
+        <p>Proyek MASTRAN akan menghadirkan BRT berskala besar pertama di Metropolitan Cekungan Bandung. Informasi
+          tentang koridor, rute, perhentian, dan manfaatnya bagi warga dikumpulkan dalam situs web ini.</p>
+        <div class="hero-actions">
+          <a href="#Mengapa-BRT" class="btn-primary">Baca Lebih Lanjut</a>
+          <a href="#Status" class="btn-secondary">Perkembangan Terkini &rarr;</a>
+        </div>
+      </div>
+      <div class="hero-map">
+        <div class="map-card">
+          <img src="/assets/brt-visual.gif"
+            alt="Gambar bergerak dalam format GIF, menampilkan visualisasi halte, jalur khusus, dan kondisinya saat sudah beroperasi"
+            loading="lazy" decoding="async" style="max-width: 100%;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="stat-item">
+      <div class="stat-num">21.7 <span>km</span></div>
+      <div class="stat-label">Panjang Koridor BRT</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">38</div>
+      <div class="stat-label">Halte <span class="italic-term">On-Corridor</span></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">742</div>
+      <div class="stat-label">Perhentian <span class="italic-term">Off-Corridor</span> dan <span class="italic-term">End
+          Station</span></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">18 <span>+ 27</span></div>
+      <div class="stat-label">Rute Utama + Feeder</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">579</div>
+      <div class="stat-label">Armada Bus</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="Tentang">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label">Tentang Proyek</div>
+          <h2 class="section-title">MASTRAN: proyek transportasi massal Cekungan Bandung</h2>
+          <p>Indonesia Mass Transit Project (MASTRAN) adalah proyek yang akan menghadirkan BRT skala metropolitan di
+            beberapa wilayah metropolitan di Indonesia, dengan tahap pertama dilakukan di Kawasan Metropolitan Cekungan
+            Bandung dan Mebidang (Medan, Binjai, dan Deli Serdang). Kawasan Metropolitan Cekungan Bandung yang dimaksud
+            mencakup 5 kota/kabupaten, antara lain Kota Bandung, Kota Cimahi, Kabupaten Bandung, Kabupaten Bandung
+            Barat, dan Kabupaten Sumedang.</p>
+          <p>Di Bandung, sistem ini akan beroperasi di bawah nama <strong>Metro Jabar Trans (MJT)</strong>, kelanjutan
+            dan pembaharuan layanan bus perkotaan yang telah berjalan saat ini.</p>
+          <div class="funding-breakdown">
+            <div class="funding-breakdown-label">Sumber Pendanaan (Bandung dan Medan)</div>
+            <div class="funding-rows">
+              <div class="funding-row-item">
+                <div class="funder-name">Bank Dunia</div>
+                <div class="funding-amount">USD 224 juta</div>
+              </div>
+              <div class="funding-row-item">
+                <div class="funder-name">AFD (Prancis)</div>
+                <div class="funding-amount">USD 40 juta</div>
+              </div>
+              <hr class="funding-divider">
+              <div class="funding-total-row">
+                <span>Total pinjaman</span>
+                <div class="funding-amount">USD 264 juta</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="map-label" style="margin-bottom:20px">Linimasa Proyek MASTRAN</div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot done">&#10003;</div>
+              <div class="tl-body">
+                <div class="tl-year">2022</div>
+                <div class="tl-title">Persetujuan Pendanaan Bank Dunia &amp; AFD</div>
+                <div class="tl-desc">Total USD 264 juta disetujui. Proyek resmi dimulai.</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot done">&#10003;</div>
+              <div class="tl-body">
+                <div class="tl-year">2023&ndash;2026</div>
+                <div class="tl-title">Studi, Desain, DED &amp; Penetapan Rute</div>
+                <div class="tl-desc">Konsultan menetapkan jalur koridor, jenis lajur, lokasi halte, dan dokumen teknis
+                  terperinci.</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot active">&#9654;</div>
+              <div class="tl-body">
+                <div class="tl-year">2026 &mdash; Sekarang</div>
+                <div class="tl-title">Konstruksi Halte, Koridor &amp; Infrastruktur</div>
+                <div class="tl-desc">Pembangunan 38 halte <span class="italic-term">on-corridor</span>, 256 perhentian
+                  <span class="italic-term">off-corridor</span>, depo, dan peningkatan trotoar sedang berjalan.
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-body">
+                <div class="tl-year">2026&ndash;2027</div>
+                <div class="tl-title">Target Selesai Konstruksi</div>
+                <div class="tl-desc">Seluruh infrastruktur halte dan perhentian ditargetkan rampung.</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-body">
+                <div class="tl-year">2027</div>
+                <div class="tl-title">Target Operasi Penuh</div>
+                <div class="tl-desc">18 rute beroperasi penuh dengan 579 armada bus.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY BRT -->
+  <section class="why-section" id="Mengapa-BRT">
+    <div class="container">
+      <div class="section-label">Mengapa BRT Dibutuhkan?</div>
+      <h2 class="section-title">Kondisi saat ini tidak bisa dibiarkan</h2>
+      <p style="font-size:16px;color:var(--text-mid);line-height:1.7;margin-bottom:40px;">Sebagai kawasan metropolitan
+        yang terus berkembang, Cekungan Bandung dihadapkan pada persoalan kemacetan dan lingkungan yang semakin parah.
+        Berdasarkan studi yang dilakukan oleh konsultan <i>detailed engineering design</i> MASTRAN, ditemukan bahwa
+        kondisi jalan dan lalu lintas saat ini tidak sejalan dengan permintaan transportasi yang terus meningkat.
+        Pemerintah perlu melakukan upaya untuk menangani hal ini sebelum situasi menjadi tidak terkendali (<b><i>do
+            something!</i></b>).</p>
+      <div class="why-grid">
+        <div class="scenario-cards">
+          <div class="scenario-card do-nothing">
+            <span class="scenario-tag bad">Tanpa BRT: Skenario &ldquo;Do Nothing&rdquo;</span>
+            <h3>Kemacetan yang terus memburuk</h3>
+            <p>Tanpa intervensi, Kawasan Metropolitan Cekungan Bandung akan menghadapi kemacetan yang semakin parah
+              akibat meningkatnya penggunaan kendaraan pribadi. Sejumlah ruas jalan pada jam sibuk sudah mencapai
+              <strong>Level of Service F</strong> berdasarkan klasifikasi <span class="italic-term">Manual Kapasitas
+                Jalan Indonesia, 1997</span>. Hal ini berarti volume kendaraan melebihi kapasitas jalan dan kemacetan
+              panjang terjadi secara rutin.
+            </p>
+            <p>Tanpa sistem angkutan massal yang andal, peluang mengintegrasikan mobilitas perkotaan dengan moda lain
+              seperti kereta komuter dan bus antarkota akan terlewatkan. Jaringan transportasi Kawasan Metropolitan
+              Cekungan Bandung tetap terfragmentasi dan tidak efisien.</p>
+            <p>Emisi gas rumah kaca dan polusi udara akan terus meningkat. Warga berpenghasilan rendah akan terus
+              menanggung biaya transportasi yang semakin tinggi, memperdalam ketimpangan akses terhadap lapangan kerja
+              dan layanan publik.</p>
+          </div>
+          <div class="scenario-card do-something">
+            <span class="scenario-tag good">Dengan BRT: Skenario &ldquo;Do Something&rdquo;</span>
+            <h3>Mobilitas terintegrasi untuk semua</h3>
+            <p>Desain BRT ditekankan pada pengembangan rute dan koridor di tempat-tempat dengan permintaan mobilitas
+              tinggi, konektivitas antarmoda, dan perluasan jangkauan.</p>
+            <p>Dengan BRT, lebih banyak lapangan kerja dapat dijangkau dalam waktu lebih masuk akal, emisi berkurang,
+              dan masyarakat (termasuk perempuan, lansia, dan penyandang disabilitas) mendapatkan akses transportasi
+              yang lebih andal dan setara.</p>
+          </div>
+        </div>
+        <div class="why-stats">
+          <div class="why-stat-card">
+            <div class="why-stat-category">&#128678; Kondisi Lalu Lintas</div>
+            <div class="why-stat-row">
+              <div class="why-stat">
+                <div class="why-stat-num orange">LOS F</div>
+                <div class="why-stat-label">Level of Service jam sibuk di sejumlah ruas utama, berarti lalu lintas
+                  terhambat, volume melebihi kapasitas</div>
+              </div>
+              <div class="why-stat">
+                <div class="why-stat-num orange">+193%</div>
+                <div class="why-stat-label">Proyeksi pertumbuhan perjalanan harian di BBMA antara 1995 dan 2030</div>
+              </div>
+            </div>
+          </div>
+          <div class="why-stat-card">
+            <div class="why-stat-category">&#128188; Keterjangkauan Lapangan Kerja menggunakan Transportasi Umum</div>
+            <p style="font-size:13px;color:var(--text-soft);margin-bottom:10px;">Sebagai sampel, dari ~3,77 juta
+              lapangan kerja di Cekungan Bandung, berapa yang bisa dijangkau dari Stasiun Bandung?</p>
+            <div class="jobs-access-wrap">
+              <div class="jobs-row">
+                <div class="jobs-pct">27%</div>
+                <div class="jobs-bar" style="width:27%"></div>
+                <span style="font-size:12px;color:var(--text-soft)">dalam 60 menit</span>
+              </div>
+              <div class="jobs-row">
+                <div class="jobs-pct">40%</div>
+                <div class="jobs-bar" style="width:40%;opacity:0.7"></div>
+                <span style="font-size:12px;color:var(--text-soft)">dalam 90 menit</span>
+              </div>
+              <div class="jobs-row">
+                <div class="jobs-pct">46%</div>
+                <div class="jobs-bar" style="width:46%;opacity:0.5"></div>
+                <span style="font-size:12px;color:var(--text-soft)">dalam 120 menit</span>
+              </div>
+            </div>
+            <p style="font-size:12px;color:var(--text-soft);margin-top:10px;">Lebih dari separuh lapangan kerja di
+              Cekungan Bandung tidak dapat dijangkau dalam 2 jam perjalanan dengan transportasi umum.</p>
+          </div>
+          <div class="why-stat-card">
+            <div class="why-stat-category">&#127807; Emisi Gas Rumah Kaca Harian di Koridor BRT</div>
+            <div class="why-stat-row" style="margin-bottom:14px">
+              <div class="why-stat">
+                <div class="why-stat-num">5.010 <span>tCO&#8322;e</span></div>
+                <div class="why-stat-label">Total emisi per hari di sepanjang jalur <span
+                    class="italic-term">on-corridor</span></div>
+              </div>
+            </div>
+            <div class="ghg-bar-wrap">
+              <div class="ghg-bar-item">
+                <div class="ghg-bar-label"><span>Mobil pribadi</span><span>41%</span></div>
+                <div class="ghg-bar-track">
+                  <div class="ghg-bar-fill car"></div>
+                </div>
+              </div>
+              <div class="ghg-bar-item">
+                <div class="ghg-bar-label"><span>Sepeda motor pribadi</span><span>31%</span></div>
+                <div class="ghg-bar-track">
+                  <div class="ghg-bar-fill moto"></div>
+                </div>
+              </div>
+              <div class="ghg-bar-item">
+                <div class="ghg-bar-label"><span>Truk</span><span>18%</span></div>
+                <div class="ghg-bar-track">
+                  <div class="ghg-bar-fill truck"></div>
+                </div>
+              </div>
+              <div class="ghg-bar-item">
+                <div class="ghg-bar-label"><span>Angkot &amp; bus</span><span>10%</span></div>
+                <div class="ghg-bar-track">
+                  <div class="ghg-bar-fill other"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why-stat-card">
+            <div class="why-stat-category">&#128168; Kualitas Udara (Data 2024)</div>
+            <p style="font-size:13px;color:var(--text-mid);line-height:1.6;">Nitrogen dioksida (NO&#8322;) terdeteksi
+              melebihi batas aman WHO di <strong>seluruh titik pemantauan di sepanjang koridor BRT</strong>, meskipun
+              masih memenuhi standar nasional Indonesia. Particulate matter (PM&#8321;&#8320;) juga tercatat melebihi
+              standar WHO di Terminal Ledeng.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE MODEL -->
+  <section class="service-section" id="Model-Layanan">
+    <div class="container">
+      <div class="section-label">Model Layanan</div>
+      <h2 class="section-title">Bagaimana pola operasi bus BRT di Cekungan Bandung nantinya?</h2>
+
+      <p style="font-size:16px;color:var(--text-mid);line-height:1.7;margin-bottom:36px;">Tidak semua sistem BRT bekerja
+        dengan cara yang sama. Ada dua pendekatan utama yang dikenal dalam perencanaan BRT: <em>direct service</em> dan
+        <em>trunk-and-feeder</em>. Metro Jabar Trans menggunakan kedua model tersebut sekaligus, dengan pendekatan
+        <strong>hybrid</strong> yang menggabungkan kelebihan masing-masing model untuk menjangkau lebih banyak wilayah tanpa mengorbankan
+        kenyamanan penumpang.
+      </p>
+
+      <!-- Three concept cards -->
+      <div class="service-model-cards">
+
+        <div class="service-model-card">
+          <div class="service-model-card-label" style="color:var(--brand-green);">Pola A</div>
+          <h3 class="service-model-card-title"><em>Direct service</em></h3>
+          <p class="service-model-card-body">Bus dapat beroperasi dengan <strong>masuk dan keluar koridor BRT</strong>. Rute bus <i>direct service</i> masuk ke koridor BRT untuk memanfaatkan jalur khusus demi mempercepat perjalanan, lalu keluar untuk mencapai tujuan akhirnya. Pendekatan ini memungkinkan penumpang untuk dapat naik dari perhentian asal di luar koridor BRT dengan tujuan di dalam koridor BRT tanpa berpindah bus.</p>
+        </div>
+
+        <div class="service-model-card">
+          <div class="service-model-card-label" style="color:var(--accent-blue);">Pola B</div>
+          <h3 class="service-model-card-title"><em>Trunk-and-feeder</em></h3>
+          <p class="service-model-card-body">Jaringan dibagi menjadi dua: rute bus <em>trunk</em> beroperasi eksklusif di dalam koridor dengan frekuensi tinggi, sementara rute bus <em>feeder</em> melayani area di luar koridor dan berakhir di titik-titik transfer. Penumpang yang ingin mencapai tujuan di dalam koridor BRT <strong>harus berpindah kendaraan</strong> di titik transfer. Sistem ini lebih sederhana dari segi pengoperasiannya, tetapi cukup merepotkan bagi penumpang.</p>
+        </div>
+
+        <div class="service-model-card highlight">
+          <div class="service-model-card-label" style="color:var(--brand-green-dark);">Pola C — Digunakan</div>
+          <h3 class="service-model-card-title"><em>Hybrid</em></h3>
+          <p class="service-model-card-body">Metro Jabar Trans <strong>menggunakan keduanya secara bersamaan</strong>. Sebagian besar rute bus beroperasi dengan model <em>direct service</em>. Namun di sisi lain, 27 rute <em>feeder</em> juga dioperasikan untuk melayani area yang tidak terjangkau rute bus utama, menghubungkan penumpang ke jaringan BRT dari wilayah yang lebih luas.</p>
+        </div>
+
+      </div>
+
+      <!-- SVG Diagram -->
+      <div style="margin:36px 0 12px;">
+        <img src="assets/brt_service_models_landscape.svg"
+          alt="Diagram tiga panel yang mengilustrasikan pola direct service, trunk-and-feeder, dan hybrid pada sistem BRT Metro Jabar Trans"
+          style="width:100%;height:auto;display:block;">
+      </div>
+      <p style="font-size:12px;color:var(--text-soft);font-style:italic;margin-bottom:48px;">Ilustrasi tiga pola layanan BRT. Pola A: bus masuk dan keluar koridor langsung tanpa transfer. Pola B: feeder berhenti di batas koridor, penumpang berpindah ke rute <i>trunk</i>. Pola C: keduanya berjalan bersamaan seperti yang diterapkan Metro Jabar Trans. Referensi desain: ITDP BRT Planning Guide, Bab 6; ESIA BBMA REV.11 (Kemenhub, 2025).</p>
+
+      <!-- On/Off corridor explainer bridge -->
+      <div style="background:var(--brand-green-pale);border:1px solid #B7DEC4;border-radius:14px;padding:28px 32px;">
+        <div
+          style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--brand-green);margin-bottom:12px;">
+          Kaitan dengan Infrastruktur</div>
+        <p style="font-size:16px;font-weight:700;color:var(--text-dark);font-family:'Lora',serif;margin-bottom:14px;">
+          Karena konsep inilah, terdapat dua jenis infrastruktur berbeda dalam Program MASTRAB</p>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:12px;">Karena bus beroperasi di dua zona yang berbeda, di dalam koridor dan di luar koridor, infrastruktur yang dibangun pun dibedakan menjadi dua jenis: <strong><span class="italic-term">on-corridor</span></strong> dan <strong><span
+              class="italic-term">off-corridor</span></strong>.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap;">
+          <div
+            style="flex:1;min-width:220px;background:var(--white);border-radius:10px;padding:16px 18px;border-left:4px solid var(--brand-green);">
+            <div
+              style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand-green);margin-bottom:6px;">
+              <em>On-corridor</em>
+            </div>
+            <div style="font-size:14px;color:var(--text-mid);line-height:1.6;">Jalur khusus, halte, dan
+              peningkatan trotoar di koridor utama sepanjang 21,7 km.</div>
+          </div>
+          <div
+            style="flex:1;min-width:220px;background:var(--white);border-radius:10px;padding:16px 18px;border-left:4px solid var(--grey-mid);">
+            <div
+              style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--grey-mid);margin-bottom:6px;">
+              <em>Off-corridor</em>
+            </div>
+            <div style="font-size:14px;color:var(--text-mid);line-height:1.6;">Perhentian sederhana di luar koridor, tempat bus beroperasi di lalu lintas biasa. <i>Off-corridor</i> menjangkau kawasan perumahan dan wilayah di 5 kota/kabupaten.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section class="scope-section" id="Halte-dan-Jalur-Khusus">
+    <div class="container">
+      <div class="section-label">Halte dan Jalur Khusus</div>
+      <h2 class="section-title">Bagaimana bentuk infrastruktur halte dan jalur khusus BRT nantinya?</h2>
+
+      <!--<div class="service-model-box">
+        <div class="service-model-label">Model Layanan</div>
+        <p>Sistem BRT di Cekungan Bandung, dengan jenama Metro Jabar Trans, akan menggunakan model operasi
+          <strong>hybrid</strong>. Skema <em>direct service</em> dan <em>trunk-and-feeder</em> akan digunakan bersamaan
+          untuk menjangkau wilayah yang lebih luas.
+        </p>
+        <p>Rute bus BRT akan menggunakan skema <strong>direct service</strong>, bus dapat bebas masuk dan keluar koridor
+          BRT, sehingga penumpang tidak perlu sering berpindah kendaraan meskipun tempat yang dituju berada di luar
+          koridor. Sepanjang perjalanannya, bus juga akan didukung oleh layanan pengumpan (<em>feeder</em>) dengan skema
+          <strong>trunk-and-feeder</strong>, memungkinkan masyarakat dari wilayah yang tidak dapat dilalui bus untuk
+          tetap dapat mengakses layanan BRT.
+        </p>
+      </div>-->
+      <!-- On-Corridor -->
+      <div class="scope-block" id="Koridor">
+        <div class="scope-header">
+          <span class="scope-tag on"><span class="italic-term">On-Corridor</span></span>
+          <h3>Jalur Utama Berinfrastruktur Khusus</h3>
+        </div>
+
+        <div class="img-placeholder" style="padding: 0%;">
+          <img src="/assets/on-corridor-brt.png"
+            alt="Peta rencana koridor BRT di Kota Bandung beserta halte-halte on-corridor" loading="lazy"
+            decoding="async" style="max-width: 100%;">
+        </div>
+        <p style="font-size:14px;color:var(--text-soft);margin-bottom:14px;font-style:italic;">Koridor BRT dan
+          halte-halte di dalamnya, berdasarkan Dokumen ESIA halaman 21-22. Gambar dibuat ulang oleh Transport for
+          Bandung pada April 2026.</p>
+
+        <div class="scope-grid" style="margin-bottom: 14px;">
+          <div class="scope-description">
+            <p>Koridor utama BRT membentang sepanjang <strong>21,7 km</strong>, melewati jalan-jalan utama di Kota
+              Bandung. Di sepanjang koridor ini, bus beroperasi di lajur khusus yang diistimewakan, baik dengan adanya
+              <strong>jalur terpisah penuh dari kendaraan pribadi</strong> maupun <strong>lajur campuran</strong>,
+              tergantung pada kondisi jalan di tiap segmen.
+            </p>
+            <p>Proyek <span class="italic-term">on-corridor</span> bukan sekadar membangun halte dan lajur bus. Dalam
+              radius <strong>300 meter</strong> dari setiap halte, trotoar di sekitarnya juga akan ditingkatkan. Sistem
+              lalu lintas terintegrasi (ITS) juga dipasang untuk memrioritaskan laju bus BRT di persimpangan.</p>
+            <p>Perlu digaris bawahi bahwa <strong>bukan koridor BRT saja yang dilayani oleh bus</strong>. Bus akan
+              melayani area di luar koridor BRT juga dengan skema <span class="italic-term">direct service</span>.
+              Informasi lebih lanjut dijelaskan di bagian berikutnya.</p>
+          </div>
+          <div>
+            <div class="scope-stats-card">
+              <div class="stats-row">
+                <div class="scope-stat">
+                  <div class="scope-stat-num">21,7 <span>km</span></div>
+                  <div class="scope-stat-label">Panjang Koridor</div>
+                </div>
+                <div class="scope-stat">
+                  <div class="scope-stat-num">38</div>
+                  <div class="scope-stat-label">Halte</div>
+                </div>
+                <div class="scope-stat">
+                  <div class="scope-stat-num">300 <span>m</span></div>
+                  <div class="scope-stat-label">Radius Perbaikan Trotoar</div>
+                </div>
+              </div>
+            </div>
+            <div class="features-list">
+              <h4>Yang dibangun di <span class="italic-term">on-corridor</span></h4>
+              <div class="feature-item"><span class="feature-check">&#10003;</span> Jalur/lajur khusus bus
+                (terpisah/campuran)</div>
+              <div class="feature-item"><span class="feature-check">&#10003;</span> 38 halte khusus BRT</div>
+              <div class="feature-item"><span class="feature-check">&#10003;</span> Peningkatan trotoar radius 300 m
+              </div>
+              <div class="feature-item"><span class="feature-check">&#10003;</span> Sistem lalu lintas terintegrasi
+                (ITS)</div>
+              <div class="feature-item"><span class="feature-check">&#10003;</span> Fasilitas pejalan kaki &amp;
+                aksesibilitas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform types A–F -->
+        <div class="platform-types-wrap">
+          <div class="platform-types-header">6 Tipe Halte On-Corridor &mdash; berdasarkan DED MASTRAN
+            (Dohwa&ndash;Lenggogeni, 2024)</div>
+          <div class="platform-types-grid">
+
+            <div class="platform-card">
+              <div class="platform-card-header">
+                <div>
+                  <span class="platform-type-id">Tipe A</span>
+                  <div class="platform-type-config">1 atau lebih jalur khusus BRT + 2 lajur kendaraan di jalan satu arah
+                  </div>
+                </div>
+                <span class="platform-pos-tag curb">Sisi Jalan</span>
+              </div>
+              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
+                  <rect x="42" y="0" width="210" height="310" fill="#D4CDBE" />
+                  <rect x="42" y="0" width="62" height="310" fill="#D4F5E2" />
+                  <rect x="0" y="0" width="42" height="310" fill="#C8C0AA" /><text x="21" y="232" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(-90,21,232)">TROTOAR</text>
+                  <rect x="252" y="0" width="68" height="310" fill="#C8C0AA" /><text x="286" y="232"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(90,286,232)">TROTOAR</text>
+                  <rect x="10" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
+                  <rect x="10" y="48" width="32" height="130" fill="#C8EFDB" />
+                  <rect x="11" y="49" width="30" height="128" fill="#EAF7EF" />
+                  <rect x="38" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="26" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">HALTE</text>
+                  <rect x="47" y="48" width="52" height="130" fill="#00A651" rx="4" /><text x="73" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
+                    fill="white">BUS BRT</text>
+                  <rect x="104" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <line x1="180" y1="0" x2="180" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
+                  <text x="73" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
+                    font-weight="700" fill="#007A3D">↑ JALUR BUS</text><text x="144" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑ lajur 1</text><text x="216"
+                    y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑
+                    lajur 2</text>
+                </svg></div>
+              <div class="platform-card-desc">Jalan satu arah dengan 3 atau lebih lajur. Jalur dan halte BRT berada di
+                kiri jalan. Terdapat separator fisik yang memisahkan jalur BRT dari 2 lajur kendaraan lainnya.</div>
+              <div class="platform-card-stops"><strong>23 halte:</strong> Stasiun Hall, Dalem Kaum, Pasir Koja,
+                Tegallega, ITC Kebon Kalapa, Kepatihan, Alun-alun Bandung, Cikapundung, Cicadas, Kebonwaru, Simpang
+                Lima, Asia Afrika, Dulatip, GKI Anugerah, Andir, RS Rajawali, YWKA, Rajawali Timur, Ciroyom, Trinitas,
+                Kebon Jati, Banceuy Center, dan BTM.</div>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-card-header">
+                <div>
+                  <span class="platform-type-id">Tipe B</span>
+                  <div class="platform-type-config">1 lajur kendaraan + halte pulau + 1 jalur BRT + 2 lajur kendaraan di
+                    jalan satu arah</div>
+                </div>
+                <span class="platform-pos-tag median">Median</span>
+              </div>
+              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
+                  <rect x="38" y="0" width="254" height="310" fill="#D4CDBE" />
+                  <rect x="126" y="0" width="52" height="310" fill="#D4F5E2" />
+                  <rect x="90" y="0" width="32" height="310" fill="#C8C0AA" />
+                  <rect x="0" y="0" width="38" height="310" fill="#C8C0AA" /><text x="19" y="232" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(-90,19,232)">TROTOAR</text>
+                  <rect x="292" y="0" width="28" height="310" fill="#C8C0AA" /><text x="306" y="232"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(90,306,232)">TROTOAR</text>
+                  <rect x="90" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
+                  <rect x="90" y="48" width="32" height="130" fill="#C8EFDB" />
+                  <rect x="91" y="49" width="30" height="128" fill="#EAF7EF" />
+                  <rect x="90" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" />
+                  <rect x="118" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="106" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">HALTE</text>
+                  <rect x="131" y="48" width="42" height="130" fill="#00A651" rx="4" /><text x="152" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
+                    fill="white">BUS BRT</text>
+                  <rect x="122" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <rect x="178" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <line x1="232" y1="0" x2="232" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
+                  <text x="64" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
+                    fill="#5E8070">↑ lajur 1</text><text x="152" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700" fill="#007A3D">↑ JALUR
+                    BUS</text><text x="207" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif"
+                    font-size="7" fill="#5E8070">↑ lajur 2</text><text x="262" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑ lajur 3</text>
+                </svg></div>
+              <div class="platform-card-desc">Jalan satu arah dengan 4 lajur. Lajur 1 untuk kendaraan pribadi, halte
+                berada di antara lajur 1 dan jalur BRT, jalur BRT di lajur kedua (lengkap dengan separator fisik),
+                ditambah 2 lajur kendaraan pribadi di kanan.</div>
+              <div class="platform-card-stops"><strong>1 halte:</strong> Pasar Baru</div>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-card-header">
+                <div>
+                  <span class="platform-type-id">Tipe C</span>
+                  <div class="platform-type-config">2 lajur kendaraan + halte pulau + 1 jalur BRT + 1 lajur kendaraan di
+                    jalan satu arah</div>
+                </div>
+                <span class="platform-pos-tag median">Median</span>
+              </div>
+              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
+                  <rect x="30" y="0" width="250" height="310" fill="#D4CDBE" />
+                  <rect x="170" y="0" width="52" height="310" fill="#D4F5E2" />
+                  <rect x="134" y="0" width="32" height="310" fill="#C8C0AA" />
+                  <rect x="0" y="0" width="30" height="310" fill="#C8C0AA" /><text x="15" y="232" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(-90,15,232)">TROTOAR</text>
+                  <rect x="280" y="0" width="40" height="310" fill="#C8C0AA" /><text x="300" y="232"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(90,300,232)">TROTOAR</text>
+                  <rect x="134" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
+                  <rect x="134" y="48" width="32" height="130" fill="#C8EFDB" />
+                  <rect x="135" y="49" width="30" height="128" fill="#EAF7EF" />
+                  <rect x="134" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" />
+                  <rect x="162" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="150" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">HALTE</text>
+                  <rect x="175" y="48" width="42" height="130" fill="#00A651" rx="4" /><text x="196" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
+                    fill="white">BUS BRT</text>
+                  <rect x="166" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <rect x="222" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <line x1="82" y1="0" x2="82" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" /><text
+                    x="56" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
+                    fill="#5E8070">↑ lajur 1</text><text x="108" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑ lajur 2</text><text x="196"
+                    y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">↑ JALUR BUS</text><text x="253" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑ lajur 4</text>
+                </svg></div>
+              <div class="platform-card-desc">Jalan satu arah dengan 4 lajur. Dua lajur kendaraan pribadi di kiri, halte
+                pulau di antara lajur 2 dan jalur BRT (dilengkapi separator fisik), 1 lajur kendaraan pribadi di kanan.
+              </div>
+              <div class="platform-card-stops"><strong>2 halte:</strong> Bundaran Cibeureum dan Batas Kota</div>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-card-header">
+                <div>
+                  <span class="platform-type-id">Tipe D</span>
+                  <div class="platform-type-config">1 lajur BRT + 1 lajur kendaraan tiap arah, jalan dua arah</div>
+                </div>
+                <span class="platform-pos-tag curb">Sisi Jalan</span>
+              </div>
+              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
+                  <rect x="46" y="0" width="224" height="310" fill="#D4CDBE" />
+                  <rect x="46" y="0" width="56" height="310" fill="#D4F5E2" />
+                  <rect x="214" y="0" width="56" height="310" fill="#D4F5E2" />
+                  <rect x="0" y="0" width="46" height="310" fill="#C8C0AA" /><text x="23" y="232" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(-90,23,232)">TROTOAR</text>
+                  <rect x="270" y="0" width="50" height="310" fill="#C8C0AA" /><text x="295" y="232"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(90,295,232)">TROTOAR</text>
+                  <rect x="14" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
+                  <rect x="14" y="48" width="32" height="130" fill="#C8EFDB" />
+                  <rect x="15" y="49" width="30" height="128" fill="#EAF7EF" />
+                  <rect x="42" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="30" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">HALTE</text>
+                  <rect x="270" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
+                  <rect x="270" y="48" width="32" height="130" fill="#C8EFDB" />
+                  <rect x="271" y="49" width="30" height="128" fill="#EAF7EF" />
+                  <rect x="270" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="286" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">HALTE</text>
+                  <rect x="51" y="48" width="46" height="130" fill="#00A651" rx="4" /><text x="74" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
+                    fill="white">BUS BRT</text>
+                  <rect x="219" y="48" width="46" height="130" fill="#00A651" rx="4" /><text x="242" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
+                    fill="white">BUS BRT</text>
+                  <line x1="102" y1="0" x2="102" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
+                  <line x1="214" y1="0" x2="214" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
+                  <rect x="156" y="0" width="4" height="310" fill="white" rx="1.5" /><text x="74" y="18"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">↑ LAJUR BUS</text><text x="129" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑ lajur</text><text x="187"
+                    y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↓
+                    lajur</text><text x="242" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif"
+                    font-size="7" font-weight="700" fill="#007A3D">↓ LAJUR BUS</text>
+                </svg></div>
+              <div class="platform-card-desc">Jalan dua arah dengan garis putih solid sebagai pemisah arah. BRT di tepi
+                kiri tiap arah, dengan marka jalan (tanpa separator fisik). Halte di kedua trotoar luar.</div>
+              <div class="platform-card-stops"><strong>5 halte:</strong> Taman Tegallega, Pasar Kosambi, Stadion
+                Sidolig, IBCC, Santa Maria</div>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-card-header">
+                <div>
+                  <span class="platform-type-id">Tipe E</span>
+                  <div class="platform-type-config">1 jalur BRT + 1 lajur ↑ + 1 lajur berlawanan, 2 arah</div>
+                </div>
+                <span class="platform-pos-tag curb">Sisi Jalan</span>
+              </div>
+              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
+                  <rect x="52" y="0" width="202" height="310" fill="#D4CDBE" />
+                  <rect x="52" y="0" width="58" height="310" fill="#D4F5E2" />
+                  <rect x="0" y="0" width="52" height="310" fill="#C8C0AA" /><text x="26" y="232" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(-90,26,232)">TROTOAR</text>
+                  <rect x="254" y="0" width="66" height="310" fill="#C8C0AA" /><text x="287" y="232"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(90,287,232)">TROTOAR</text>
+                  <rect x="20" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
+                  <rect x="20" y="48" width="32" height="130" fill="#C8EFDB" />
+                  <rect x="21" y="49" width="30" height="128" fill="#EAF7EF" />
+                  <rect x="48" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="36" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">HALTE</text>
+                  <rect x="57" y="48" width="48" height="130" fill="#00A651" rx="4" /><text x="81" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
+                    fill="white">BUS BRT</text>
+                  <rect x="110" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <rect x="182" y="0" width="4" height="310" fill="white" rx="1.5" /><text x="81" y="18"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">↑ JALUR BUS</text><text x="148" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑ lajur 1</text><text x="220"
+                    y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↓
+                    lajur 2</text>
+                </svg></div>
+              <div class="platform-card-desc">Jalan dua arah 3 lajur total. BRT di tepi kiri bersama 1 lajur searah, 1
+                lajur arah berlawanan di kanan, dipisahkan garis putih solid.</div>
+              <div class="platform-card-stops"><strong>1 halte:</strong> Naripan</div>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-card-header">
+                <div>
+                  <span class="platform-type-id">Tipe F</span>
+                  <div class="platform-type-config">1 jalur BRT + 2 lajur ↑ + 2 lajur berlawanan, 2 arah</div>
+                </div>
+                <span class="platform-pos-tag curb">Sisi Jalan</span>
+              </div>
+              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
+                  <rect x="44" y="0" width="248" height="310" fill="#D4CDBE" />
+                  <rect x="44" y="0" width="56" height="310" fill="#D4F5E2" />
+                  <rect x="0" y="0" width="44" height="310" fill="#C8C0AA" /><text x="22" y="232" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(-90,22,232)">TROTOAR</text>
+                  <rect x="292" y="0" width="28" height="310" fill="#C8C0AA" /><text x="306" y="232"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
+                    transform="rotate(90,306,232)">TROTOAR</text>
+                  <rect x="12" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
+                  <rect x="12" y="48" width="32" height="130" fill="#C8EFDB" />
+                  <rect x="13" y="49" width="30" height="128" fill="#EAF7EF" />
+                  <rect x="40" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="28" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
+                    fill="#007A3D">HALTE</text>
+                  <rect x="49" y="48" width="46" height="130" fill="#00A651" rx="4" /><text x="72" y="117"
+                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
+                    fill="white">BUS BRT</text>
+                  <rect x="100" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <line x1="150" y1="0" x2="150" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
+                  <rect x="196" y="0" width="4" height="310" fill="white" rx="1.5" />
+                  <line x1="246" y1="0" x2="246" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
+                  <text x="72" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
+                    font-weight="700" fill="#007A3D">↑ JALUR BUS</text><text x="127" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑ lajur 1</text><text x="173"
+                    y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↑
+                    lajur 2</text><text x="223" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif"
+                    font-size="7" fill="#5E8070">↓ lajur 3</text><text x="269" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">↓ lajur 4</text>
+                </svg></div>
+              <div class="platform-card-desc">Jalan dua arah 5 lajur total. BRT di tepi kiri bersama 2 lajur searah, 2
+                lajur arah berlawanan di kanan.</div>
+              <div class="platform-card-stops"><strong>3 halte:</strong> Ciateul, Jamika, dan Suryani</div>
+            </div>
+
+          </div><!-- /platform-types-grid -->
+          <p style="font-size:12px;color:var(--text-soft);margin-top:14px;font-style:italic;">Keterangan: <span
+              style="display:inline-block;width:12px;height:10px;background:#C8EFDB;border:1px solid #A0D0B0;vertical-align:middle;margin-right:4px;border-radius:2px;"></span>Jalur
+            BRT &nbsp; <span
+              style="display:inline-block;width:12px;height:10px;background:white;border:1.5px solid #00A651;vertical-align:middle;margin-right:4px;border-radius:2px;"></span>Platform
+            penumpang &nbsp; <span
+              style="display:inline-block;width:12px;height:10px;background:#D4CEC6;vertical-align:middle;margin-right:4px;border-radius:2px;"></span>Lajur
+            kendaraan umum &nbsp; Sumber: DED MASTRAN (Dohwa&ndash;Lenggogeni, 2024)</p>
+        </div>
+      </div><!-- /scope-block on-corridor -->
+
+      <!-- Corridor location rationale -->
+      <div
+        style="background:var(--warm-stone);border:1px solid var(--border-light);border-radius:14px;padding:28px 32px;margin-bottom:48px;">
+        <div
+          style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-soft);margin-bottom:14px;">
+          Mengapa Koridor BRT Dibangun di Sini?</div>
+        <p style="font-size:16px;font-weight:700;color:var(--text-dark);font-family:'Lora',serif;margin-bottom:16px;">
+          Koridor mengikuti ruas-ruas jalan dengan dengan permintaan tertinggi</p>
+        <p style="font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:12px;">Permintaan mobilitas menjadi
+          kriteria utama. Koridor BRT melewati ruas-ruas yang dengan kepadatan rute transportasi umum tertinggi. Laporan
+          ESIA mencatat terdapat <strong>78 rute transportasi umum</strong> eksisting di sepanjang rencana koridor BRT.
+          Hal ini mengindikasikan bahwa lokasi yang dipilih untuk dibangun koridor BRT berada tepat di mana pergerakan
+          warga sudah terjadi.</p>
+        <p style="font-size:14px;color:var(--text-mid);line-height:1.7;">Koridor BRT juga dirancang untuk menghubungkan
+          <strong>simpul perjalanan utama</strong> termasuk Stasiun Hall, Alun-alun, kawasan Cicadas, serta
+          kawasan universitas dan komersial yang diidentifikasi sebagai salah satu titik bangkitan dan tarikan
+          perjalanan terbesar di Kawasan Metropolitan Cekungan Bandung.
+        </p>
+      </div>
+
+      <!-- Narrow street teaser -->
+      <div
+        style="background:var(--accent-blue);border-radius:14px;padding:28px 32px;margin:36px 0 48px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:260px;">
+          <div
+            style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.6);margin-bottom:10px;">
+            Pertanyaan yang Sering Muncul</div>
+          <p
+            style="font-size:19px;font-family:'Lora',serif;font-weight:700;color:white;line-height:1.3;margin-bottom:10px;">
+            &ldquo;Jalan di Bandung sudah sempit, bukankah BRT membuatnya semakin sempit?&rdquo;</p>
+          <p style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.6;">Hal ini merupakan kekhawatiran yang
+            wajar. Namun, perlu diketahui bahwa kondisi jalan saat ini bukanlah kondisi <em>sebenarnya</em>. Parkir
+            liar, angkot ngetem, PKL, dan geometri jalan yang buruk sudah lama membuat ruang jalan menjadi lebih sempit.
+            Kehadiran BRT tidak menyempitkan jalan, tetapi justru mengembalikan fungsinya.</p>
+        </div>
+        <a href="brt-jalan-sempit.html"
+          style="flex-shrink:0;background:white;color:var(--accent-blue);font-weight:700;font-size:14px;padding:14px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;">Baca
+          penjelasan lengkap &rarr;</a>
+      </div>
+
+      <div style="border-top:1.5px dashed #D8D0C4;margin:0 0 48px;"></div>
+
+      <!-- Off-Corridor -->
+      <div class="scope-block" id="Off-Corridor">
+        <div class="scope-header">
+          <span class="scope-tag off"><span class="italic-term">Off-Corridor</span></span>
+          <h3>Infrastruktur Penunjang di Luar Koridor</h3>
+        </div>
+        <div class="scope-grid">
+          <div class="scope-description">
+            <p>Di luar koridor utama, bus beroperasi di lalu lintas biasa dan tidak diakomodasi oleh jalur khusus.
+              Bagian ini disebut <span class="italic-term">off-corridor</span>. Pada bagian inilah sebagian besar rute
+              bus menjangkau kawasan perumahan, pusat aktivitas, dan wilayah di 5 kota/kabupaten yang tidak dilalui
+              koridor BRT.</p>
+            <p>Sebanyak <strong>719 titik perhentian</strong> telah direncanakan untuk naik dan turun penumpang bus di
+              luar koridor BRT. Sebanyak <strong>256 perhentian</strong> di antaranya akan dijadikan prioritas untuk
+              dibangun pada 2026. Tiga jenis infrastruktur digunakan, dari yang paling sederhana hingga yang paling
+              lengkap.</p>
+            <p>Selain itu, sebanyak <strong>23 titik perhentian</strong> di luar koridor BRT akan dijadikan sebagai
+              <i><strong>end station</strong></i>, tempat di mana rute bus mengawali atau mengakhiri perjalanan. <i>End
+                station</i> dapat diletakkan di terminal eksisting maupun di lokasi baru yang memadai antrean
+              keberangkatan bus. Pada tahap awal, <i>end station</i> akan dibangun di Terminal Antapani dan Ledeng.
+            </p>
+          </div>
+          <div>
+            <div class="scope-stats-card off">
+              <div class="stats-row">
+                <div class="scope-stat">
+                  <div class="scope-stat-num grey">742</div>
+                  <div class="scope-stat-label">Total perhentian <i>off-corridor</i> dan <i>end station</i></div>
+                </div>
+                <div class="scope-stat">
+                  <div class="scope-stat-num grey">256</div>
+                  <div class="scope-stat-label">Perhentian <i>off-corridor</i> dan <i>end station</i> dibangun pada 2026
+                  </div>
+                </div>
+                <div class="scope-stat">
+                  <div class="scope-stat-num grey">5</div>
+                  <div class="scope-stat-label">Kota dan Kabupaten Terjangkau</div>
+                </div>
+              </div>
+            </div>
+            <div class="features-list">
+              <h4>Yang dibangun di <span class="italic-term">off-corridor</span></h4>
+              <div class="feature-item"><span class="feature-check">&#10003;</span> Papan informasi berbentuk totem
+                untuk penanda perhentian</div>
+              <div class="feature-item"><span class="feature-check">&#10003;</span> Bangunan halte/shelter pada beberapa
+                tempat dengan permintaan tinggi dan lahan yang cukup</div>
+              <div class="feature-item"><span class="feature-check">&#10003;</span> Peningkatan trotoar di sekitar
+                perhentian
+              </div>
+            </div>
+          </div>
+          <div class="features-list off">
+            <h4>Jenis Perhentian di <span class="italic-term">Off-Corridor</span></h4>
+            <div class="plaform-types-grid">
+              <div class="stop-ph-cards"">
+              <div class=" stop-ph-card">
+                <div class="stop-ph-img">
+                  <img src="/assets/off-corridor-pole.png"
+                    alt="Tipe perhentian off-corridor pole, menampilkan sebuah papan informasi berbentuk totem dengan nama halte dan informasi rute"
+                    loading="lazy" decoding="async" style="max-width: 100%;">
+                  <div class="stop-ph-label"><strong>Pole</strong></div>
+                </div>
+                <div class="stop-ph-desc">Perhentian sederhana tanpa atap, dipasang di pinggir jalan.</div>
+              </div>
+              <div class="stop-ph-card">
+                <div class="stop-ph-img">
+                  <img src="/assets/off-corridor-small-shelter.png"
+                    alt="Tipe perhentian off-corridor halte kecil, menampilkan sebuah bangunan kecil dengan atap untuk perlindungan dari cuaca"
+                    loading="lazy" decoding="async" style="max-width: 100%;">
+                  <div class="stop-ph-label"><strong>Shelter Kecil</strong></div>
+                </div>
+                <div class="stop-ph-desc">Bangunan halte kecil dengan atap untuk perlindungan dari cuaca.</div>
+              </div>
+              <div class="stop-ph-card">
+                <div class="stop-ph-img">
+                  <img src="/assets/off-corridor-big-shelter.png"
+                    alt="Tipe perhentian off-corridor halte besar, menampilkan sebuah bangunan besar dengan atap untuk perlindungan dari cuaca"
+                    loading="lazy" decoding="async" style="max-width: 100%;">
+                  <div class="stop-ph-label"><strong>Shelter Besar</strong></div>
+                </div>
+                <div class="stop-ph-desc">Fasilitas lebih memadai, di titik-titik dengan permintaan tinggi.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1.5px dashed #D8D0C4;margin:0 0 48px;"></div>
+
+    <!-- Interactive stop map -->
+    <div class="scope-block" id="Peta-Perhentian">
+      <div class="scope-header">
+        <span class="scope-tag"
+          style="background:var(--warm-stone);color:var(--text-mid);border:1px solid var(--border-light);">Peta
+          Sebaran Halte</span>
+        <h3>Sebaran Lokasi Perhentian <span class="italic-term">On-Corridor</span>, <span
+            class="italic-term">Off-Corridor</span>, dan <span class="italic-term">End Station</span></h3>
+      </div>
+
+      <p style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:24px;">
+        Peta di bawah menampilkan 780 titik perhentian <span class="italic-term">on-corridor</span>, <span
+          class="italic-term">off-corridor</span>, dan <span class="italic-term">end-station</span> yang direncanakan
+        di seluruh Kawasan Metropolitan Cekungan Bandung, berdasarkan dokumen LARAP BBMA BRT. Klik titik mana saja
+        untuk melihat nama, jenis, dan wilayah administratifnya.
+      </p>
+
+      <!-- Filter bar -->
+      <div class="halte-map-filters" style="
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          margin-bottom: 14px;
+          background: var(--warm-stone);
+          border: 1px solid var(--border-light);
+          border-radius: 10px;
+          overflow: hidden;
+        ">
+
+        <!-- Row 1: top-level filters + wilayah + count -->
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 18px;">
+          <span
+            style="font-size:12px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Filter:</span>
+          <button id="halte-filter-semua" class="halte-filter-btn">Semua</button>
+          <button id="halte-priority-2026" class="halte-filter-btn">
+            &#9733; Prioritas 2026
+          </button>
+          <div style="flex:1;min-width:8px;"></div>
+          <!-- Wilayah dropdown (label + select kept together as one unit) -->
+          <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+            <label for="halte-wilayah-filter"
+              style="font-size:12px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Wilayah:</label>
+            <select id="halte-wilayah-filter" style="
+                font-size:12px;
+                font-family:inherit;
+                padding:5px 10px;
+                border:1px solid var(--border-light);
+                border-radius:6px;
+                background:white;
+                color:var(--text-dark);
+                cursor:pointer;
+              ">
+              <option value="">Semua Wilayah</option>
+              <option value="Kota Bandung">Kota Bandung</option>
+              <option value="Kab Bandung">Kab Bandung</option>
+              <option value="Kab Bandung Barat">Kab Bandung Barat</option>
+              <option value="Kota Cimahi">Kota Cimahi</option>
+              <option value="Kab Sumedang">Kab Sumedang</option>
+            </select>
+          </div>
+          <!-- Count badge -->
+          <span id="halte-filter-count"
+            style="font-size:12px;color:var(--text-soft);white-space:nowrap;padding:4px 10px;background:white;border:1px solid var(--border-light);border-radius:20px;">
+            780 perhentian ditampilkan
+          </span>
+        </div>
+
+        <!-- Divider -->
+        <div style="border-top:1px solid var(--border-light);"></div>
+
+        <!-- Row 2: On-corridor filters -->
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:10px 18px;">
+          <span
+            style="font-size:11px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;"><i>On-corridor</i>:</span>
+          <button data-halte-type-filter="On-Corridor Type A" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#D82B00;margin-right:4px;vertical-align:middle;"></span>
+            Type A <span style="opacity:0.6">(23)</span>
+          </button>
+          <button data-halte-type-filter="On-Corridor Type B" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#007A3D;margin-right:4px;vertical-align:middle;"></span>
+            Type B <span style="opacity:0.6">(1)</span>
+          </button>
+          <button data-halte-type-filter="On-Corridor Type C" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#B8860B;margin-right:4px;vertical-align:middle;"></span>
+            Type C <span style="opacity:0.6">(2)</span>
+          </button>
+          <button data-halte-type-filter="On-Corridor Type D" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#6A5ACD;margin-right:4px;vertical-align:middle;"></span>
+            Type D <span style="opacity:0.6">(8)</span>
+          </button>
+          <button data-halte-type-filter="On-Corridor Type E" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#8B0000;margin-right:4px;vertical-align:middle;"></span>
+            Type E <span style="opacity:0.6">(1)</span>
+          </button>
+          <button data-halte-type-filter="On-Corridor Type F" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#2F4F4F;margin-right:4px;vertical-align:middle;"></span>
+            Type F <span style="opacity:0.6">(3)</span>
+          </button>
+        </div>
+
+        <!-- Divider -->
+        <div style="border-top:1px solid var(--border-light);"></div>
+
+        <!-- Row 3: Off-corridor filters -->
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:10px 18px;">
+          <span
+            style="font-size:11px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;"><i>Off-corridor</i>:</span>
+          <button data-halte-type-filter="Bus Pole" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#00568E;margin-right:4px;vertical-align:middle;"></span>
+            Bus Pole <span style="opacity:0.6">(501)</span>
+          </button>
+          <button data-halte-type-filter="Small Shelter" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#00A651;margin-right:4px;vertical-align:middle;"></span>
+            Small Shelter <span style="opacity:0.6">(209)</span>
+          </button>
+          <button data-halte-type-filter="Big Shelter" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#FFCA0A;border:1.5px solid #B8860B;margin-right:4px;vertical-align:middle;"></span>
+            Big Shelter <span style="opacity:0.6">(9)</span>
+          </button>
+          <button data-halte-type-filter="End-Station" class="halte-filter-btn" style="font-size:12px;">
+            <span
+              style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#addd00;margin-right:4px;vertical-align:middle;"></span>
+            End Station <span style="opacity:0.6">(23)</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Map container -->
+      <div id="halte-map" style="
+          width: 100%;
+          height: 520px;
+          border-radius: 12px;
+          border: 1px solid var(--border-light);
+          overflow: hidden;
+          background: #E8E3D8;
+          position: relative;
+          z-index: 0;
+        "></div>
+
+      <!-- Legend & caption -->
+      <div style="
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-top: 12px;
+        ">
+        <p style="font-size:12px;color:var(--text-soft);margin:0;font-style:italic;">
+          Sumber: LARAP BBMA BRT (Dohwa&ndash;Lenggogeni, Maret 2025) &middot; Peta: &copy; OpenStreetMap Contributors
+        </p>
+      </div>
+
+    </div><!-- /scope-block peta -->
+    </div>
+  </section>
+
+  <!-- ROUTES -->
+  <section class="routes-section" id="Rute">
+    <div class="container">
+      <div class="section-label">Rute</div>
+      <h2 class="section-title">18 rute BRT dan 27 rute <i>feeder</i> direncanakan untuk Cekungan Bandung</h2>
+      <div class="scope-header">
+        <span class="scope-tag"
+          style="background:var(--warm-stone);color:var(--text-mid);border:1px solid var(--border-light);">Rute Bus
+          BRT</span>
+        <h3>18 rute bus yang melayani Cekungan Bandung</h3>
+      </div>
+      <div class="mjt-note">
+        &#128652; <strong>6 dari 18 rute ini sudah beroperasi sebagian</strong> sebagai Metro Jabar Trans (MJT),
+        kelanjutan dari layanan Trans Metro Pasundan dan Buratas yang digabung dan di-<i>rebranding</i> per 1 Januari
+        2025. Rute-rute tersebut akan dikembangkan, diperpanjang, atau disesuaikan jalurnya saat MASTRAN beroperasi
+        penuh.
+      </div>
+      <div class="img-placeholder" style="padding: 0%;">
+        <img src="/assets/off-corridor-brt.png" alt="Peta rute BRT di Cekungan Bandung" loading="lazy" decoding="async"
+          style="max-width: 100%;">
+      </div>
+      <p style="font-size:14px;color:var(--text-soft);margin-bottom:14px;font-style:italic;">Visualisasi 18 rute BRT
+        yang melayani 5 kota dan kabupaten di Cekungan Bandung.</p>
+      <div class="routes-table">
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Rute</th>
+              <th>Status Saat Ini</th>
+              <th>Catatan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="route-no">BRT 1</td>
+              <td class="route-name">Cibiru&mdash;Kalapa</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan layanan Bus Kota Damri Jalur 11 (Cibiru&mdash;Leuwipanjang), dengan
+                diperpendek hanya sampai Kebon Kalapa.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 2</td>
+              <td class="route-name">Lembang&mdash;Kalapa</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan layanan Bus Kota Damri Jalur 2 (Leuwipanjang&mdash;Ledeng), dengan
+                diperpanjang hingga Lembang dan diperpendek hanya sampai Kebon Kalapa.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 3</td>
+              <td class="route-name">Leuwipanjang&mdash;Dago via Dipatiukur</td>
+              <td><span class="status-badge operating">MJT 4 (sebagian)</span></td>
+              <td class="route-note">Memperpanjang layanan Metro Jabar Trans Koridor 4 (Leuwipanjang&mdash;Dago)hingga
+                Dago Atas.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 4</td>
+              <td class="route-name">Elang&mdash;Riau</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan rute angkot dalam Kota Bandung trayek nomor 21
+                (Cikudapateuh&mdash;Ciroyom), dengan diperpanjang hingga Jalan Riau.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 5</td>
+              <td class="route-name">Ciroyom&mdash;Antapani&mdash;Pajajaran</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan rute angkot dalam Kota Bandung nomor 31 (Antapani&mdash;Ciroyom).</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 6</td>
+              <td class="route-name">Cibaduyut&mdash;Leuwipanjang &mdash; Dago</td>
+              <td><span class="status-badge operating">MJT 4 (sebagian)</span></td>
+              <td class="route-note">Duplikasi layanan Metro Jabar Trans Koridor 4 (Leuwipanjang&mdash;Dago) yang telah
+                beroperasi saat ini, dengan diperpanjang hingga Dago Atas dan Cibaduyut.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 7</td>
+              <td class="route-name">Padalarang&mdash;Alun-alun Bandung</td>
+              <td><span class="status-badge operating">MJT 2</span></td>
+              <td class="route-note">Telah beroperasi sebagai Metro Jabar Trans Koridor 2 (Kota Baru
+                Parahyangan&mdash;Alun-alun Bandung).</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 8</td>
+              <td class="route-name">Cimahi&mdash;Cicaheum</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan layanan Trans Metro Bandung Koridor 2 (Cicaheum&mdash;Cibeureum),
+                dengan diperpanjang hingga Cimahi.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 9</td>
+              <td class="route-name">Ledeng&mdash;Antapani</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Terdapat layanan bus sekolah Kota Bandung dengan rute yang sama sebelumnya.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 10</td>
+              <td class="route-name">Cicaheum&mdash;Kalapa via Binong</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan layanan angkot dalam Kota Bandung trayek nomor 01A
+                (Cicaheum&mdash;Kalapa via Binong).</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 11</td>
+              <td class="route-name">Tegalluar&mdash;Stasiun Hall</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Rute baru. Sebelumnya dilayani oleh layanan <i>shuttle</i> Perum Damri.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 12</td>
+              <td class="route-name">Soreang&mdash;Terminal Tegallega</td>
+              <td><span class="status-badge operating">MJT 1 (dikembangkan)</span></td>
+              <td class="route-note">Mengembangkan layanan Metro Jabar Trans Koridor 1 (Soreang&mdash;Terminal
+                Leuwipanjang) menjadi melalui Jalan Kopo dan mencapai Terminal Soreang.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 13</td>
+              <td class="route-name">Jatinangor&mdash;Cibeureum</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan layanan nonaktif Bus Kota Damri Jalur 6.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 14</td>
+              <td class="route-name">Majalaya&mdash;Baleendah&mdash; Leuwipanjang</td>
+              <td><span class="status-badge operating">MJT 6</span></td>
+              <td class="route-note">Mengembangkan layanan Metro Jabar Trans Koridor 6 yang telah beroperasi saat ini.
+              </td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 15</td>
+              <td class="route-name">Banjaran&mdash;Baleendah&mdash;BEC</td>
+              <td><span class="status-badge operating">MJT 3 (sebagian)</span></td>
+              <td class="route-note">Memperpanjang layanan Metro Jabar Trans Koridor 3 yang telah beroperasi saat ini
+                hingga Banjaran.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 16</td>
+              <td class="route-name">Sarijadi&mdash;Antapani</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan layanan nonaktif Bus Kota Kobutri.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 17</td>
+              <td class="route-name">Cicaheum&mdash;Sarijadi</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan layanan Trans Metro Bandung Koridor 3 dengan rute yang sama.</td>
+            </tr>
+            <tr>
+              <td class="route-no">BRT 18</td>
+              <td class="route-name">Jatinangor&mdash;Dipatiukur</td>
+              <td><span class="status-badge operating">MJT 5</span></td>
+              <td class="route-note">Telah beroperasi sebagai Metro Jabar Trans Koridor 5.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="scope-header" style="margin-top: 2rem;">
+        <span class="scope-tag"
+          style="background:var(--warm-stone);color:var(--text-mid);border:1px solid var(--border-light);">Rute
+          <i>Feeder</i></span>
+        <h3>27 rute feeder yang direkomendasikan di Cekungan Bandung</h3>
+      </div>
+      <p>Rekomendasi rute <i>feeder</i> ini bertujuan untuk memperluas cakupan layanan BRT, terutama di tempat-tempat
+        yang tidak dilayani oleh rute BRT. Selain itu, adanya layanan <i>feeder</i> mampu memberdayakan koperasi angkot
+        yang terdampak oleh adanya BRT. Informasi ini didapatkan dari paparan Dinas Perhubungan Kota Bandung dalam
+        webinar terbuka yang diselenggarakan oleh ITB.</p>
+
+      <div class="mjt-note">
+        &#128652; Saat ini, Metro Jabar Trans telah merintis layanan <i>feeder</i> dalam <strong>dua rute</strong>.
+        Kedua rute tersebut memberdayakan Koperasi Kobanter Baru, pelaku usaha angkot eksisting di Kota Bandung.
+      </div>
+
+      <div class="routes-table">
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Rute</th>
+              <th>Status Saat Ini</th>
+              <th>Catatan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="route-no">FD 1</td>
+              <td class="route-name">Stasiun Rancaekek&mdash;Jatinangor</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan sebagian layanan rute angkot AKDP Gedebage&mdash;Majalaya via Sayang.
+              </td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 2</td>
+              <td class="route-name">Tanjungsari&mdash;Pasar Cileunyi</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan sebagian layanan rute angkot AKDP Sumedang&mdash;Cileunyi.</td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 3</td>
+              <td class="route-name">Majalaya&mdash;Derwati&mdash;Tegalluar</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 4</td>
+              <td class="route-name">Gempolsari&mdash;Pajajaran</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 5</td>
+              <td class="route-name">Kalapa&mdash;Pusdai</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 6</td>
+              <td class="route-name">Simpang Kircon&mdash;Pasar Baru ABC</td>
+              <td><span class="status-badge operating">MJT FD1</span></td>
+              <td class="route-note">Telah beroperasi dalam layanan Metro Jabar Trans dengan nomor FD1</td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 7</td>
+              <td class="route-name">Mahmud&mdash;Kopo</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 8</td>
+              <td class="route-name">Padalarang&mdash;Cipeundeuy</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Melanjutkan sebagian layanan angkot Kabupaten Bandung Barat dengan rute yang sama.
+              </td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 9</td>
+              <td class="route-name">Lembang&mdash;Padalarang</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 10</td>
+              <td class="route-name">Taman Budaya Dago&mdash;Cicaheum</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 11</td>
+              <td class="route-name">Ciwastra&mdash;Ujungberung</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 12</td>
+              <td class="route-name">Soreang&mdash;Ciwidey</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note">Telah masuk dalam rencana pengoperasian feeder pada 2025, tetapi ditunda.</td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 13</td>
+              <td class="route-name">Antapani&mdash;Ciwastra</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 14</td>
+              <td class="route-name">Gedebage&mdash;Arcamanik</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 15</td>
+              <td class="route-name">Buahbatu&mdash;Cibaduyut</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 16</td>
+              <td class="route-name">Pasar Gedebage&mdash;Rancanumpang</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 17</td>
+              <td class="route-name">Soreang&mdash;Cimahi</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 18</td>
+              <td class="route-name">Bandasari&mdash;Soreang</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 19</td>
+              <td class="route-name">Soreang&mdash;Banjaran</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 20</td>
+              <td class="route-name">Baleendah&mdash;Cibaduyut</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 21</td>
+              <td class="route-name">Sederhana&mdash;Cimindi</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 22</td>
+              <td class="route-name">Cicalengka&mdash;Cileunyi</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 23</td>
+              <td class="route-name">Ciumbuleuit&mdash;Wastukencana</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 24</td>
+              <td class="route-name">UIN Sunan Gunung Djati&mdash;Stasiun Kiaracondong</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 25</td>
+              <td class="route-name">GBLA&mdash;Derwati&mdash;Simpang Kircon</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 26</td>
+              <td class="route-name">Cimahi&mdash;Parongpong</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+            <tr>
+              <td class="route-no">FD 27</td>
+              <td class="route-name">Pacet&mdash;Ciparay</td>
+              <td><span class="status-badge">Belum beroperasi</span></td>
+              <td class="route-note"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUS SPECS -->
+  <section class="busspec-section" id="Spesifikasi-Bus">
+    <div class="container">
+      <div class="section-label">Armada Bus</div>
+      <h2 class="section-title">Spesifikasi bus dan jadwal operasional</h2>
+      <div class="busspec-grid">
+        <div class="busspec-card">
+          <div class="busspec-header">
+            <div class="busspec-icon">&#128652;</div>
+            <div>
+              <div class="busspec-tag">On-Corridor</div>
+              <div class="busspec-name">Bus Besar &mdash; 12 Meter</div>
+            </div>
+          </div>
+          <div class="busspec-body">
+            <div class="busspec-rows">
+              <div class="busspec-row"><span class="busspec-row-label">Panjang</span><span class="busspec-row-value">12
+                  meter</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Lebar maks.</span><span
+                  class="busspec-row-value">2,50 meter</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Jumlah kursi</span><span
+                  class="busspec-row-value">29 kursi</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Kapasitas berdiri</span><span
+                  class="busspec-row-value">Maks. 55 penumpang</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Aksesibilitas</span><span
+                  class="busspec-row-value">1 ruang kursi roda</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Lebar pintu</span><span
+                  class="busspec-row-value">1.200 mm (pintu tengah)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="busspec-card">
+          <div class="busspec-header">
+            <div class="busspec-icon">&#128662;</div>
+            <div>
+              <div class="busspec-tag">Off-Corridor</div>
+              <div class="busspec-name">Bus Sedang &mdash; 9 Meter</div>
+            </div>
+          </div>
+          <div class="busspec-body">
+            <div class="busspec-rows">
+              <div class="busspec-row"><span class="busspec-row-label">Panjang</span><span class="busspec-row-value">9
+                  meter</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Lebar maks.</span><span
+                  class="busspec-row-value">2,45 meter</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Jumlah kursi</span><span
+                  class="busspec-row-value">20 kursi</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Kapasitas berdiri</span><span
+                  class="busspec-row-value">Maks. 25 penumpang</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Aksesibilitas</span><span
+                  class="busspec-row-value">1 ruang kursi roda</span></div>
+              <div class="busspec-row"><span class="busspec-row-label">Lebar pintu</span><span
+                  class="busspec-row-value">1.200 mm (pintu tengah)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ops-band">
+        <div class="ops-item">
+          <div class="ops-num">06.00 <span>&ndash;</span> 22.00</div>
+          <div class="ops-label">Jam operasi harian (16 jam)</div>
+        </div>
+        <div class="ops-item">
+          <div class="ops-num">3&ndash;5 <span>menit</span></div>
+          <div class="ops-label">Frekuensi bus saat jam sibuk</div>
+        </div>
+        <div class="ops-item">
+          <div class="ops-num">5&ndash;10 <span>menit</span></div>
+          <div class="ops-label">Frekuensi bus di luar jam sibuk</div>
+        </div>
+        <div class="ops-item">
+          <div class="ops-num">579</div>
+          <div class="ops-label">Total armada bus yang direncanakan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFRASTRUCTURE -->
+  <section class="infra-section" id="Depo">
+    <div class="container">
+      <div class="section-label">Infrastruktur Pendukung</div>
+      <h2 class="section-title">Depo BRT</h2>
+
+      <!-- Depot intro -->
+      <p style="font-size:16px;color:var(--text-mid);line-height:1.7;margin-bottom:36px;">Selain koridor dan perhentian,
+        sistem BRT membutuhkan infrastruktur <strong>depo</strong> sebagai pusat operasional armada bus setiap harinya.
+        Bus menjalani perawatan, pencucian, pengisian bahan bakar atau daya listrik, dan dipersiapkan sebelum beroperasi
+        di depo. Depo BRT
+        Cekungan Bandung juga berfungsi ganda sebagai <em>end station</em> dan kantor administrasi.</p>
+
+      <p style="font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:0;">Dokumen ESIA mencatat bahwa dua
+        lokasi alternatif sempat dikaji, yakni di <strong>Rancanumpang</strong> dan <strong>Gedebage</strong>. Namun,
+        kedua lokasi tersebut akhirnya
+        ditolak karena hasil penilaian geoteknik dan risiko banjir menunjukkan bahwa tidak memungkinkan untuk dilakukan
+        pembangunan depo di sana.
+        Cicaheum dan Leuwipanjang dipilih karena lahannya sudah dikuasai negara (tidak perlu pembebasan lahan swasta),
+        dan posisinya di kedua ujung koridor <span class="italic-term">on-corridor</span> menjadikannya logis sebagai
+        titik awal dan akhir operasi bus setiap harinya.</p>
+
+      <!-- Depot cards -->
+      <div class="depot-cards-grid">
+
+        <!-- Cicaheum -->
+        <div style="background:var(--white);border:1.5px solid var(--border-light);border-radius:16px;overflow:hidden;">
+          <div style="height:180px;overflow:hidden;position:relative;">
+            <img src="assets/depo-cicaheum.jpg" alt="Foto Terminal Cicaheum yang akan menjadi Depo BRT"
+              style="width:100%;height:100%;object-fit:cover;display:block;">
+            <div
+              style="position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top, rgba(0,60,30,0.85) 0%, transparent 100%);">
+              <div
+                style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.7);margin-bottom:4px;">
+                Depo Bus</div>
+              <div style="font-size:20px;font-weight:700;color:white;font-family:'Lora',serif;">Cicaheum</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-top:2px;">Kota Bandung &middot; Terminal
+                Cicaheum eksisting</div>
+            </div>
+          </div>
+          <div style="padding:22px 24px;">
+            <p style="font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:18px;">Depo Cicaheum dibangun
+              di dalam area Terminal Cicaheum yang sudah ada, memanfaatkan lahan milik Pemerintah Kota Bandung seluas
+              sekitar <strong>10.058 m²</strong>. Depo ini menjadi ujung timur operasional BRT, melayani rute-rute yang
+              berawal atau berakhir di sisi timur Kota Bandung.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;">
+              <div style="background:var(--warm-stone);border-radius:10px;padding:14px 16px;">
+                <div style="font-size:22px;font-weight:800;color:var(--brand-green);line-height:1.1;">57</div>
+                <div style="font-size:12px;color:var(--text-soft);margin-top:3px;">Kapasitas parkir bus</div>
+              </div>
+              <div style="background:var(--warm-stone);border-radius:10px;padding:14px 16px;">
+                <div style="font-size:22px;font-weight:800;color:var(--brand-green);line-height:1.1;">4.980 <span
+                    style="font-size:14px;font-weight:500;">m²</span></div>
+                <div style="font-size:12px;color:var(--text-soft);margin-top:3px;">Total luas fasilitas depo</div>
+              </div>
+            </div>
+            <div
+              style="font-size:12px;color:var(--text-soft);line-height:1.6;border-top:1px solid var(--border-light);padding-top:14px;">
+              <strong style="color:var(--text-mid);">Kontraktor:</strong> Pilar Dasar Membangun &nbsp;&middot;&nbsp;
+              <strong style="color:var(--text-mid);">Kepemilikan lahan:</strong> Pemkot Bandung
+            </div>
+          </div>
+        </div>
+
+        <!-- Leuwipanjang -->
+        <div style="background:var(--white);border:1.5px solid var(--border-light);border-radius:16px;overflow:hidden;">
+          <div style="height:180px;overflow:hidden;position:relative;">
+            <img src="assets/depo-leuwipanjang.jpg" alt="Foto Terminal Leuwipanjang yang akan menjadi Depo BRT"
+              style="width:100%;height:100%;object-fit:cover;display:block;">
+            <div
+              style="position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top, rgba(0,40,80,0.85) 0%, transparent 100%);">
+              <div
+                style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.7);margin-bottom:4px;">
+                Depo Bus</div>
+              <div style="font-size:20px;font-weight:700;color:white;font-family:'Lora',serif;">Leuwipanjang</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-top:2px;">Kota Bandung &middot; Bekas kantor
+                Dishub Kota Bandung</div>
+            </div>
+          </div>
+          <div style="padding:22px 24px;">
+            <p style="font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:18px;">Depo Leuwipanjang
+              dibangun di selatan Terminal Leuwipanjang, di atas lahan bekas kantor Dinas Perhubungan Kota Bandung yang
+              telah selesai dibongkar. Total lahan yang digunakan sekitar <strong>6.298 m²</strong>, dengan status
+              kepemilikan sebagian milik Pemkot Bandung dan sebagian milik Kementerian Perhubungan.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;">
+              <div style="background:var(--warm-stone);border-radius:10px;padding:14px 16px;">
+                <div style="font-size:22px;font-weight:800;color:var(--brand-green);line-height:1.1;">29</div>
+                <div style="font-size:12px;color:var(--text-soft);margin-top:3px;">Kapasitas parkir bus</div>
+              </div>
+              <div style="background:var(--warm-stone);border-radius:10px;padding:14px 16px;">
+                <div style="font-size:22px;font-weight:800;color:var(--brand-green);line-height:1.1;">3.962 <span
+                    style="font-size:14px;font-weight:500;">m²</span></div>
+                <div style="font-size:12px;color:var(--text-soft);margin-top:3px;">Total luas fasilitas depo</div>
+              </div>
+            </div>
+            <div
+              style="font-size:12px;color:var(--text-soft);line-height:1.6;border-top:1px solid var(--border-light);padding-top:14px;">
+              <strong style="color:var(--text-mid);">Kontraktor:</strong> Abadi Prima Intikarya &nbsp;&middot;&nbsp;
+              <strong style="color:var(--text-mid);">Kepemilikan lahan:</strong> Pemkot Bandung + Kemenhub
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- What's inside a depot -->
+      <div
+        style="background:var(--warm-stone);border:1px solid var(--border-light);border-radius:14px;padding:28px 32px;margin-bottom:48px;">
+        <div
+          style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-soft);margin-bottom:14px;">
+          Fasilitas yang Dibangun di Setiap Depo</div>
+        <p style="font-size:16px;font-weight:700;color:var(--text-dark);font-family:'Lora',serif;margin-bottom:16px;">
+          Lebih dari sekadar tempat parkir bus</p>
+        <div class="depot-facilities-grid">
+          <div
+            style="background:var(--white);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--text-mid);line-height:1.5;">
+            <span style="color:var(--brand-green);font-weight:700;margin-right:6px;">&#10003;</span>Area parkir dan
+            manuver bus
+          </div>
+          <div
+            style="background:var(--white);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--text-mid);line-height:1.5;">
+            <span style="color:var(--brand-green);font-weight:700;margin-right:6px;">&#10003;</span>Stasiun pengisian
+            bahan bakar atau daya
+          </div>
+          <div
+            style="background:var(--white);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--text-mid);line-height:1.5;">
+            <span style="color:var(--brand-green);font-weight:700;margin-right:6px;">&#10003;</span>Fasilitas pencucian
+            bus
+          </div>
+          <div
+            style="background:var(--white);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--text-mid);line-height:1.5;">
+            <span style="color:var(--brand-green);font-weight:700;margin-right:6px;">&#10003;</span>Bengkel perawatan
+            dan perbaikan utama
+          </div>
+          <div
+            style="background:var(--white);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--text-mid);line-height:1.5;">
+            <span style="color:var(--brand-green);font-weight:700;margin-right:6px;">&#10003;</span>Body shop
+            (pengecatan)
+          </div>
+          <div
+            style="background:var(--white);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--text-mid);line-height:1.5;">
+            <span style="color:var(--brand-green);font-weight:700;margin-right:6px;">&#10003;</span>Kantor administrasi
+            dan operasional
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--text-soft);margin-top:16px;margin-bottom:0;">Air limbah pencucian bus akan
+          diolah. Sekitar <strong style="color:var(--text-mid);">60% air limbah didaur ulang</strong> untuk kembali
+          digunakan mencuci
+          bus berikutnya, sesuai rancangan sistem pengolahan air dalam dokumen DED.</p>
+      </div>
+
+      <!-- Social impact - minimal -->
+      <div
+        style="background:var(--accent-yellow-pale);border:1px solid #F0DC60;border-radius:14px;padding:24px 28px;margin-bottom:48px;">
+        <div
+          style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-yellow-dark);margin-bottom:10px;">
+          Catatan Dampak Sosial</div>
+        <p style="font-size:14px;color:var(--accent-yellow-dark);line-height:1.7;margin-bottom:0;">Terminal Cicaheum,
+          yang akan menjadi depo, saat ini dihuni <strong>59 penyewa kios</strong> yang akan terdampak oleh renovasi.
+          Terminal Leuwipanjang tidak memiliki penyewa kios yang teridentifikasi. Kompensasi dan relokasi mengacu pada
+          dokumen LARAP (2025) yang telah disetujui sesuai standar Bank Dunia dan AFD. Informasi lengkap mengenai dampak
+          sosial proyek secara keseluruhan tersedia di bagian Isu Sosial di bawah.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE -->
+  <section class="gov-section" id="Pemangku-Kepentingan">
+    <div class="container">
+      <div class="section-label">Siapa yang Bertanggung Jawab?</div>
+      <h2 class="section-title">Tata kelola program: dari pusat hingga kota</h2>
+      <div class="gov-grid">
+        <div>
+          <p style="font-size:16px;color:var(--text-mid);line-height:1.7;margin-bottom:28px;">Program MASTRAN melibatkan
+            banyak lapisan pemerintahan, mulai dari pendanaan skala multinasional hingga pemerintahan kota dan
+            kabupaten. Berikut daftar pemangku kepentingan dalam program MASTRAN di Cekungan Bandung.</p>
+          <p
+            style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-soft);margin-bottom:16px;">
+            Sumber Pendanaan</p>
+          <div class="gov-layers" style="margin-bottom: 1em;">
+            <div class="gov-layer">
+              <div class="gov-content" style="border-left-color:var(--accent-blue-dark)">
+                <div class="gov-level">Multilateral</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/World Bank Logo.svg" alt="World Bank Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/AFD Logo.svg" alt="AFD Logo">
+                  </div>
+                </div>
+                <div class="gov-name">Bank Dunia + Agence Française de Développement (AFD)</div>
+                <div class="gov-role">Memberikan pinjaman masing-masing sebesar US$224 juta dan US$40 juta untuk
+                  pembangunan prasarana dan peningkatan sumber daya manusia dalam program MASTRAN di Cekungan Bandung
+                  dan Mebidang.</div>
+              </div>
+            </div>
+            <div class="gov-layer">
+              <div class="gov-content">
+                <div class="gov-level">Daerah &mdash; Pemerintah Provinsi, Kota, dan Kabupaten</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Jawa Barat Logo.svg" alt="Jawa Barat Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kota Bandung Logo.svg" alt="Kota Bandung Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kota Cimahi Logo.svg" alt="Kota Cimahi Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kabupaten Bandung Logo.svg" alt="Kabupaten Bandung Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kabupaten Bandung Barat Logo.svg" alt="Kabupaten Bandung Barat Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kabupaten Sumedang Logo.svg" alt="Kabupaten Sumedang Logo">
+                  </div>
+                </div>
+                <div class="gov-name">Enam Pemerintah Daerah di Jawa Barat</div>
+                <div class="gov-role">Pemerintah Provinsi Jawa Barat serta pemerintah daerah di lima kota dan kabupaten
+                  menyediakan dana subsidi <i>public service obligation</i> (PSO) untuk operasional layanan BRT.</div>
+              </div>
+            </div>
+          </div>
+          <p
+            style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-soft);margin-bottom:16px;">
+            Pemilik, Pengelola, dan Regulator</p>
+          <div class="gov-layers">
+            <div class="gov-layer" style="border-left-color:var(--accent-blue-dark)">
+              <div class="gov-content">
+                <div class="gov-level">Nasional &mdash; Pemilik Proyek</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kemenhub Logo.svg" alt="Kemenhub Logo">
+                  </div>
+                </div>
+                <div class="gov-name">Kementerian Perhubungan RI (Ditjen Perhubungan Darat / PMU)</div>
+                <div class="gov-role">Kementerian Perhubungan adalah pemilik proyek. Direktorat Jenderal Perhubungan
+                  Darat mengelola pelaksanaan teknis melalui Program Management Unit (PMU).</div>
+              </div>
+            </div>
+            <div class="gov-layer" style="border-left-color:var(--accent-blue-dark)">
+              <div class="gov-content">
+                <div class="gov-level">Nasional &mdash; Pengelola Pinjaman</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kemenkeu Logo.svg" alt="Kemenkeu Logo">
+                  </div>
+                </div>
+                <div class="gov-name">Kementerian Keuangan RI</div>
+                <div class="gov-role">Pinjaman dari Bank Dunia dan AFD mengalir melalui Kementerian Keuangan sebagai
+                  on-lending ke Kemenhub.</div>
+              </div>
+            </div>
+            <div class="gov-layer provincial">
+              <div class="gov-content">
+                <div class="gov-level">Provinsi &mdash; Koordinator &amp; Operator Transisi</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Jawa Barat Logo.svg" alt="Pemprov Jabar Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Dishub Jabar Logo.svg" alt="Dishub Jabar Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Jasa Sarana Logo.svg" alt="PT Jasa Sarana Logo">
+                  </div>
+                </div>
+                <div class="gov-name">Pemerintah Provinsi Jawa Barat &middot; Dishub Jabar &middot; PT Jasa Sarana</div>
+                <div class="gov-role">Dishub Jabar mengoordinasikan lintas kota/kabupaten. PT Jasa Sarana (BUMD Provinsi
+                  Jawa Barat) ditunjuk sebagai operator transisi sementara berdasarkan Pergub Jabar No. 53/2023, mulai 1
+                  Januari 2025 hingga BUMD permanen terbentuk.</div>
+              </div>
+            </div>
+            <div class="gov-layer city">
+              <div class="gov-content">
+                <div class="gov-level">Kota/Kabupaten &mdash; 5 Daerah</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kota Bandung Logo.svg" alt="Kota Bandung Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kota Cimahi Logo.svg" alt="Kota Cimahi Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kabupaten Bandung Logo.svg" alt="Kabupaten Bandung Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kabupaten Bandung Barat Logo.svg" alt="Kabupaten Bandung Barat Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Kabupaten Sumedang Logo.svg" alt="Kabupaten Sumedang Logo">
+                  </div>
+                </div>
+                <div class="gov-name">Kota Bandung &middot; Kota Cimahi &middot; Kabupaten Bandung &middot; Kabupaten
+                  Bandung Barat &middot; Kabupaten Sumedang</div>
+                <div class="gov-role">Masing-masing bertanggung jawab atas BRT di wilayahnya, termasuk perizinan,
+                  pengawasan, dan pengelolaan manfaat BRT.</div>
+              </div>
+            </div>
+            <div class="gov-layer" style="border-left-color:var(--accent-blue)">
+              <div class="gov-content">
+                <div class="gov-level">BUMD Permanen &mdash; Sedang Direncanakan</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <div class="gov-icon">&#127959;</div>
+                  </div>
+                </div>
+                <div class="gov-name">BUMD Kerjasama Antardaerah (belum terbentuk)</div>
+                <div class="gov-role">Akan menjadi operator tetap dengan Pemprov Jabar dan 5 kota/kabupaten sebagai
+                  pemegang saham.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p
+            style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-soft);margin-bottom:16px;">
+            Konsultan Proyek</p>
+          <div class="consultants-section">
+            <div class="consultant-card">
+              <div class="consultant-category">PrMC &mdash; Program Management Consultant</div>
+              <div class="gov-logos">
+                <div class="gov-logo-box">
+                  <img src="assets/logo/ARUP Logo.svg" alt="ARUP Logo">
+                </div>
+                <div class="gov-logo-box">
+                  <img src="assets/logo/Perentjana Djaja Logo.svg" alt="Perentjana Djaja Logo">
+                </div>
+              </div>
+              <div class="consultant-name">ARUP + Perentjana Djaja</div>
+              <div class="consultant-desc">Merancang dan mengelola program, menilai kapasitas nasional, melakukan
+                pengembangan institusional, serta mengembangkan database transportasi perkotaan.</div>
+            </div>
+            <div class="consultant-card">
+              <div class="consultant-category">PMC &mdash; Project Management Consultant</div>
+              <div class="gov-logos">
+                <div class="gov-logo-box">
+                  <img src="assets/logo/egis Logo.svg" alt="Egis Logo">
+                </div>
+                <div class="gov-logo-box">
+                  <img src="assets/logo/Avenew Indonesia Logo.svg" alt="Avenew Indonesia Logo">
+                </div>
+                <div class="gov-logo-box">
+                  <img src="assets/logo/Yooshin Logo.svg" alt="Yooshin Engineering Logo">
+                </div>
+              </div>
+              <div class="consultant-name">Egis + Avenew Indonesia + Yooshin Engineering</div>
+              <div class="consultant-desc">Perencanaan operasi, pengadaan, penyusunan spesifikasi ITS, pengawasan aspek
+                lingkungan dan sosial, serta pengembangan organisasi BRT.</div>
+            </div>
+            <div class="consultant-card">
+              <div class="consultant-category">Konsultan DED &amp; Pengawas</div>
+              <div class="gov-logos">
+                <div class="gov-logo-box">
+                  <img src="assets/logo/Dohwa Logo.svg" alt="Dohwa Engineering Logo">
+                </div>
+                <div class="gov-logo-box">
+                  <img src="assets/logo/Lenggogeni Logo.svg" alt="Lenggogeni Logo">
+                </div>
+              </div>
+              <div class="consultant-name">Dohwa Engineering + Lenggogeni</div>
+              <div class="consultant-desc">Membuat detailed engineering design (selesai) dan menjadi pengawas
+                konstruksi.</div>
+            </div>
+            <div class="consultant-card">
+              <div class="consultant-category">Konsultan DED Peningkatan Aksesibilitas Koridor BRT dan Depo Tambahan
+              </div>
+              <div class="gov-logos">
+                <div class="gov-logo-box">
+                  <img src="assets/logo/Winsolusi Logo.svg" alt="Winsolusi Konsultan Logo">
+                </div>
+              </div>
+              <div class="consultant-name">Winsolusi Konsultan</div>
+              <div class="consultant-desc">Membuat detailed engineering design untuk peningkatan aksesibilitas di
+                sepanjang koridor BRT serta depo BRT tambahan.</div>
+            </div>
+          </div>
+          <p
+            style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-soft);margin:28px 0 16px;">
+            Kontraktor Konstruksi</p>
+          <div class="contractors-list">
+            <div class="contractor-item">
+              <div class="contractor-detail">
+                <div class="contractor-scope"><span class="italic-term">On-Corridor</span></div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Abipraya Logo.svg" alt="Abipraya Logo">
+                  </div>
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/SBS Logo.svg" alt="Sumber Bangun Sentosa Logo">
+                  </div>
+                </div>
+                <div class="contractor-name">KSO Brantas Abipraya (Persero) + Sumber Bangun Sentosa</div>
+                <div class="contractor-desc">Membangun jalur <span class="italic-term">on-corridor</span>, antara lain
+                  perkerasan jalan, separator, halte, dan infrastruktur pendukung lainnya di sepanjang Koridor BRT.
+                </div>
+              </div>
+            </div>
+            <div class="contractor-item">
+              <div class="contractor-detail">
+                <div class="contractor-scope"><span class="italic-term">Off-Corridor</span></div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/SBS Logo.svg" alt="Sumber Bangun Sentosa Logo">
+                  </div>
+                </div>
+                <div class="contractor-name">Sumber Bangun Sentosa</div>
+                <div class="contractor-desc">Membangun 256 perhentian &amp; halte di jaringan <span
+                    class="italic-term">off-corridor</span> yang menjadi prioritas untuk dibangun pada 2026.</div>
+              </div>
+            </div>
+            <div class="contractor-item">
+              <div class="contractor-detail">
+                <div class="contractor-scope">Depo Leuwipanjang</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Abadi Prima Intikarya Logo.svg" alt="Abadi Prima Intikarya Logo">
+                  </div>
+                </div>
+                <div class="contractor-name">Abadi Prima Intikarya</div>
+                <div class="contractor-desc">Membangun depo bus di Leuwipanjang.</div>
+              </div>
+            </div>
+            <div class="contractor-item">
+              <div class="contractor-detail">
+                <div class="contractor-scope">Depo Cicaheum</div>
+                <div class="gov-logos">
+                  <div class="gov-logo-box">
+                    <img src="assets/logo/Pilar Dasar Membangun Logo.svg" alt="Pilar Dasar Membangun Logo">
+                  </div>
+                </div>
+                <div class="contractor-name">Pilar Dasar Membangun</div>
+                <div class="contractor-desc">Membangun depo bus di Cicaheum.</div>
+              </div>
+            </div>
+          </div>
+          <!--<div class="note-box">&#9881; Kontrak lainnya (depo Cicaheum, dll) belum dapat dipastikan.</div>-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL ISSUES -->
+  <section class="social-section">
+    <div class="container">
+      <div class="section-label">Isu Sosial</div>
+      <h2 class="section-title">Dampak proyek terhadap masyarakat</h2>
+      <div class="social-grid">
+        <div class="social-card">
+          <div class="social-card-icon">&#128226;</div>
+          <div class="social-card-label">Kesadaran Publik</div>
+          <h3>Banyak warga belum tahu, tapi mendukung</h3>
+          <p>Survei terhadap masyarakat yang dilakukan di sekitar terminal dan sepanjang lokasi rencana koridor BRT
+            menemukan
+            bahwa <strong>46% responden belum mengetahui</strong> adanya proyek BRT di Cekungan Bandung. Namun di antara
+            seluruh responden, <strong>92% menyatakan dukungan</strong> terhadap proyek ini. Hal ini menunjukkan bahwa
+            dukungan warga tinggi meski tingkat kesadaran publik masih rendah.</p>
+          <p>77% responden yakin BRT akan membawa manfaat bagi mobilitas warga Bandung. .</p>
+          <div class="awareness-bar-wrap">
+            <div class="awareness-item">
+              <div class="awareness-label"><span>Responden yang mendukung proyek BRT</span><span>92%</span></div>
+              <div class="awareness-track">
+                <div class="awareness-fill support"></div>
+              </div>
+            </div>
+            <div class="awareness-item">
+              <div class="awareness-label"><span>Responden yang sudah mengetahui proyek BRT</span><span>54%</span></div>
+              <div class="awareness-track">
+                <div class="awareness-fill aware"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social-card">
+          <div class="social-card-icon">&#128662;</div>
+          <div class="social-card-label">Dampak pada Angkot</div>
+          <h3>Angkot tidak dihapus, melainkan akan direformasi</h3>
+          <p>Berdasarkan kajian yang tercantum dalam laporan ESIA, rute BRT akan bersinggungan dengan <strong>48 rute
+              angkot</strong>, dengan 8 di antaranya memiliki tumpang tindih lebih dari 80%. Diperkirakan sekitar
+            <strong>1.554 kendaraan angkot</strong> beroperasi di rute yang tumpang tindih, dengan ~5.069 rumah tangga
+            yang menggantungkan penghidupan dari sektor ini.
+          </p>
+          <p>Untuk menangani hal ini, MASTRAN menyiapkan <strong>Public Transport Reform</strong> &mdash; subkomponen
+            program yang merancang integrasi angkot ke dalam sistem BRT, termasuk opsi pelatihan ulang pengemudi dan
+            penggabungan koperasi angkot sebagai penyedia rute feeder dan titik ujung.</p>
+          <div class="angkot-stats">
+            <div>
+              <div class="angkot-stat-num">48</div>
+              <div class="angkot-stat-label">Rute angkot bersinggungan</div>
+            </div>
+            <div>
+              <div class="angkot-stat-num">1.554</div>
+              <div class="angkot-stat-label">Kendaraan di rute tumpang tindih</div>
+            </div>
+            <div>
+              <div class="angkot-stat-num">5.069</div>
+              <div class="angkot-stat-label">Rumah tangga terdampak</div>
+            </div>
+          </div>
+        </div>
+        <div class="social-card">
+          <div class="social-card-icon">&#128717;</div>
+          <div class="social-card-label">Pedagang Kaki Lima (PKL)</div>
+          <h3>1.735 PKL di sepanjang koridor</h3>
+          <p>Survei LARAP mengidentifikasi <strong>1.735 pedagang kaki lima (PKL)</strong> di sepanjang koridor BRT,
+            depo, terminal, dan <i>end station</i>. PKL dikategorikan berdasarkan zonasi Perda Kota Bandung No. 4/2011:
+          </p>
+          <div class="vendor-zones">
+            <div class="vendor-zone-row">
+              <div class="zone-dot green"></div>
+              <div class="vendor-zone-name">Zona Hijau</div>
+              <div class="vendor-zone-count">331</div>
+              <div class="vendor-zone-desc">Boleh berjualan tanpa pembatasan</div>
+            </div>
+            <div class="vendor-zone-row">
+              <div class="zone-dot yellow"></div>
+              <div class="vendor-zone-name">Zona Kuning</div>
+              <div class="vendor-zone-count">353</div>
+              <div class="vendor-zone-desc">Boleh berjualan dengan batasan waktu/lokasi</div>
+            </div>
+            <div class="vendor-zone-row">
+              <div class="zone-dot red"></div>
+              <div class="vendor-zone-name">Zona Merah</div>
+              <div class="vendor-zone-count">1.051</div>
+              <div class="vendor-zone-desc">Berjualan di area terlarang menurut Perda, harus direlokasi</div>
+            </div>
+          </div>
+          <p style="margin-top:14px;">Seluruh PKL terdampak berhak atas program pemulihan penghidupan (<i>livelihood
+              restoration</i>) sesuai LARAP yang telah disetujui (2025).</p>
+        </div>
+        <div class="social-card">
+          <div class="social-card-icon">&#127978;</div>
+          <div class="social-card-label">Penyewa Kios &amp; Terminal</div>
+          <h3>124 penyewa kios di terminal yang direnovasi</h3>
+          <p>Terminal Cicaheum (calon depo), Terminal Antapani, dan Terminal Ledeng akan direnovasi total sebagai bagian
+            dari proyek. Hal ini berdampak pada <strong>124 penyewa kios</strong> yang saat ini beroperasi di ketiga
+            terminal tersebut.</p>
+          <p>Kompensasi dan program relokasi akan mengacu pada LARAP (2025) sesuai standar World Bank dan AFD. Selain
+            itu, terdapat sekitar <strong>193 juru parkir resmi</strong> yang beroperasi di sepanjang koridor yang juga
+            teridentifikasi sebagai pihak terdampak.</p>
+          <p style="font-size:13px;color:var(--text-soft);margin-top:8px;">Sumber: LARAP BBMA BRT
+            (Dohwa&ndash;Lenggogeni, Maret 2025) dan ESIA BBMA REV.11 (Kemenhub, 2025)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT STATUS -->
+  <section style="background:var(--white);padding:80px 20px;" id="Status">
+    <div class="container">
+      <div class="section-label">Status Proyek</div>
+      <h2 class="section-title">Seberapa jauh proyek ini sudah berjalan?</h2>
+      <p style="font-size:16px;color:var(--text-mid);line-height:1.7;margin-bottom:40px;">Proyek MASTRAN terdiri dari
+        beberapa komponen besar yang berjalan bersamaan, dari studi, desain, hingga konstruksi fisik dan persiapan
+        operasional. Berikut kemajuan proyek BRT di Cekungan Bandung berdasarkan pengamatan di lapangan dan informasi
+        publik. <b>Informasi ini akurat per April 2026</b>.</p>
+
+      <div class="status-grid">
+
+        <div class="consultant-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div class="consultant-category">Koridor &amp; Halte <span class="italic-term">On-Corridor</span></div>
+            <span class="status-badge"
+              style="background:var(--accent-blue-pale);color:var(--accent-blue-dark);white-space:nowrap;">&#9654;
+              Konstruksi Berjalan</span>
+          </div>
+          <div class="consultant-name">38 halte dan jalur khusus sepanjang 21,7 km</div>
+          <div class="consultant-desc">Konstruksi fisik halte <span class="italic-term">on-corridor</span> telah
+            berjalan. Kontraktor Brantas Abipraya (Persero) melakukan kerja sama operasi (KSO) dengan Sumber Bangun
+            Sentosa untuk mengerjakan pembangunan jalur BRT dan halte di sepanjang koridor BRT. Pekerjaan yang dilakukan
+            termasuk pemasangan separator, marka jalan, dan peningkatan trotoar dalam radius 300 meter dari setiap
+            halte.</div>
+          <div class="note-box" style="margin-top:12px;"><i>Update</i>:<br />
+            <ul>
+              <li>7 Mei: Pekerjaan konstruksi untuk Halte BS 08 ITC Kebon Kalapa dan BS 17 Kebonwaru telah dimulai.</li>
+              <li>1 Mei: Pembangunan halte <i>on-corridor</i> telah dimulai di dua lokasi pertama, yakni BS 6B Taman
+                Tegallega dan BS 7 Ciateul</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="consultant-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div class="consultant-category">Perhentian <span class="italic-term">Off-Corridor</span></div>
+            <span class="status-badge"
+              style="background:var(--accent-blue-pale);color:var(--accent-blue-dark);white-space:nowrap;">&#9654;
+              Konstruksi Berjalan</span>
+          </div>
+          <div class="consultant-name">256 perhentian di 2 kota</div>
+          <div class="consultant-desc">Kontraktor Sumber Bangun Sentosa sedang membangun 256 perhentian di jaringan
+            <span class="italic-term">off-corridor</span> yang menjadi prioritas untuk dibangun pada 2026. Perhentian
+            ini mencakup tiga jenis: pole, <i>shelter</i> kecil, dan <i>shelter</i> besar.
+            Pembangunan tersebar di Kota Bandung dan Kota Cimahi.
+          </div>
+          <div class="note-box" style="margin-top:12px;"><i>Update</i>:<br />
+            <ul>
+              <li>7 Mei: Pembangunan perhentian <i>off-corridor</i> sedang dilakukan di beberapa lokasi, antara lain di
+                GBLA, Jalan Soekarno Hatta, Jalan Ibrahim Adjie, Jalan Terusan Jakarta, Jalan Gatot Subroto, Jalan Riau,
+                Jalan Laswi, Jalan Pelajar Pejuang, Jalan Moh. Ramdan, Jalan Dago, Jalan Pasir Kaliki, Jalan Otto
+                Iskandar Dinata, Jalan Wastukancana, Jalan Hasanudin, Jalan A. Yani, dan Jalan H. Amir Machmud.
+                Konstruksi memasuki tahap pekerjaan tanah, pekerjaan pondasi, dan pemasangan struktur baja
+                <i>shelter</i>.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="consultant-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div class="consultant-category">Depo BRT Leuwipanjang</div>
+            <span class="status-badge"
+              style="background:var(--accent-blue-pale);color:var(--accent-blue-dark);white-space:nowrap;">&#9654;
+              Konstruksi Berjalan</span>
+          </div>
+          <div class="consultant-name">Depo BRT di Terminal Leuwipanjang</div>
+          <div class="consultant-desc">Depo Leuwipanjang sedang dalam tahap konstruksi, dibangun oleh Abadi Prima
+            Intikarya selaku pemenang tender konstruksi dan diawasi oleh Dohwa-Lenggogeni selaku Konsultan DED dan
+            Pengawas. Depo ini akan menjadi fasilitas perawatan dan penyimpanan armada bus di sisi barat koridor.</div>
+          <div class="note-box" style="margin-top:12px;"><i>Update</i>:<br />
+            <ul>
+              <li>7 Mei: Bekas kantor Dishub Kota Bandung di Leuwipanjang telah selesai dibongkar. Proses konstruksi
+                telah memasuki tahap mobilisasi dan pekerjaan tanah.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="consultant-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div class="consultant-category">Detailed Engineering Design (DED)</div>
+            <span class="status-badge operating">&#10003; Selesai</span>
+          </div>
+          <div class="consultant-name">Dohwa Engineering + Lenggogeni</div>
+          <div class="consultant-desc">DED telah selesai dikerjakan oleh Dohwa Engineering bersama Lenggogeni. Dokumen
+            teknis ini mencakup desain 6 tipe platform halte (Tipe A–F), konfigurasi lajur bus, sistem lalu lintas
+            terintegrasi (ITS), serta spesifikasi trotoar dan aksesibilitas di setiap titik halte sepanjang koridor.
+          </div>
+        </div>
+
+        <div class="consultant-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div class="consultant-category">Rute &amp; Operasional BRT</div>
+            <span class="status-badge"
+              style="background:var(--accent-yellow-pale);color:var(--accent-yellow-dark);white-space:nowrap;">&#9201;
+              Persiapan</span>
+          </div>
+          <div class="consultant-name">18 rute utama + 27 rute feeder</div>
+          <div class="consultant-desc">6 dari 18 rute sudah beroperasi sebagian sebagai Metro Jabar Trans (MJT) sejak 1
+            Januari 2025, kelanjutan dari Trans Metro Pasundan dan Buratas. Sisa 12 rute belum beroperasi dan masih
+            dalam tahap persiapan. Daftar lengkap 27 rute feeder belum dipublikasikan secara resmi.</div>
+        </div>
+
+        <div class="consultant-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div class="consultant-category">Operator &amp; Kelembagaan</div>
+            <span class="status-badge"
+              style="background:var(--accent-yellow-pale);color:var(--accent-yellow-dark);white-space:nowrap;">&#9201;
+              Persiapan</span>
+          </div>
+          <div class="consultant-name">BUMD permanen belum terbentuk</div>
+          <div class="consultant-desc">PT Jasa Sarana (BUMD Provinsi Jawa Barat) ditunjuk sebagai operator transisi
+            berdasarkan Pergub Jabar No. 53/2023. Pembentukan BUMD permanen yang melibatkan 5 kota/kabupaten sebagai
+            pemegang saham masih dalam proses perencanaan dan belum selesai.</div>
+        </div>
+
+        <div class="consultant-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div class="consultant-category">Pengadaan Armada Bus</div>
+            <span class="status-badge"
+              style="background:var(--accent-yellow-pale);color:var(--accent-yellow-dark);white-space:nowrap;">&#9201;
+              Persiapan</span>
+          </div>
+          <div class="consultant-name">579 bus (12m + 9m) belum diadakan</div>
+          <div class="consultant-desc">Pengadaan 579 armada bus — terdiri dari bus besar 12 meter untuk <span
+              class="italic-term">on-corridor</span> dan bus sedang 9 meter untuk <span
+              class="italic-term">off-corridor</span> — tidak termasuk dalam cakupan pinjaman Bank Dunia dan AFD. Proses
+            pengadaan terpisah dan belum dilaporkan selesai.</div>
+        </div>
+
+        <div class="consultant-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div class="consultant-category">Penanganan Dampak Sosial (LARAP)</div>
+            <span class="status-badge operating">&#10003; Selesai</span>
+          </div>
+          <div class="consultant-name">Dokumen LARAP disetujui 2025</div>
+          <div class="consultant-desc">Land Acquisition and Resettlement Action Plan (LARAP) untuk seluruh komponen
+            proyek — termasuk program relokasi 1.735 PKL, kompensasi 124 penyewa kios terminal, dan program pemulihan
+            penghidupan — telah selesai disusun dan disetujui pada Maret 2025 sesuai standar Bank Dunia dan AFD.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-layout">
+        <div>
+          <div class="section-label">Pertanyaan Umum</div>
+          <h2 class="section-title">Yang paling sering ditanyakan warga</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-q">Apa perbedaan koridor dan rute? <span class="faq-chevron">+</span></div>
+              <div class="faq-a hidden">Dalam konteks program MASTRAN, <b>koridor</b> atau <b>koridor BRT</b> adalah
+                ruas-ruas jalan yang mendapatkan perlakuan khusus, seperti jalur khusus, marka pada lajur bus, dan
+                prioritas untuk bus di persimpangan. Sementara itu, <b>rute</b> merujuk pada perjalanan bus dari titik
+                awal ke titik akhir, atau sebaliknya. Sebuah rute bus bisa menggunakan koridor BRT untuk mendukung
+                keandalan layanan.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Siapa yang membiayai proyek ini? <span class="faq-chevron">+</span></div>
+              <div class="faq-a hidden">Proyek ini dibiayai pinjaman dari World Bank (USD224 juta) dan AFD/Prancis
+                (USD40 juta) yang dikelola oleh Kemenhub RI melalui Kemenkeu. Total pinjaman mencapai USD 264 juta.
+                Pengadaan bus tidak termasuk dalam cakupan pinjaman ini.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Apakah angkot akan dihapus setelah BRT beroperasi? <span class="faq-chevron">+</span>
+              </div>
+              <div class="faq-a hidden">Tidak secara langsung. Metro Jabar Trans (MJT) menggunakan skema Buy-the-Service
+                (BTS) yang berbasis integrasi, bukan penghapusan. Angkot yang rutenya bersinggungan akan dievaluasi
+                dengan opsi konversi rute angkot menjadi rute feeder MJT atau integrasi koperasi ke dalam sistem BRT.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Apa perbedaan BRT Bandung Raya, BRT Mastran, BRT Cekungan Bandung, dan BRT Metro Jabar
+                Trans? <span class="faq-chevron">+</span></div>
+              <div class="faq-a hidden">Secara umum, keempat nama tersebut merujuk pada satu program yang terintegrasi.
+                Saat ini, pengembangan BRT di Cekungan Bandung merupakan bagian dari program MASTRAN yang dikelola oleh
+                Kementerian Perhubungan serta dibiayai oleh Bank Dunia dan AFD. Dalam nomenklatur resmi, program BRT di
+                Bandung Raya menggunakan istilah BBMA BRT yang diterjemahkan sebagai BRT Kawasan Metropolitan Cekungan
+                Bandung. Meskipun demikian, program BRT ini lebih dikenal oleh masyarakat dan media sebagai BRT Bandung
+                Raya. Setelah beroperasi nantinya, layanan bus BRT akan dioperasikan dalam jaringan Metro Jabar Trans
+                yang dikelola dan dibiayai oleh Pemerintah Daerah di Cekungan Bandung.
+                <br />
+                Singkatnya, Anda bisa menggunakan semua istilah-istilah tersebut untuk proyek infrastruktur BRT yang
+                sama. Namun, layanan bus BRT yang berjalan nantinya akan menggunakan jenama atau <i>brand</i> Metro
+                Jabar Trans.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Apa itu konsep &ldquo;direct service&rdquo; dan &ldquo;trunk-and-feeder&rdquo;? <span
+                  class="faq-chevron">+</span></div>
+              <div class="faq-a hidden">BRT Metro Jabar Trans menggunakan model hybrid. Direct service artinya bus dari
+                18 rute utama bisa masuk-keluar koridor BRT, memungkinkan penumpang untuk tidak berpindah kendaraan
+                ketika ingin menumpangi bus dari koridor BRT ke luar koridor BRT maupun sebaliknya. Trunk-and-feeder
+                artinya rute bus akan ditunjang oleh 27 rute feeder yang akan menghubungkan kawasan di luar jangkauan
+                bus. Kedua konsep ini berjalan bersamaan.</div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-cta-box">
+          <h3>Informasi yang Anda cari tidak ada di sini?</h3>
+          <p>Diskusikan topik yang ingin Anda ketahui mengenai BRT bersama lebih dari 1300 orang lainnya di grup
+            Telegram Forum Diskusi Transportasi Bandung.</p>
+          <a href="https://t.me/fdtbandung" class="btn-white">Ikuti Diskusi &rarr;</a>
+          <div class="social-links">
+            <div class="social-label">Ikuti kami</div>
+            <div class="social-badges">
+              <span class="social-badge" href="https://t.me/fdtbandung">Telegram</span>
+              <span class="social-badge" href="https://www.instagram.com/fdtbandung/">Instagram</span>
+              <span class="social-badge" href="https://twitter.com/fdtbandung">Twitter/X</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATES 
+  <section class="updates-section">
+    <div class="container">
+      <div class="section-label">Pembaruan Terbaru</div>
+      <h2 class="section-title">Yang baru di lapangan &amp; kebijakan</h2>
+      <div class="updates-grid">
+        <div class="update-card">
+          <div class="update-img">&#128679;</div>
+          <div class="update-body">
+            <div class="update-tag">Konstruksi</div>
+            <div class="update-title">Pembangunan Halte <span class="italic-term">On-Corridor</span> di Antapani Dimulai
+            </div>
+            <div class="update-date">8 Maret 2026</div>
+          </div>
+        </div>
+        <div class="update-card">
+          <div class="update-img">&#128203;</div>
+          <div class="update-body">
+            <div class="update-tag">Kebijakan</div>
+            <div class="update-title">Dishub Jabar Konfirmasi Nama Metro Jabar Trans Dipertahankan</div>
+            <div class="update-date">5 Maret 2026</div>
+          </div>
+        </div>
+        <div class="update-card">
+          <div class="update-img">&#128483;</div>
+          <div class="update-body">
+            <div class="update-tag">Komunitas</div>
+            <div class="update-title">Forum Warga: Apa yang Berubah di Sekitar Halte Barumu?</div>
+            <div class="update-date">1 Maret 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- ── Footer (loaded from footer.html) ── -->
+  <div data-include="footer.html"></div>
+
+  <!-- ── Scripts ── -->
+  <script src="main.js"></script>
+  <script src="halte-map.js"></script>
+
+</body>
+
+</html>
