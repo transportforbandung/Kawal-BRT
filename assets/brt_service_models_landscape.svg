@@ -44,10 +44,10 @@
 <desc  style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
 	Diagram tiga panel landscape mengilustrasikan cara kerja direct service, trunk-and-feeder, dan hybrid BRT</desc>
 <path class="st0" d="M27,47.1h558c5,0,9,4,9,9v133.2c0,5-4,9-9,9H27c-5,0-9-4-9-9V56.1C18,51.2,22,47.1,27,47.1z"/>
-<path class="st1" d="M36,55.2h55.8c4,0,7.2,3.2,7.2,7.2l0,0c0,4-3.2,7.2-7.2,7.2H36c-4,0-7.2-3.2-7.2-7.2l0,0
+<path class="st14" d="M36,55.2h55.8c4,0,7.2,3.2,7.2,7.2l0,0c0,4-3.2,7.2-7.2,7.2H36c-4,0-7.2-3.2-7.2-7.2l0,0
 	C28.8,58.5,32,55.2,36,55.2z"/>
-<text transform="matrix(1 0 0 1 50.064 66.0415)" class="st2 st3 st4">Pola A</text>
-<text transform="matrix(1 0 0 1 108 66.0415)" class="st2 st5 st6">Direct service</text>
+<text transform="matrix(1 0 0 1 50.064 66.0415)" class="st15 st3 st4">Pola A</text>
+<text transform="matrix(1 0 0 1 108 66.0415)" class="st15 st5 st6">Trunk-and-feeder</text>
 <path class="st7" d="M185.4,101.7h241.2c3,0,5.4,1.3,5.4,3v54c0,1.7-2.4,3-5.4,3H185.4c-3,0-5.4-1.3-5.4-3v-54
 	C180,103.1,182.4,101.7,185.4,101.7z"/>
 <text transform="matrix(1 0 0 1 279.2524 91.2412)" class="st2 st3 st4">Koridor BRT</text>
@@ -127,21 +127,21 @@
 <path marker-end="url(#arr-g)" class="st11" d="M585,61.5"/>
 <path class="st8" d=""/>
 <path marker-end="url(#arr-g)" class="st9" d="M585,186.6"/>
-<text transform="matrix(1 0 0 1 133.1323 192.6416)" class="st12 st13 st4">Bus masuk dan keluar koridor langsung, tanpa penumpang perlu berpindah kendaraan</text>
+<text transform="matrix(1 0 0 1 133.1323 192.6416)" class="st12 st13 st4">Feeder berhenti di batas koridor, penumpang berpindah ke bus untuk menjangkau rute trunk</text>
 <path class="st0" d="M27,213.6h558c5,0,9,4,9,9v133.2c0,5-4,9-9,9H27c-5,0-9-4-9-9V222.6C18,217.7,22,213.6,27,213.6z"/>
-<path class="st14" d="M36,221.7h55.8c4,0,7.2,3.2,7.2,7.2l0,0c0,4-3.2,7.2-7.2,7.2H36c-4,0-7.2-3.2-7.2-7.2l0,0
+<path class="st1" d="M36,221.7h55.8c4,0,7.2,3.2,7.2,7.2l0,0c0,4-3.2,7.2-7.2,7.2H36c-4,0-7.2-3.2-7.2-7.2l0,0
 	C28.8,225,32,221.7,36,221.7z"/>
-<text transform="matrix(1 0 0 1 49.897 232.5415)" class="st15 st3 st4">Pola B</text>
-<text transform="matrix(1 0 0 1 109.6001 232.5415)" class="st15 st5 st6">Trunk-and-feeder</text>
+<text transform="matrix(1 0 0 1 49.897 232.5415)" class="st2 st3 st4">Pola B</text>
+<text transform="matrix(1 0 0 1 109.6001 232.5415)" class="st2 st5 st6">Direct service</text>
 <path class="st7" d="M185.4,268.2h241.2c3,0,5.4,1.3,5.4,3v54c0,1.7-2.4,3-5.4,3H185.4c-3,0-5.4-1.3-5.4-3v-54
 	C180,269.6,182.4,268.2,185.4,268.2z"/>
 <g>
 	<text transform="matrix(1 0 0 1 279.2527 257.7412)" class="st2 st3 st4">Koridor BRT</text>
 </g>
-<text transform="matrix(1 0 0 1 84.7422 300.9414)" class="st16 st13 st4">Feeder</text>
-<text transform="matrix(1 0 0 1 52.9208 131.7415)" class="st17 st13 st4">Rute Direct Service</text>
-<text transform="matrix(1 0 0 1 283.9898 294.4412)" class="st17 st13 st4">Rute Trunk</text>
-<text transform="matrix(1 0 0 1 504.2214 263.0128)" class="st16 st13 st4">Feeder</text>
+<text transform="matrix(1 0 0 1 84.7422 134.4414)" class="st16 st13 st4">Feeder</text>
+<text transform="matrix(1 0 0 1 52.9208 298.2415)" class="st17 st13 st4">Rute Direct Service</text>
+<text transform="matrix(1 0 0 1 283.9898 127.9412)" class="st17 st13 st4">Rute Trunk</text>
+<text transform="matrix(1 0 0 1 504.2214 96.5128)" class="st16 st13 st4">Feeder</text>
 <path class="st8" d=""/>
 <defs>
 	
@@ -218,15 +218,15 @@
 <path marker-end="url(#arr-y)" class="st20" d="M234,237.9"/>
 <path class="st8" d=""/>
 <path marker-end="url(#arr-y)" class="st20" d="M342,327.9"/>
-<circle class="st21" cx="32.4" cy="353.1" r="5.4"/>
-<text transform="matrix(1 0 0 1 30.2012 355.8413)" class="st22 st3 st23">T</text>
-<text transform="matrix(1 0 0 1 43.2002 355.8413)" class="st12 st13 st4">= titik transfer</text>
-<text transform="matrix(1 0 0 1 122.1306 358.1416)" class="st12 st13 st4">Feeder berhenti di batas koridor, penumpang berpindah ke bus untuk menjangkau rute trunk</text>
+<circle class="st21" cx="32.4" cy="186.6" r="5.4"/>
+<text transform="matrix(1 0 0 1 30.2012 189.3413)" class="st22 st3 st23">T</text>
+<text transform="matrix(1 0 0 1 43.2002 189.3413)" class="st12 st13 st4">= titik transfer</text>
+<text transform="matrix(1 0 0 1 122.1306 358.1416)" class="st12 st13 st4">Bus masuk dan keluar koridor langsung, tanpa penumpang perlu berpindah kendaraan</text>
 <path class="st24" d="M27,380.1h558c5,0,9,4,9,9v133.2c0,5-4,9-9,9H27c-5,0-9-4-9-9V389.1C18,384.2,22,380.1,27,380.1z"/>
 <path class="st25" d="M36,388.2h156.6c4,0,7.2,3.2,7.2,7.2l0,0c0,4-3.2,7.2-7.2,7.2H36c-4,0-7.2-3.2-7.2-7.2l0,0
 	C28.8,391.5,32,388.2,36,388.2z"/>
 <text transform="matrix(1 0 0 1 54.5322 399.041)" class="st26 st3 st4">Pola C — Metro Jabar Trans</text>
-<text transform="matrix(1 0 0 1 210.6001 399.041)" class="st2 st5 st6">Hybrid</text>
+<text transform="matrix(1 0 0 1 210.6001 399.041)" class="st2 st5 st6">Direct Service dengan Feeder</text>
 <path class="st7" d="M185.4,434.7h241.2c3,0,5.4,1.3,5.4,3v54c0,1.7-2.4,3-5.4,3H185.4c-3,0-5.4-1.3-5.4-3v-54
 	C180,436.1,182.4,434.7,185.4,434.7z"/>
 <text transform="matrix(1 0 0 1 279.2529 424.2412)" class="st2 st3 st4">Koridor BRT</text>
@@ -314,36 +314,36 @@
 <circle class="st21" cx="32.4" cy="522.3" r="5.4"/>
 <text transform="matrix(1 0 0 1 30.2012 525.041)" class="st22 st3 st23">T</text>
 <text transform="matrix(1 0 0 1 43.2002 525.041)" class="st12 st13 st4">= titik transfer</text>
-<line class="st29" x1="32.4" y1="137.6" x2="579.6" y2="137.6"/>
-<polyline class="st30" points="180,132.7 447.7,132.7 447.7,105.2 579.6,105.2 "/>
-<polyline class="st31" points="32.4,105 161.9,105 161.9,128.1 379.8,128.1 379.8,177.4 579.6,177.4 "/>
-<polyline class="st32" points="432,141.9 209.6,141.9 209.6,174.6 32.4,174.6 "/>
+<line class="st29" x1="32.4" y1="304.1" x2="579.6" y2="304.1"/>
+<polyline class="st30" points="180,299.2 447.7,299.2 447.7,271.7 579.6,271.7 "/>
+<polyline class="st31" points="32.4,271.5 161.9,271.5 161.9,294.6 379.8,294.6 379.8,343.9 579.6,343.9 "/>
+<polyline class="st32" points="432,308.4 209.6,308.4 209.6,341.1 32.4,341.1 "/>
 <text transform="matrix(1 0 0 1 188.6121 525.6416)" class="st12 st13 st4">Gabungan pola operasi direct service dan trunk-and-feeder</text>
 <text transform="matrix(1 0 0 1 52.9208 464.7415)" class="st17 st13 st4">Rute Direct Service</text>
 <line class="st29" x1="32.4" y1="470.6" x2="579.6" y2="470.6"/>
 <polyline class="st30" points="180,465.7 447.7,465.7 447.7,438.2 579.6,438.2 "/>
 <polyline class="st31" points="32.4,438 161.9,438 161.9,461.1 379.8,461.1 379.8,510.4 579.6,510.4 "/>
 <polyline class="st32" points="432,474.9 209.6,474.9 209.6,507.6 32.4,507.6 "/>
-<line class="st29" x1="180" y1="298.2" x2="432" y2="298.2"/>
-<circle class="st21" cx="180" cy="298.2" r="6.3"/>
-<text transform="matrix(1 0 0 1 177.8008 300.9414)" class="st22 st3 st23">T</text>
-<circle class="st21" cx="432" cy="298.2" r="6.3"/>
-<text transform="matrix(1 0 0 1 429.8008 300.9414)" class="st22 st3 st23">T</text>
-<circle class="st21" cx="365.3" cy="298.2" r="6.3"/>
-<text transform="matrix(1 0 0 1 363.0865 300.9414)" class="st22 st3 st23">T</text>
-<circle class="st21" cx="233.3" cy="298.2" r="6.3"/>
-<text transform="matrix(1 0 0 1 231.0938 300.9414)" class="st22 st3 st23">T</text>
-<polyline class="st33" points="43.2,260 160,260 160,295.4 174.7,295.4 "/>
-<polyline class="st33" points="43.2,306.3 160.2,306.3 160.2,298.6 173.7,298.6 "/>
-<polyline class="st33" points="43.2,328.2 170.3,328.2 170.3,302 174.8,302 "/>
-<polyline class="st33" points="210.6,243.7 233.3,243.7 233.3,291.9 "/>
+<line class="st29" x1="180" y1="131.7" x2="432" y2="131.7"/>
+<circle class="st21" cx="180" cy="131.7" r="6.3"/>
+<text transform="matrix(1 0 0 1 177.8008 134.4414)" class="st22 st3 st23">T</text>
+<circle class="st21" cx="432" cy="131.7" r="6.3"/>
+<text transform="matrix(1 0 0 1 429.8008 134.4414)" class="st22 st3 st23">T</text>
+<circle class="st21" cx="365.3" cy="131.7" r="6.3"/>
+<text transform="matrix(1 0 0 1 363.0865 134.4414)" class="st22 st3 st23">T</text>
+<circle class="st21" cx="233.3" cy="131.7" r="6.3"/>
+<text transform="matrix(1 0 0 1 231.0938 134.4414)" class="st22 st3 st23">T</text>
+<polyline class="st33" points="43.2,93.5 160,93.5 160,128.9 174.7,128.9 "/>
+<polyline class="st33" points="43.2,139.8 160.2,139.8 160.2,132.1 173.7,132.1 "/>
+<polyline class="st33" points="43.2,161.7 170.3,161.7 170.3,135.5 174.8,135.5 "/>
+<polyline class="st33" points="210.6,77.2 233.3,77.2 233.3,125.4 "/>
 <circle class="st21" cx="233.3" cy="465.4" r="6.3"/>
 <text transform="matrix(1 0 0 1 231.0938 468.1135)" class="st22 st3 st23">T</text>
 <polyline class="st33" points="210.6,410.9 233.3,410.9 233.3,459.1 "/>
-<polyline class="st33" points="365.3,291.9 365.3,257.7 411.4,257.7 "/>
-<polyline class="st33" points="365.3,304.5 365.3,342.1 333.6,342.1 "/>
-<polyline class="st33" points="437.3,295.6 470.8,295.6 470.8,250.8 566.7,250.8 "/>
-<polyline class="st33" points="437.3,300.9 470.8,300.9 470.8,328.2 569.1,328.2 "/>
+<polyline class="st33" points="365.3,125.4 365.3,91.2 411.4,91.2 "/>
+<polyline class="st33" points="365.3,138.0 365.3,175.6 333.6,175.6 "/>
+<polyline class="st33" points="437.3,129.1 470.8,129.1 470.8,84.3 566.7,84.3 "/>
+<polyline class="st33" points="437.3,134.4 470.8,134.4 470.8,161.7 569.1,161.7 "/>
 <polyline class="st33" points="32.4,420.5 70,420.5 70,438 "/>
 <polyline class="st33" points="397.5,470.6 397.5,405.1 579.6,405.1 "/>
 <polyline class="st33" points="488.6,470.6 488.6,491.3 565,491.3 "/>
@@ -353,6 +353,6 @@
 <text transform="matrix(1 0 0 1 395.3365 471.5785)" class="st22 st3 st23">T</text>
 <circle class="st21" cx="488.6" cy="468.9" r="6.3"/>
 <text transform="matrix(1 0 0 1 486.3687 471.5785)" class="st22 st3 st23">T</text>
-<line class="st33" x1="438.3" y1="298.2" x2="569.1" y2="298.2"/>
+<line class="st33" x1="438.3" y1="131.7" x2="569.1" y2="131.7"/>
 <text transform="matrix(1 0 0 1 504.2214 416.7271)" class="st16 st13 st4">Feeder</text>
 </svg>
