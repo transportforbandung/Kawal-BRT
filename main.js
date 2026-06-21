@@ -63,11 +63,16 @@ function initNav() {
   /* ── Desktop dropdown ── */
   document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
     const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+    const menu = dropdown.querySelector('.nav-dropdown-menu');
 
     toggle.addEventListener('click', e => {
       e.stopPropagation();
       const isOpen = dropdown.classList.toggle('open');
       toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    menu?.addEventListener('click', e => {
+      e.stopPropagation();
     });
 
     document.addEventListener('click', () => {

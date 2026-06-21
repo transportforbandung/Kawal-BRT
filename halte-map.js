@@ -54,21 +54,46 @@
     },
   ];
 
-  // Line layer configs — populate when route GeoJSON files are available.
-  // Supports local GeoJSON (filePath) with optional Overpass fallback (relationId).
-  // Each config can have both, one, or neither fallback — the loader tries in order.
+  // Line layer configs — BRT routes loaded from KML files in dataset/BRT-Route/.
+  // Each route has two directions (A→B and B→A) loaded as separate KML files.
+  // Format: 'kmlFiles' is an array of KML paths to merge into a single layer.
   const lineLayerConfigs = [
-    // Example:
-    // {
-    //   id:          'brt-route-7',
-    //   name:        'BRT 7 – Padalarang–Alun-alun',
-    //   color:       '#00568E',
-    //   weight:      4,
-    //   opacity:     0.85,
-    //   filePath:    'dataset/Routes/BRT7/ways.geojson',   // local first
-    //   relationId:  '12345678',                         // Overpass fallback
-    //   defaultEnabled: false,
-    // },
+    { id: 'brt-01', name: 'BRT 01: Cibiru–Kalapa', color: '#E63946', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 01_ Cibiru → Kalapa.kml', 'dataset/BRT-Route/BRT 01_ Kalapa → Cibiru.kml'] },
+    { id: 'brt-02', name: 'BRT 02: Lembang–Kalapa', color: '#457B9D', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 02_ Kalapa → Lembang.kml', 'dataset/BRT-Route/BRT 02_ Lembang → Kalapa.kml'] },
+    { id: 'brt-03', name: 'BRT 03: Leuwipanjang–Dago via Dipatiukur', color: '#2A9D8F', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 03_ Dago → Dipatiukur → Leuwipanjang.kml', 'dataset/BRT-Route/BRT 03_ Leuwipanjang → Dipatiukur → Dago.kml'] },
+    { id: 'brt-04', name: 'BRT 04: Elang–Riau', color: '#E9C46A', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 04_ Elang → Riau.kml', 'dataset/BRT-Route/BRT 04_ Riau → Elang.kml'] },
+    { id: 'brt-05', name: 'BRT 05: Ciroyom–Antapani–Pajajaran', color: '#F4A261', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 05_ Antapani → Pajajaran → Ciroyom.kml', 'dataset/BRT-Route/BRT 05_ Ciroyom → Pajajaran → Antapani.kml'] },
+    { id: 'brt-06', name: 'BRT 06: Cibaduyut–Leuwipanjang–Dago', color: '#264653', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 06_ Cibaduyut → Leuwipanjang → Dago.kml', 'dataset/BRT-Route/BRT 06_ Dago → Leuwipanjang → Cibaduyut.kml'] },
+    { id: 'brt-07', name: 'BRT 07: Padalarang–Alun-alun Bandung', color: '#6A4C93', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 07_ Alun-alun Bandung → Padalarang.kml', 'dataset/BRT-Route/BRT 07_ Padalarang → Alun-alun Bandung.kml'] },
+    { id: 'brt-08', name: 'BRT 08: Cimahi–Cicaheum', color: '#1982C4', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 08_ Cicaheum → Cimahi.kml', 'dataset/BRT-Route/BRT 08_ Cimahi → Cicaheum.kml'] },
+    { id: 'brt-09', name: 'BRT 09: Ledeng–Antapani', color: '#8AC926', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 09_ Antapani → Ledeng.kml', 'dataset/BRT-Route/BRT 09_ Ledeng → Antapani.kml'] },
+    { id: 'brt-10', name: 'BRT 10: Cicaheum–Kalapa via Binong', color: '#FF595E', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 10_ Cicaheum → Kalapa.kml', 'dataset/BRT-Route/BRT 10_ Kalapa → Cicaheum.kml'] },
+    { id: 'brt-11', name: 'BRT 11: Tegalluar–Stasiun Hall', color: '#6A0572', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 11_ Stasiun Hall → Tegalluar.kml', 'dataset/BRT-Route/BRT 11_ Tegalluar → Stasiun Hall.kml'] },
+    { id: 'brt-12', name: 'BRT 12: Soreang–Terminal Tegallega', color: '#B5838D', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 12_ Soreang → Terminal Tegallega.kml', 'dataset/BRT-Route/BRT 12_ Terminal Tegallega → Soreang.kml'] },
+    { id: 'brt-13', name: 'BRT 13: Jatinangor–Elang', color: '#FF6B35', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 13_ Elang → Jatinangor.kml', 'dataset/BRT-Route/BRT 13_ Jatinangor → Elang.kml'] },
+    { id: 'brt-14', name: 'BRT 14: Majalaya–Baleendah–Leuwipanjang', color: '#004E89', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 14_ Leuwipanjang → Baleendah → Majalaya.kml', 'dataset/BRT-Route/BRT 14_ Majalaya → Baleendah → Leuwipanjang.kml'] },
+    { id: 'brt-15', name: 'BRT 15: Banjaran–Baleendah–BEC', color: '#00A676', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 15_ BEC → Baleendah → Banjaran.kml', 'dataset/BRT-Route/BRT 15_ Banjaran → Baleendah → BEC.kml'] },
+    { id: 'brt-16', name: 'BRT 16: Sarijadi–Antapani', color: '#D62828', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 16_ Antapani → Sarijadi.kml', 'dataset/BRT-Route/BRT 16_ Sarijadi → Antapani.kml'] },
+    { id: 'brt-17', name: 'BRT 17: Cicaheum–Sarijadi', color: '#3A86FF', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 17_ Cicaheum → Sarijadi.kml', 'dataset/BRT-Route/BRT 17_ Sarijadi → Cicaheum.kml'] },
+    { id: 'brt-18', name: 'BRT 18: Jatinangor–Dipatiukur', color: '#9B5DE5', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 18_ Dipatiukur → Jatinangor.kml', 'dataset/BRT-Route/BRT 18_ Jatinangor → Dipatiukur.kml'] },
   ];
 
   // ─── State ────────────────────────────────────────────────────────────────
@@ -82,6 +107,7 @@
   let activeTypeFilter = new Set();// e.g. 'Bus Pole'
   let activeWilayahFilter = null; // e.g. 'Kota Bandung'
   let activePriorityFilter = false; // true = show only priority_2026 === 'yes'
+  let pointLayersVisible = true;
 
   // ─── Map initialisation ───────────────────────────────────────────────────
 
@@ -103,7 +129,8 @@
 
     // Load all configured layers
     pointLayerConfigs.forEach(config => loadPointLayer(config));
-    lineLayerConfigs.forEach(config => loadLineLayer(config));
+    // Only auto-load line layers that default to enabled; others are lazy-loaded on click
+    lineLayerConfigs.filter(c => c.defaultEnabled).forEach(config => loadLineLayer(config));
 
     // Wire up filter controls once map is ready
     bindFilterControls();
@@ -118,6 +145,31 @@
     const data = await res.json();
     dataCache.set(filePath, data);
     return data;
+  }
+
+  // ─── KML fetch + parse helper ─────────────────────────────────────────────
+  // Parses KML <LineString> coordinates inside <MultiGeometry> or standalone.
+  // Returns an array of coordinate arrays: [ [[lat,lng], …], … ]
+
+  async function fetchKML(filePath) {
+    if (dataCache.has(filePath)) return dataCache.get(filePath);
+    const res = await fetch(filePath);
+    if (!res.ok) throw new Error(`HTTP ${res.status} fetching ${filePath}`);
+    const text = await res.text();
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, 'application/xml');
+    const lines = xml.querySelectorAll('LineString coordinates');
+    const polylines = [];
+    lines.forEach(coordEl => {
+      const raw = coordEl.textContent.trim();
+      const coords = raw.split(/\s+/).map(triple => {
+        const [lng, lat] = triple.split(',').map(Number);
+        return [lat, lng]; // Leaflet uses [lat, lng]
+      }).filter(c => !isNaN(c[0]) && !isNaN(c[1]));
+      if (coords.length > 0) polylines.push(coords);
+    });
+    dataCache.set(filePath, polylines);
+    return polylines;
   }
 
   // ─── Point (halte) layer loader ───────────────────────────────────────────
@@ -157,15 +209,23 @@
   }
 
   // ─── Line (route) layer loader ─────────────────────────────────────────────
-  // Tries local filePath first, then Overpass API if relationId is provided.
+  // Supports: kmlFiles (array of KML paths), filePath (GeoJSON), or relationId (Overpass).
 
   async function loadLineLayer(config) {
     let layerGroup;
     try {
-      layerGroup = config.filePath
-        ? await buildLineLayerFromFile(config)
-        : await buildLineLayerFromOverpass(config);
-    } catch (localErr) {
+      if (config.kmlFiles && config.kmlFiles.length > 0) {
+        layerGroup = await buildLineLayerFromKML(config);
+      } else if (config.filePath) {
+        layerGroup = await buildLineLayerFromFile(config);
+      } else if (config.relationId) {
+        layerGroup = await buildLineLayerFromOverpass(config);
+      } else {
+        console.warn(`[halte-map] No data source for line layer "${config.name}"`);
+        return;
+      }
+    } catch (err) {
+      // Fallback to Overpass if local load fails
       if (config.relationId) {
         try {
           layerGroup = await buildLineLayerFromOverpass(config);
@@ -174,7 +234,7 @@
           return;
         }
       } else {
-        console.warn(`[halte-map] Failed to load line layer "${config.name}":`, localErr.message);
+        console.warn(`[halte-map] Failed to load line layer "${config.name}":`, err.message);
         return;
       }
     }
@@ -184,6 +244,34 @@
     }
 
     lineLayers.set(config.id, { layer: layerGroup, config, enabled: config.defaultEnabled });
+  }
+
+  // Build line layer from one or more KML files
+  async function buildLineLayerFromKML(config) {
+    const group = L.layerGroup();
+    const lineStyle = {
+      color: config.color || '#00568E',
+      weight: config.weight || 4,
+      opacity: config.opacity || 0.85,
+    };
+
+    for (const kmlPath of config.kmlFiles) {
+      const polylines = await fetchKML(kmlPath);
+      polylines.forEach(coords => {
+        const line = L.polyline(coords, lineStyle);
+        line.bindPopup(
+          `<div class="halte-popup-inner">
+            <div class="halte-popup-header">
+              <span class="halte-popup-type-badge" style="background:${config.color}">Rute</span>
+              <div class="halte-popup-name">${config.name}</div>
+            </div>
+          </div>`,
+          { maxWidth: 260, minWidth: 180, className: 'halte-popup' }
+        );
+        line.addTo(group);
+      });
+    }
+    return group;
   }
 
   async function buildLineLayerFromFile(config) {
@@ -247,7 +335,7 @@
         </div>
         <div class="halte-popup-meta">
           <div class="halte-popup-row">
-            <span class="halte-popup-label">Kepemilikan Jalan</span>
+            <span class="halte-popup-label">Kewenangan Jalan</span>
             <span class="halte-popup-value">${kepemilikan}</span>
           </div>
           <div class="halte-popup-row">
@@ -275,48 +363,50 @@
   // Re-draw all point layers respecting current filters.
   // GeoJSON layers don't support dynamic filtering natively, so we rebuild.
   function applyFilters() {
-    pointLayers.forEach(({ layer, config, enabled }) => {
-      if (!enabled) return;
-      halteMap.removeLayer(layer);
+      pointLayers.forEach(({ layer, config, enabled }) => {
+        if (!enabled) return;
+        halteMap.removeLayer(layer);
 
-      // Rebuild with new filter
-      const newLayer = L.geoJSON(dataCache.get(config.filePath), {
-        pointToLayer: (feature, latlng) => {
-          const type = feature.properties?.Type || '';
-          const style = config.typeStyles?.[type] ?? config.fallbackStyle;
-          return L.circleMarker(latlng, style);
-        },
-        onEachFeature: (feature, marker) => {
-          marker.bindPopup(buildPointPopup(feature.properties || {}), {
-            maxWidth: 280, minWidth: 200, className: 'halte-popup',
-          });
-        },
-        filter: f => featurePassesFilter(f),
+        // Rebuild with new filter
+        const newLayer = L.geoJSON(dataCache.get(config.filePath), {
+          pointToLayer: (feature, latlng) => {
+            const type = feature.properties?.Type || '';
+            const style = config.typeStyles?.[type] ?? config.fallbackStyle;
+            return L.circleMarker(latlng, style);
+          },
+          onEachFeature: (feature, marker) => {
+            marker.bindPopup(buildPointPopup(feature.properties || {}), {
+              maxWidth: 280, minWidth: 200, className: 'halte-popup',
+            });
+          },
+          filter: f => featurePassesFilter(f),
+        });
+
+        if (pointLayersVisible) {
+          newLayer.addTo(halteMap);
+        }
+
+        // Update stored reference so toggle controls still work
+        pointLayers.set(config.id, { layer: newLayer, config, enabled });
       });
 
-      newLayer.addTo(halteMap);
-      // Update stored reference so toggle controls still work
-      pointLayers.set(config.id, { layer: newLayer, config, enabled });
-    });
-
-    syncSemuaButton();
-    updateFilterCount();
-  }
-
+      syncSemuaButton();
+      updateFilterCount();
+    }
   // ─── Filter UI wiring ─────────────────────────────────────────────────────
 
   function bindFilterControls() {
-    // Type filter buttons
-    document.querySelectorAll('[data-halte-type-filter]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const val = btn.dataset.halteTypeFilter;
-        if (activeTypeFilter.has(val)) {
-          activeTypeFilter.delete(val);
-        } else {
+    // Type filter checkboxes
+    document.querySelectorAll('[data-halte-type-filter]').forEach(chk => {
+      chk.addEventListener('change', () => {
+        const val = chk.dataset.halteTypeFilter;
+        if (chk.checked) {
           activeTypeFilter.add(val);
+        } else {
+          activeTypeFilter.delete(val);
         }
-        btn.classList.toggle('halte-filter-active', activeTypeFilter.has(val));
         applyFilters();
+        updateStopDropdownLabel();
       });
     });
 
@@ -330,18 +420,15 @@
         const allActive = allTypeVals.every(v => activeTypeFilter.has(v));
 
         if (allActive) {
-          // All were on — turn all off
           activeTypeFilter.clear();
+          document.querySelectorAll('[data-halte-type-filter]').forEach(chk => chk.checked = false);
         } else {
-          // Some or none were on — turn all on
           allTypeVals.forEach(v => activeTypeFilter.add(v));
+          document.querySelectorAll('[data-halte-type-filter]').forEach(chk => chk.checked = true);
         }
 
-        document.querySelectorAll('[data-halte-type-filter]').forEach(b => {
-          b.classList.toggle('halte-filter-active', activeTypeFilter.has(b.dataset.halteTypeFilter));
-        });
-
         applyFilters();
+        updateStopDropdownLabel();
       });
     }
 
@@ -364,6 +451,28 @@
       });
     }
 
+    // Hide/show bus stops
+    const hideStopsBtn = document.getElementById('halte-toggle-haltes');
+    if (hideStopsBtn) {
+      hideStopsBtn.addEventListener('click', () => {
+        pointLayersVisible = !pointLayersVisible;
+        hideStopsBtn.textContent = pointLayersVisible ? 'Sembunyikan Halte' : 'Tampilkan Halte';
+        hideStopsBtn.classList.toggle('halte-filter-active', !pointLayersVisible);
+
+        pointLayers.forEach(({ layer, enabled }, id) => {
+          if (pointLayersVisible && enabled) {
+            layer.addTo(halteMap);
+          } else {
+            halteMap.hasLayer(layer) && halteMap.removeLayer(layer);
+          }
+        });
+
+        if (pointLayersVisible) {
+          applyFilters();
+        }
+      });
+    }
+
     // Layer visibility toggles (one per pointLayerConfig + lineLayerConfig)
     document.querySelectorAll('[data-halte-layer-toggle]').forEach(chk => {
       chk.addEventListener('change', () => {
@@ -383,6 +492,163 @@
         }
       });
     });
+
+    function updateStopDropdownLabel() {
+      const label = document.getElementById('halte-stop-dropdown-label');
+      if (!label) return;
+      const activeCount = activeTypeFilter.size;
+      if (activeCount === 0) {
+        label.textContent = 'Semua Halte';
+      } else if (activeCount === 1) {
+        const type = [...activeTypeFilter][0];
+        label.textContent = type;
+      } else {
+        label.textContent = `${activeCount} jenis aktif`;
+      }
+    }
+
+    function updateRouteDropdownLabel() {
+      const label = document.getElementById('halte-route-dropdown-label');
+      if (!label) return;
+      const activeRoutes = [...lineLayerConfigs].filter(c => lineLayers.get(c.id)?.enabled).map(c => c.name);
+      if (activeRoutes.length === 0) {
+        label.textContent = 'Tidak Ada Rute';
+      } else if (activeRoutes.length === lineLayerConfigs.length) {
+        label.textContent = 'Semua Rute';
+      } else if (activeRoutes.length === 1) {
+        label.textContent = activeRoutes[0];
+      } else {
+        label.textContent = `${activeRoutes.length} Rute`; 
+      }
+    }
+
+    function syncRouteCheckboxes() {
+      document.querySelectorAll('input[data-route-toggle]').forEach(chk => {
+        const id = chk.dataset.routeToggle;
+        chk.checked = !!lineLayers.get(id)?.enabled;
+      });
+      updateRouteDropdownLabel();
+    }
+
+    function createRouteDropdownItems() {
+      const routeMenu = document.getElementById('halte-route-dropdown-menu');
+      if (!routeMenu) return;
+      routeMenu.querySelectorAll('.dropdown-item').forEach(item => item.remove());
+
+      lineLayerConfigs.forEach(config => {
+        const label = document.createElement('label');
+        label.className = 'dropdown-item';
+        label.setAttribute('role', 'menuitem');
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.dataset.routeToggle = config.id;
+
+        const colorDot = document.createElement('span');
+        colorDot.className = 'route-color';
+        colorDot.style.background = config.color;
+        if (config.id === 'brt-13' || config.id === 'brt-14') {
+          colorDot.style.border = '1.5px solid #00000010';
+        }
+
+        const textSpan = document.createElement('span');
+        textSpan.className = 'dropdown-item-label';
+        textSpan.textContent = config.name;
+
+        label.appendChild(checkbox);
+        label.appendChild(colorDot);
+        label.appendChild(textSpan);
+
+        routeMenu.appendChild(label);
+      });
+    }
+
+    function bindRouteDropdownControls() {
+      createRouteDropdownItems();
+
+      document.querySelectorAll('input[data-route-toggle]').forEach(chk => {
+        chk.addEventListener('change', async () => {
+          const id = chk.dataset.routeToggle;
+          const config = lineLayerConfigs.find(c => c.id === id);
+          if (!config) return;
+
+          let entry = lineLayers.get(id);
+          if (chk.checked) {
+            if (!entry) {
+              chk.disabled = true;
+              const allRoutesBtn = document.getElementById('halte-route-toggle-all');
+              allRoutesBtn?.classList.add('route-loading');
+              await loadLineLayer({ ...config, defaultEnabled: true });
+              chk.disabled = false;
+              allRoutesBtn?.classList.remove('route-loading');
+              entry = lineLayers.get(id);
+            }
+            if (entry && !entry.enabled) {
+              entry.layer.addTo(halteMap);
+              entry.enabled = true;
+              lineLayers.set(id, entry);
+            }
+          } else if (entry && entry.enabled) {
+            halteMap.removeLayer(entry.layer);
+            entry.enabled = false;
+            lineLayers.set(id, entry);
+          }
+
+          updateRouteDropdownLabel();
+          const allRoutesBtn = document.getElementById('halte-route-toggle-all');
+          const allActive = [...lineLayerConfigs].every(c => lineLayers.get(c.id)?.enabled);
+          allRoutesBtn?.classList.toggle('halte-filter-active', allActive);
+        });
+      });
+    }
+
+    bindRouteDropdownControls();
+    syncRouteCheckboxes();
+    updateStopDropdownLabel();
+    updateRouteDropdownLabel();
+
+    // "Show all routes" / "Hide all routes" toggle
+    const allRoutesBtn = document.getElementById('halte-route-toggle-all');
+    if (allRoutesBtn) {
+      allRoutesBtn.addEventListener('click', async () => {
+        const anyActive = [...lineLayers.values()].some(e => e.enabled);
+
+        if (anyActive) {
+          // Hide all loaded routes
+          lineLayers.forEach((entry, id) => {
+            if (entry.enabled) {
+              halteMap.removeLayer(entry.layer);
+              entry.enabled = false;
+              lineLayers.set(id, entry);
+            }
+          });
+          document.querySelectorAll('input[data-route-toggle]').forEach(chk => chk.checked = false);
+          allRoutesBtn.classList.remove('halte-filter-active');
+        } else {
+          // Load + show all routes
+          allRoutesBtn.classList.add('route-loading');
+          allRoutesBtn.disabled = true;
+          for (const config of lineLayerConfigs) {
+            let entry = lineLayers.get(config.id);
+            if (!entry) {
+              await loadLineLayer({ ...config, defaultEnabled: true });
+              entry = lineLayers.get(config.id);
+            }
+            if (entry && !entry.enabled) {
+              entry.layer.addTo(halteMap);
+              entry.enabled = true;
+              lineLayers.set(config.id, entry);
+            }
+          }
+          document.querySelectorAll('input[data-route-toggle]').forEach(chk => chk.checked = true);
+          allRoutesBtn.disabled = false;
+          allRoutesBtn.classList.remove('route-loading');
+          allRoutesBtn.classList.add('halte-filter-active');
+        }
+
+        updateRouteDropdownLabel();
+      });
+    }
   }
 
   // Update the visible count badge
