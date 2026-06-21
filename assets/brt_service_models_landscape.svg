@@ -318,7 +318,7 @@
 <polyline class="st30" points="180,299.2 447.7,299.2 447.7,271.7 579.6,271.7 "/>
 <polyline class="st31" points="32.4,271.5 161.9,271.5 161.9,294.6 379.8,294.6 379.8,343.9 579.6,343.9 "/>
 <polyline class="st32" points="432,308.4 209.6,308.4 209.6,341.1 32.4,341.1 "/>
-<text transform="matrix(1 0 0 1 188.6121 525.6416)" class="st12 st13 st4">Gabungan pola operasi direct service dan trunk-and-feeder</text>
+<text transform="matrix(1 0 0 1 188.6121 525.6416)" class="st12 st13 st4">Pola operasi direct service yang didukung dengan layanan pengumpan</text>
 <text transform="matrix(1 0 0 1 52.9208 464.7415)" class="st17 st13 st4">Rute Direct Service</text>
 <line class="st29" x1="32.4" y1="470.6" x2="579.6" y2="470.6"/>
 <polyline class="st30" points="180,465.7 447.7,465.7 447.7,438.2 579.6,438.2 "/>
