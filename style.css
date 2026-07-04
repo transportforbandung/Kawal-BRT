@@ -2576,6 +2576,41 @@ tr:nth-child(even) {
   font-weight: 600;
 }
 
+.stakeholder-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.stakeholder-contact-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stakeholder-contact-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+
+.stakeholder-contact-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+.stakeholder-contact-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* ── Updates ── */
 .updates-section {
   background: var(--white);
@@ -3602,6 +3637,12 @@ tr:nth-child(even) {
   position: relative;
 }
 
+.halte-map-shell #halte-map {
+  height: 520px;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
 .halte-map-fullscreen-btn {
   position: absolute;
   top: 12px;
@@ -3636,25 +3677,47 @@ tr:nth-child(even) {
 }
 
 .halte-map-shell:fullscreen {
-  padding: 12px;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
   background: #f7f3e8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .halte-map-shell:fullscreen #halte-map {
-  height: 100%;
+  height: 100% !important;
+  width: 100% !important;
   min-height: 0;
-  border-radius: 10px;
+  border-radius: 0;
+  border: none;
 }
 
 .halte-map-shell:-webkit-full-screen {
-  padding: 12px;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
   background: #f7f3e8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .halte-map-shell:-webkit-full-screen #halte-map {
-  height: 100%;
+  height: 100% !important;
+  width: 100% !important;
   min-height: 0;
-  border-radius: 10px;
+  border-radius: 0;
+  border: none;
 }
 
 @media (max-width: 640px) {
