@@ -111,6 +111,44 @@
 
   // ─── Map initialisation ───────────────────────────────────────────────────
 
+  function syncHalteMapFullscreenButton() {
+    const btn = document.getElementById('halte-map-fullscreen-btn');
+    if (!btn) return;
+
+    const isFullscreen = Boolean(document.fullscreenElement);
+    btn.classList.toggle('is-active', isFullscreen);
+    btn.setAttribute('aria-pressed', String(isFullscreen));
+    btn.setAttribute('aria-label', isFullscreen ? 'Tutup layar penuh' : 'Buka peta layar penuh');
+    const label = btn.querySelector('span');
+    if (label) {
+      label.textContent = isFullscreen ? 'Keluar layar penuh' : 'Layar penuh';
+    }
+  }
+
+  function bindHalteMapFullscreenControl() {
+    const btn = document.getElementById('halte-map-fullscreen-btn');
+    const shell = document.querySelector('.halte-map-shell');
+    if (!btn || !shell) return;
+
+    btn.addEventListener('click', event => {
+      event.preventDefault();
+      if (!document.fullscreenElement) {
+        shell.requestFullscreen?.();
+      } else {
+        document.exitFullscreen?.();
+      }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+      syncHalteMapFullscreenButton();
+      if (halteMap) {
+        setTimeout(() => halteMap.invalidateSize(), 80);
+      }
+    });
+
+    syncHalteMapFullscreenButton();
+  }
+
   function initHalteMap() {
     const el = document.getElementById(MAP_ID);
     if (!el) return;
@@ -134,6 +172,7 @@
 
     // Wire up filter controls once map is ready
     bindFilterControls();
+    bindHalteMapFullscreenControl();
   }
 
   // ─── GeoJSON fetch helper (cache-first) ───────────────────────────────────

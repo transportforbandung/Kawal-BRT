@@ -3598,6 +3598,65 @@ tr:nth-child(even) {
   }
 }
 
+.halte-map-shell {
+  position: relative;
+}
+
+.halte-map-fullscreen-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-dark);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.halte-map-fullscreen-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.16);
+}
+
+.halte-map-fullscreen-btn.is-active {
+  background: var(--accent-blue);
+  color: white;
+  border-color: transparent;
+}
+
+.halte-map-shell:fullscreen {
+  padding: 12px;
+  background: #f7f3e8;
+}
+
+.halte-map-shell:fullscreen #halte-map {
+  height: 100%;
+  min-height: 0;
+  border-radius: 10px;
+}
+
+.halte-map-shell:-webkit-full-screen {
+  padding: 12px;
+  background: #f7f3e8;
+}
+
+.halte-map-shell:-webkit-full-screen #halte-map {
+  height: 100%;
+  min-height: 0;
+  border-radius: 10px;
+}
+
 @media (max-width: 640px) {
   .platform-types-grid {
     grid-template-columns: 1fr;
