@@ -153,6 +153,14 @@
             <div class="tl-item">
               <div class="tl-dot done">&#10003;</div>
               <div class="tl-body">
+                <div class="tl-year">2017&ndash;2024</div>
+                <div class="tl-title">Cikal Bakal BRT &amp; SUTRINAMA-INDOBUS</div>
+                <div class="tl-desc">Program kerjasama multinasional SUTRINAMA-INDOBUS menyusun studi kelayakan dan pendampingan awal dalam pengembangan BRT Cekungan Bandung.</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot done">&#10003;</div>
+              <div class="tl-body">
                 <div class="tl-year">2022</div>
                 <div class="tl-title">Persetujuan Pendanaan Bank Dunia &amp; AFD</div>
                 <div class="tl-desc">Total USD 264 juta disetujui. Proyek resmi dimulai.</div>
@@ -163,8 +171,7 @@
               <div class="tl-body">
                 <div class="tl-year">2023&ndash;2026</div>
                 <div class="tl-title">Studi, Desain, DED &amp; Penetapan Rute</div>
-                <div class="tl-desc">Konsultan menetapkan jalur koridor, jenis lajur, lokasi halte, dan dokumen teknis
-                  terperinci.</div>
+                <div class="tl-desc">Konsultan menetapkan jalur koridor, jenis lajur, lokasi halte, dan dokumen teknis terperinci.</div>
               </div>
             </div>
             <div class="tl-item">
@@ -394,9 +401,33 @@
           </div>
         </div>
 
+        <div class="features-list off">
+          <h4>Gambar Rencana Halte <span class="italic-term">On-Corridor</span></h4>
+          <div class="plaform-types-grid">
+            <div class="stop-ph-cards">
+              <div class="stop-ph-card">
+                <div class="stop-ph-img">
+                  <img src="/assets/oncorridor-medium-double.png"
+                      alt="Jenis halte on-corridor dengan tipe medium double"
+                      loading="lazy" decoding="async" style="max-width: 100%;">
+                </div>
+                <div class="stop-ph-desc">Halte <i>on-corridor</i> ukuran <i>medium double</i> yang terletak di sisi jalan.</div>
+              </div>
+              <div class="stop-ph-card">
+                <div class="stop-ph-img">
+                  <img src="/assets/oncorridor-type-c-render.png"
+                      alt="Tipe perhentian on-corridor tipe c, dengan halte di tengah"
+                      loading="lazy" decoding="async" style="max-width: 100%;">
+                </div>
+                <div class="stop-ph-desc">Halte <i>on-corridor</i> tipe c yang terletak di tengah jalan.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Platform types A-F -->
         <div class="platform-types-wrap">
-          <div class="platform-types-header">6 Tipe Halte On-Corridor &mdash; berdasarkan DED MASTRAN
+          <div class="platform-types-header">6 Tipe Halte On-Corridor Berdasarkan Posisinya &mdash; berdasarkan DED MASTRAN
             (Dohwa&ndash;Lenggogeni, 2024)</div>
           <div class="platform-types-grid">
 
@@ -937,204 +968,6 @@
     </div>
   </section>
 
-  <!-- STOP MAP -->
-  <div class="container" id="Peta-Perhentian">
-    <div class="section-label">Peta Sebaran Halte</div>
-    <h2 class="section-title">Sebaran Lokasi Perhentian <span class="italic-term">On-Corridor</span>, <span
-        class="italic-term">Off-Corridor</span>, dan <span class="italic-term">End Station</span></h2>
-
-    <p style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:24px;">
-      Peta di bawah menampilkan 780 titik perhentian <span class="italic-term">on-corridor</span>, <span
-        class="italic-term">off-corridor</span>, dan <span class="italic-term">end-station</span> yang direncanakan
-      di seluruh Kawasan Metropolitan Cekungan Bandung, berdasarkan dokumen LARAP BBMA BRT. Klik titik mana saja
-      untuk melihat nama, jenis, dan wilayah administratifnya.
-    </p>
-
-    <!-- Filter bar -->
-    <div class="halte-map-filters" style="
-          display: flex;
-          flex-direction: column;
-          gap: 0;
-          margin-bottom: 14px;
-          background: var(--warm-stone);
-          border: 1px solid var(--border-light);
-          border-radius: 10px;
-          overflow: visible;
-        ">
-
-      <!-- Row 1: top-level filters + wilayah + count -->
-      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 18px;">
-        <span
-          style="font-size:12px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Filter:</span>
-        <button id="halte-filter-semua" class="halte-filter-btn">Semua</button>
-        <button id="halte-priority-2026" class="halte-filter-btn">
-          &#9733; Prioritas 2026
-        </button>
-        <button id="halte-toggle-haltes" class="halte-filter-btn">Sembunyikan Halte</button>
-        <div style="flex:1;min-width:8px;"></div>
-        <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-          <label for="halte-wilayah-filter"
-            style="font-size:12px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Wilayah:</label>
-          <select id="halte-wilayah-filter" style="
-                font-size:12px;
-                font-family:inherit;
-                padding:5px 10px;
-                border:1px solid var(--border-light);
-                border-radius:6px;
-                background:white;
-                color:var(--text-dark);
-                cursor:pointer;
-              ">
-            <option value="">Semua Wilayah</option>
-            <option value="Kota Bandung">Kota Bandung</option>
-            <option value="Kab Bandung">Kab Bandung</option>
-            <option value="Kab Bandung Barat">Kab Bandung Barat</option>
-            <option value="Kota Cimahi">Kota Cimahi</option>
-            <option value="Kab Sumedang">Kab Sumedang</option>
-          </select>
-        </div>
-        <span id="halte-filter-count"
-          style="font-size:12px;color:var(--text-soft);white-space:nowrap;padding:4px 10px;background:white;border:1px solid var(--border-light);border-radius:20px;">
-          780 perhentian ditampilkan
-        </span>
-      </div>
-
-      <!-- Divider -->
-      <div style="border-top:1px solid var(--border-light);"></div>
-
-      <!-- Row 2: Filter dropdowns -->
-      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 18px;">
-        <div class="halte-filter-dropdown nav-dropdown" id="halte-stop-filter-dropdown">
-          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-            <span>Halte</span>
-            <span class="filter-dropdown-state" id="halte-stop-dropdown-label">Semua Halte</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
-          <div class="nav-dropdown-menu" role="menu" id="halte-stop-dropdown-menu">
-            <div class="dropdown-group">
-              <div class="dropdown-group-heading">On-Corridor</div>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="On-Corridor Type A">
-                <span class="route-color" style="background:#D82B00"></span>
-                Type A <span class="dropdown-item-count">(23)</span>
-              </label>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="On-Corridor Type B">
-                <span class="route-color" style="background:#007A3D"></span>
-                Type B <span class="dropdown-item-count">(1)</span>
-              </label>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="On-Corridor Type C">
-                <span class="route-color" style="background:#B8860B"></span>
-                Type C <span class="dropdown-item-count">(2)</span>
-              </label>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="On-Corridor Type D">
-                <span class="route-color" style="background:#6A5ACD"></span>
-                Type D <span class="dropdown-item-count">(8)</span>
-              </label>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="On-Corridor Type E">
-                <span class="route-color" style="background:#8B0000"></span>
-                Type E <span class="dropdown-item-count">(1)</span>
-              </label>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="On-Corridor Type F">
-                <span class="route-color" style="background:#2F4F4F"></span>
-                Type F <span class="dropdown-item-count">(3)</span>
-              </label>
-            </div>
-            <div class="dropdown-group">
-              <div class="dropdown-group-heading">Off-Corridor</div>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="Bus Pole">
-                <span class="route-color" style="background:#00568E"></span>
-                Bus Pole <span class="dropdown-item-count">(501)</span>
-              </label>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="Small Shelter">
-                <span class="route-color" style="background:#00A651"></span>
-                Small Shelter <span class="dropdown-item-count">(209)</span>
-              </label>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="Big Shelter">
-                <span class="route-color" style="background:#FFCA0A;border:1.5px solid #B8860B"></span>
-                Big Shelter <span class="dropdown-item-count">(9)</span>
-              </label>
-              <label class="dropdown-item">
-                <input type="checkbox" data-halte-type-filter="End-Station">
-                <span class="route-color" style="background:#addd00"></span>
-                End Station <span class="dropdown-item-count">(23)</span>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="halte-filter-dropdown nav-dropdown" id="halte-route-filter-dropdown">
-          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-            <span>Rute</span>
-            <span class="filter-dropdown-state" id="halte-route-dropdown-label">Semua Rute</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
-          <div class="nav-dropdown-menu" role="menu" id="halte-route-dropdown-menu">
-            <button type="button" id="halte-route-toggle-all" class="dropdown-menu-action">Semua Rute</button>
-            <div class="dropdown-menu-divider"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Map container -->
-    <div class="halte-map-shell">
-      <button type="button" id="halte-map-fullscreen-btn" class="halte-map-fullscreen-btn"
-        aria-label="Buka peta layar penuh" title="Layar penuh">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M8 3H3v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M16 3h5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M8 21H3v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M16 21h5v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span>Layar penuh</span>
-      </button>
-      <div id="halte-map" style="
-            width: 100%;
-            height: 520px;
-            border-radius: 12px;
-            border: 1px solid var(--border-light);
-            overflow: hidden;
-            background: #E8E3D8;
-            position: relative;
-            z-index: 0;
-          "></div>
-    </div>
-
-    <!-- Legend & caption -->
-    <div style="
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          flex-wrap: wrap;
-          gap: 12px;
-          margin-top: 12px;
-        ">
-      <p style="font-size:12px;color:var(--text-soft);margin:0;font-style:italic;">
-        Sumber: Data titik perhentian merupakan informasi resmi dan terbuka yang diterbitkan dalam dokumen LARAP
-        <i>Off-Corridor</i> BBMA BRT (Dohwa&ndash;Lenggogeni, Maret 2025) dan diolah oleh Transport for Bandung supaya
-        dapat digunakan dalam visualisasi peta. Data rute BRT bersumber dari dokumen ESIA (Kemenhub, 2025) dan LARAP
-        <i>Off-Corridor</i> yang dibuat ulang oleh Transport for Bandung menggunakan data jaringan jalan OpenStreetMap.
-        Data rute dapat memiliki kesalahan karena terbatasnya akses informasi &middot; Peta dasar: &copy; OpenStreetMap
-        Contributors
-      </p>
-    </div>
-  </div>
-
   <!-- ROUTES -->
   <section class="routes-section" id="Rute">
     <div class="container">
@@ -1488,6 +1321,204 @@
       </div>
     </div>
   </section>
+
+  <!-- STOP MAP -->
+  <div class="container" id="Peta-Perhentian">
+    <div class="section-label">Peta Sebaran Halte</div>
+    <h2 class="section-title">Sebaran Lokasi Perhentian <span class="italic-term">On-Corridor</span>, <span
+        class="italic-term">Off-Corridor</span>, dan <span class="italic-term">End Station</span></h2>
+
+    <p style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:24px;">
+      Peta di bawah menampilkan 780 titik perhentian <span class="italic-term">on-corridor</span>, <span
+        class="italic-term">off-corridor</span>, dan <span class="italic-term">end-station</span> yang direncanakan
+      di seluruh Kawasan Metropolitan Cekungan Bandung, berdasarkan dokumen LARAP BBMA BRT. Klik titik mana saja
+      untuk melihat nama, jenis, dan wilayah administratifnya.
+    </p>
+
+    <!-- Filter bar -->
+    <div class="halte-map-filters" style="
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          margin-bottom: 14px;
+          background: var(--warm-stone);
+          border: 1px solid var(--border-light);
+          border-radius: 10px;
+          overflow: visible;
+        ">
+
+      <!-- Row 1: top-level filters + wilayah + count -->
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 18px;">
+        <span
+          style="font-size:12px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Filter:</span>
+        <button id="halte-filter-semua" class="halte-filter-btn">Semua</button>
+        <button id="halte-priority-2026" class="halte-filter-btn">
+          &#9733; Prioritas 2026
+        </button>
+        <button id="halte-toggle-haltes" class="halte-filter-btn">Sembunyikan Halte</button>
+        <div style="flex:1;min-width:8px;"></div>
+        <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+          <label for="halte-wilayah-filter"
+            style="font-size:12px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Wilayah:</label>
+          <select id="halte-wilayah-filter" style="
+                font-size:12px;
+                font-family:inherit;
+                padding:5px 10px;
+                border:1px solid var(--border-light);
+                border-radius:6px;
+                background:white;
+                color:var(--text-dark);
+                cursor:pointer;
+              ">
+            <option value="">Semua Wilayah</option>
+            <option value="Kota Bandung">Kota Bandung</option>
+            <option value="Kab Bandung">Kab Bandung</option>
+            <option value="Kab Bandung Barat">Kab Bandung Barat</option>
+            <option value="Kota Cimahi">Kota Cimahi</option>
+            <option value="Kab Sumedang">Kab Sumedang</option>
+          </select>
+        </div>
+        <span id="halte-filter-count"
+          style="font-size:12px;color:var(--text-soft);white-space:nowrap;padding:4px 10px;background:white;border:1px solid var(--border-light);border-radius:20px;">
+          780 perhentian ditampilkan
+        </span>
+      </div>
+
+      <!-- Divider -->
+      <div style="border-top:1px solid var(--border-light);"></div>
+
+      <!-- Row 2: Filter dropdowns -->
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 18px;">
+        <div class="halte-filter-dropdown nav-dropdown" id="halte-stop-filter-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Halte</span>
+            <span class="filter-dropdown-state" id="halte-stop-dropdown-label">Semua Halte</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu" id="halte-stop-dropdown-menu">
+            <div class="dropdown-group">
+              <div class="dropdown-group-heading">On-Corridor</div>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="On-Corridor Type A">
+                <span class="route-color" style="background:#D82B00"></span>
+                Type A <span class="dropdown-item-count">(23)</span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="On-Corridor Type B">
+                <span class="route-color" style="background:#007A3D"></span>
+                Type B <span class="dropdown-item-count">(1)</span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="On-Corridor Type C">
+                <span class="route-color" style="background:#B8860B"></span>
+                Type C <span class="dropdown-item-count">(2)</span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="On-Corridor Type D">
+                <span class="route-color" style="background:#6A5ACD"></span>
+                Type D <span class="dropdown-item-count">(8)</span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="On-Corridor Type E">
+                <span class="route-color" style="background:#8B0000"></span>
+                Type E <span class="dropdown-item-count">(1)</span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="On-Corridor Type F">
+                <span class="route-color" style="background:#2F4F4F"></span>
+                Type F <span class="dropdown-item-count">(3)</span>
+              </label>
+            </div>
+            <div class="dropdown-group">
+              <div class="dropdown-group-heading">Off-Corridor</div>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="Bus Pole">
+                <span class="route-color" style="background:#00568E"></span>
+                Bus Pole <span class="dropdown-item-count">(501)</span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="Small Shelter">
+                <span class="route-color" style="background:#00A651"></span>
+                Small Shelter <span class="dropdown-item-count">(209)</span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="Big Shelter">
+                <span class="route-color" style="background:#FFCA0A;border:1.5px solid #B8860B"></span>
+                Big Shelter <span class="dropdown-item-count">(9)</span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" data-halte-type-filter="End-Station">
+                <span class="route-color" style="background:#addd00"></span>
+                End Station <span class="dropdown-item-count">(23)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="halte-filter-dropdown nav-dropdown" id="halte-route-filter-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Rute</span>
+            <span class="filter-dropdown-state" id="halte-route-dropdown-label">Semua Rute</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu" id="halte-route-dropdown-menu">
+            <button type="button" id="halte-route-toggle-all" class="dropdown-menu-action">Semua Rute</button>
+            <div class="dropdown-menu-divider"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Map container -->
+    <div class="halte-map-shell">
+      <button type="button" id="halte-map-fullscreen-btn" class="halte-map-fullscreen-btn"
+        aria-label="Buka peta layar penuh" title="Layar penuh">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M8 3H3v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M16 3h5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M8 21H3v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M16 21h5v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Layar penuh</span>
+      </button>
+      <div id="halte-map" style="
+            width: 100%;
+            height: 520px;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            background: #E8E3D8;
+            position: relative;
+            z-index: 0;
+          "></div>
+    </div>
+
+    <!-- Legend & caption -->
+    <div style="
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-top: 12px;
+        ">
+      <p style="font-size:12px;color:var(--text-soft);margin:0;font-style:italic;">
+        Sumber: Data titik perhentian merupakan informasi resmi dan terbuka yang diterbitkan dalam dokumen LARAP
+        <i>Off-Corridor</i> BBMA BRT (Dohwa&ndash;Lenggogeni, Maret 2025) dan diolah oleh Transport for Bandung supaya
+        dapat digunakan dalam visualisasi peta. Data rute BRT bersumber dari dokumen ESIA (Kemenhub, 2025) dan LARAP
+        <i>Off-Corridor</i> yang dibuat ulang oleh Transport for Bandung menggunakan data jaringan jalan OpenStreetMap.
+        Data rute dapat memiliki kesalahan karena terbatasnya akses informasi &middot; Peta dasar: &copy; OpenStreetMap
+        Contributors
+      </p>
+    </div>
+  </div>
 
   <!-- BUS SPECS -->
   <section class="busspec-section" id="Spesifikasi-Bus">
