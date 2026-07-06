@@ -376,6 +376,10 @@ nav {
   width: 100%;
   min-width: 260px;
   box-sizing: border-box;
+  max-height: min(320px, calc(100vh - 140px));
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
 }
 
 .halte-filter-dropdown .nav-dropdown-menu label {
