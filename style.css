@@ -2007,6 +2007,10 @@ tr:nth-child(even) {
   color: var(--text-mid);
 }
 
+.map-section {
+  background: var(--warm-cream);
+}
+
 .halte-filter-btn {
   background: white;
   border: 1px solid var(--border-light);
