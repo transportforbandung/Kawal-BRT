@@ -1273,7 +1273,7 @@ footer {
 /* Service Model */
 /* ── Service Model Section ── */
 .service-section {
-  background: var(--warm-cream);
+  background: var(--white);
 }
 
 .service-model-cards {
@@ -1320,7 +1320,7 @@ footer {
 
 /* ── Scope ── */
 .scope-section {
-  background: var(--white);
+  background: var(--warm-cream);
 }
 
 .service-model-box {
@@ -1808,7 +1808,7 @@ tr:nth-child(even) {
 
 /* ── Bus specs ── */
 .busspec-section {
-  background: var(--warm-cream);
+  background: var(--white);
 }
 
 .busspec-grid {
@@ -2483,7 +2483,7 @@ tr:nth-child(even) {
 
 /* ── FAQ ── */
 .faq-section {
-  background: var(--white);
+  background: var(--warm-cream);
 }
 
 .faq-layout {
