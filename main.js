@@ -60,6 +60,40 @@ function initNav() {
     });
   });
 
+  /* Keep mobile drawer open for same-page anchor links, but close for cross-page links */
+  document.querySelectorAll('.nav-mobile a[href*="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      const url = new URL(href, location.href);
+      const normalize = p => p.replace(/index\.html$/, '');
+      // same origin and same normalized pathname → fragment navigation on same page
+      if (url.origin === location.origin && normalize(url.pathname) === normalize(location.pathname)) {
+        e.preventDefault();
+        const id = url.hash.replace('#', '');
+        if (id) {
+          const target = document.getElementById(id) || document.querySelector(`[name="${id}"]`);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        // update hash without reloading
+        history.replaceState(null, '', url.hash || '#');
+        // keep drawer open and preserve body overflow state
+        if (mobileNav.classList.contains('open')) document.body.style.overflow = 'hidden';
+      } else {
+        // navigating to a different page — close the mobile drawer to allow navigation
+        mobileNav.classList.remove('open');
+        if (hamburger) {
+          hamburger.setAttribute('aria-expanded', false);
+          hamburger.querySelector('.icon-menu').style.display  = 'block';
+          hamburger.querySelector('.icon-close').style.display = 'none';
+        }
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
   /* ── Desktop dropdown ── */
   document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
     const toggle = dropdown.querySelector('.nav-dropdown-toggle');
