@@ -58,41 +58,41 @@
   // Each route has two directions (A→B and B→A) loaded as separate KML files.
   // Format: 'kmlFiles' is an array of KML paths to merge into a single layer.
   const lineLayerConfigs = [
-    { id: 'brt-01', name: 'BRT 01: Cibiru–Kalapa', color: '#E63946', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-01', name: 'BRT 01: Cibiru–Kalapa', color: '#734D29', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 01_ Cibiru → Kalapa.kml', 'dataset/BRT-Route/BRT 01_ Kalapa → Cibiru.kml'] },
-    { id: 'brt-02', name: 'BRT 02: Lembang–Kalapa', color: '#457B9D', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-02', name: 'BRT 02: Lembang–Kalapa', color: '#287518', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 02_ Kalapa → Lembang.kml', 'dataset/BRT-Route/BRT 02_ Lembang → Kalapa.kml'] },
-    { id: 'brt-03', name: 'BRT 03: Leuwipanjang–Dago via Dipatiukur', color: '#2A9D8F', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-03', name: 'BRT 03: Leuwipanjang–Dago via Dipatiukur', color: '#2E3192', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 03_ Dago → Dipatiukur → Leuwipanjang.kml', 'dataset/BRT-Route/BRT 03_ Leuwipanjang → Dipatiukur → Dago.kml'] },
-    { id: 'brt-04', name: 'BRT 04: Elang–Riau', color: '#E9C46A', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-04', name: 'BRT 04: Elang–Riau', color: '#BCCF83', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 04_ Elang → Riau.kml', 'dataset/BRT-Route/BRT 04_ Riau → Elang.kml'] },
-    { id: 'brt-05', name: 'BRT 05: Ciroyom–Antapani–Pajajaran', color: '#F4A261', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-05', name: 'BRT 05: Ciroyom–Antapani–Pajajaran', color: '#C9A15C', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 05_ Antapani → Pajajaran → Ciroyom.kml', 'dataset/BRT-Route/BRT 05_ Ciroyom → Pajajaran → Antapani.kml'] },
-    { id: 'brt-06', name: 'BRT 06: Cibaduyut–Leuwipanjang–Dago', color: '#264653', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-06', name: 'BRT 06: Cibaduyut–Leuwipanjang–Dago', color: '#4246C3', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 06_ Cibaduyut → Leuwipanjang → Dago.kml', 'dataset/BRT-Route/BRT 06_ Dago → Leuwipanjang → Cibaduyut.kml'] },
-    { id: 'brt-07', name: 'BRT 07: Padalarang–Alun-alun Bandung', color: '#6A4C93', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-07', name: 'BRT 07: Padalarang–Alun-alun Bandung', color: '#B61B24', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 07_ Alun-alun Bandung → Padalarang.kml', 'dataset/BRT-Route/BRT 07_ Padalarang → Alun-alun Bandung.kml'] },
-    { id: 'brt-08', name: 'BRT 08: Cimahi–Cicaheum', color: '#1982C4', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-08', name: 'BRT 08: Cimahi–Cicaheum', color: '#DC2833', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 08_ Cicaheum → Cimahi.kml', 'dataset/BRT-Route/BRT 08_ Cimahi → Cicaheum.kml'] },
-    { id: 'brt-09', name: 'BRT 09: Ledeng–Antapani', color: '#8AC926', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-09', name: 'BRT 09: Ledeng–Antapani', color: '#1B6FA8', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 09_ Antapani → Ledeng.kml', 'dataset/BRT-Route/BRT 09_ Ledeng → Antapani.kml'] },
-    { id: 'brt-10', name: 'BRT 10: Cicaheum–Kalapa via Binong', color: '#FF595E', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-10', name: 'BRT 10: Cicaheum–Kalapa via Binong', color: '#9BC02C', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 10_ Cicaheum → Kalapa.kml', 'dataset/BRT-Route/BRT 10_ Kalapa → Cicaheum.kml'] },
-    { id: 'brt-11', name: 'BRT 11: Tegalluar–Stasiun Hall', color: '#6A0572', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-11', name: 'BRT 11: Tegalluar–Stasiun Hall', color: '#915C87', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 11_ Stasiun Hall → Tegalluar.kml', 'dataset/BRT-Route/BRT 11_ Tegalluar → Stasiun Hall.kml'] },
-    { id: 'brt-12', name: 'BRT 12: Soreang–Terminal Tegallega', color: '#B5838D', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-12', name: 'BRT 12: Soreang–Terminal Tegallega', color: '#009246', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 12_ Soreang → Terminal Tegallega.kml', 'dataset/BRT-Route/BRT 12_ Terminal Tegallega → Soreang.kml'] },
-    { id: 'brt-13', name: 'BRT 13: Jatinangor–Elang', color: '#FF6B35', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-13', name: 'BRT 13: Jatinangor–Elang', color: '#C51CA4', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 13_ Elang → Jatinangor.kml', 'dataset/BRT-Route/BRT 13_ Jatinangor → Elang.kml'] },
-    { id: 'brt-14', name: 'BRT 14: Majalaya–Baleendah–Leuwipanjang', color: '#004E89', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-14', name: 'BRT 14: Majalaya–Baleendah–Leuwipanjang', color: '#ED3B10', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 14_ Leuwipanjang → Baleendah → Majalaya.kml', 'dataset/BRT-Route/BRT 14_ Majalaya → Baleendah → Leuwipanjang.kml'] },
-    { id: 'brt-15', name: 'BRT 15: Banjaran–Baleendah–BEC', color: '#00A676', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-15', name: 'BRT 15: Banjaran–Baleendah–BEC', color: '#562B63', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 15_ BEC → Baleendah → Banjaran.kml', 'dataset/BRT-Route/BRT 15_ Banjaran → Baleendah → BEC.kml'] },
-    { id: 'brt-16', name: 'BRT 16: Sarijadi–Antapani', color: '#D62828', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-16', name: 'BRT 16: Sarijadi–Antapani', color: '#5BB8C2', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 16_ Antapani → Sarijadi.kml', 'dataset/BRT-Route/BRT 16_ Sarijadi → Antapani.kml'] },
-    { id: 'brt-17', name: 'BRT 17: Cicaheum–Sarijadi', color: '#3A86FF', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-17', name: 'BRT 17: Cicaheum–Sarijadi', color: '#8A6849', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 17_ Cicaheum → Sarijadi.kml', 'dataset/BRT-Route/BRT 17_ Sarijadi → Cicaheum.kml'] },
-    { id: 'brt-18', name: 'BRT 18: Jatinangor–Dipatiukur', color: '#9B5DE5', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+    { id: 'brt-18', name: 'BRT 18: Jatinangor–Dipatiukur', color: '#A9188C', weight: 3.5, opacity: 0.85, defaultEnabled: false,
       kmlFiles: ['dataset/BRT-Route/BRT 18_ Dipatiukur → Jatinangor.kml', 'dataset/BRT-Route/BRT 18_ Jatinangor → Dipatiukur.kml'] },
   ];
 
@@ -174,7 +174,49 @@
     bindFilterControls();
     bindHalteMapFullscreenControl();
   }
+  function isMobileViewport() {
+    return window.matchMedia('(max-width: 900px)').matches;
+  }
 
+  function buildInteractivePointLayer(feature, config) {
+    const type = feature.properties?.Type || '';
+    const style = config.typeStyles?.[type] ?? config.fallbackStyle;
+    const visible = L.circleMarker(feature.geometry.coordinates ? [feature.geometry.coordinates[1], feature.geometry.coordinates[0]] : null, {
+      ...style,
+      interactive: false,
+    });
+
+    const hitRadius = isMobileViewport() ? Math.max(style.radius + 8, 12) : Math.max(style.radius + 4, style.radius + 6);
+    const hitArea = L.circleMarker(feature.geometry.coordinates ? [feature.geometry.coordinates[1], feature.geometry.coordinates[0]] : null, {
+      radius: hitRadius,
+      color: 'transparent',
+      fillColor: 'transparent',
+      opacity: 0,
+      fillOpacity: 0,
+      interactive: true,
+    });
+
+    const group = L.layerGroup([hitArea, visible]);
+    return { group, hitArea, visible };
+  }
+
+  function buildInteractiveLineLayer(coords, visibleStyle) {
+    const visibleLine = L.polyline(coords, {
+      ...visibleStyle,
+      interactive: false,
+    });
+
+    const hitWeight = isMobileViewport() ? visibleStyle.weight + 10 : visibleStyle.weight + 6;
+    const hitLine = L.polyline(coords, {
+      color: '#000000',
+      opacity: 0,
+      weight: hitWeight,
+      interactive: true,
+    });
+
+    const group = L.layerGroup([hitLine, visibleLine]);
+    return { group, hitLine, visibleLine };
+  }
   // ─── GeoJSON fetch helper (cache-first) ───────────────────────────────────
 
   async function fetchGeoJSON(filePath) {
@@ -224,17 +266,19 @@
 
     const layer = L.geoJSON(data, {
       pointToLayer: (feature, latlng) => {
-        const type = feature.properties?.Type || '';
-        const style = config.typeStyles?.[type] ?? config.fallbackStyle;
-        return L.circleMarker(latlng, style);
+        const interactive = buildInteractivePointLayer(feature, config, latlng);
+        return interactive.group;
       },
-      onEachFeature: (feature, marker) => {
+      onEachFeature: (feature, layerGroup) => {
         const p = feature.properties || {};
-        marker.bindPopup(buildPointPopup(p), {
-          maxWidth: 280,
-          minWidth: 200,
-          className: 'halte-popup',
-        });
+        const hitArea = layerGroup.getLayers()[0];
+        if (hitArea) {
+          hitArea.bindPopup(buildPointPopup(p), {
+            maxWidth: 280,
+            minWidth: 200,
+            className: 'halte-popup',
+          });
+        }
       },
       // Filter applied at render time
       filter: feature => featurePassesFilter(feature),
@@ -297,8 +341,8 @@
     for (const kmlPath of config.kmlFiles) {
       const polylines = await fetchKML(kmlPath);
       polylines.forEach(coords => {
-        const line = L.polyline(coords, lineStyle);
-        line.bindPopup(
+        const interactive = buildInteractiveLineLayer(coords, lineStyle);
+        interactive.hitLine.bindPopup(
           `<div class="halte-popup-inner">
             <div class="halte-popup-header">
               <span class="halte-popup-type-badge" style="background:${config.color}">Rute</span>
@@ -307,7 +351,7 @@
           </div>`,
           { maxWidth: 260, minWidth: 180, className: 'halte-popup' }
         );
-        line.addTo(group);
+        interactive.group.addTo(group);
       });
     }
     return group;
@@ -317,10 +361,35 @@
     const data = await fetchGeoJSON(config.filePath);
     const group = L.layerGroup();
     data.features.forEach(f => {
-      if (f.geometry?.type === 'LineString' || f.geometry?.type === 'MultiLineString') {
-        L.geoJSON(f, {
-          style: { color: config.color || '#00568E', weight: config.weight || 4, opacity: config.opacity || 0.85 }
-        }).addTo(group);
+      if (!f.geometry) return;
+      const style = { color: config.color || '#00568E', weight: config.weight || 4, opacity: config.opacity || 0.85 };
+
+      if (f.geometry.type === 'LineString') {
+        const interactive = buildInteractiveLineLayer(f.geometry.coordinates.map(c => [c[1], c[0]]), style);
+        interactive.hitLine.bindPopup(
+          `<div class="halte-popup-inner">
+              <div class="halte-popup-header">
+                <span class="halte-popup-type-badge" style="background:${config.color}">Rute</span>
+                <div class="halte-popup-name">${config.name}</div>
+              </div>
+            </div>`,
+          { maxWidth: 260, minWidth: 180, className: 'halte-popup' }
+        );
+        interactive.group.addTo(group);
+      } else if (f.geometry.type === 'MultiLineString') {
+        f.geometry.coordinates.forEach(coords => {
+          const interactive = buildInteractiveLineLayer(coords.map(c => [c[1], c[0]]), style);
+          interactive.hitLine.bindPopup(
+            `<div class="halte-popup-inner">
+                <div class="halte-popup-header">
+                  <span class="halte-popup-type-badge" style="background:${config.color}">Rute</span>
+                  <div class="halte-popup-name">${config.name}</div>
+                </div>
+              </div>`,
+            { maxWidth: 260, minWidth: 180, className: 'halte-popup' }
+          );
+          interactive.group.addTo(group);
+        });
       }
     });
     return group;
@@ -335,10 +404,19 @@
     const group = L.layerGroup();
     data.elements.forEach(el => {
       if (el.type === 'way' && el.geometry) {
-        L.polyline(
-          el.geometry.map(p => [p.lat, p.lon]),
-          { color: config.color || '#00568E', weight: config.weight || 4, opacity: config.opacity || 0.85 }
-        ).addTo(group);
+        const coords = el.geometry.map(p => [p.lat, p.lon]);
+        const style = { color: config.color || '#00568E', weight: config.weight || 4, opacity: config.opacity || 0.85 };
+        const interactive = buildInteractiveLineLayer(coords, style);
+        interactive.hitLine.bindPopup(
+          `<div class="halte-popup-inner">
+              <div class="halte-popup-header">
+                <span class="halte-popup-type-badge" style="background:${config.color}">Rute</span>
+                <div class="halte-popup-name">${config.name}</div>
+              </div>
+            </div>`,
+          { maxWidth: 260, minWidth: 180, className: 'halte-popup' }
+        );
+        interactive.group.addTo(group);
       }
     });
     return group;
@@ -406,17 +484,22 @@
         if (!enabled) return;
         halteMap.removeLayer(layer);
 
-        // Rebuild with new filter
+        // Rebuild with new filter and larger interactive hit area
         const newLayer = L.geoJSON(dataCache.get(config.filePath), {
           pointToLayer: (feature, latlng) => {
-            const type = feature.properties?.Type || '';
-            const style = config.typeStyles?.[type] ?? config.fallbackStyle;
-            return L.circleMarker(latlng, style);
+            const interactive = buildInteractivePointLayer(feature, config, latlng);
+            return interactive.group;
           },
-          onEachFeature: (feature, marker) => {
-            marker.bindPopup(buildPointPopup(feature.properties || {}), {
-              maxWidth: 280, minWidth: 200, className: 'halte-popup',
-            });
+          onEachFeature: (feature, layerGroup) => {
+            const p = feature.properties || {};
+            const hitArea = layerGroup.getLayers()[0];
+            if (hitArea) {
+              hitArea.bindPopup(buildPointPopup(p), {
+                maxWidth: 280,
+                minWidth: 200,
+                className: 'halte-popup',
+              });
+            }
           },
           filter: f => featurePassesFilter(f),
         });
