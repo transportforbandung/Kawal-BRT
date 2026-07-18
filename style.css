@@ -2608,6 +2608,14 @@ tr:nth-child(even) {
   color: white;
 }
 
+.stakeholder-contact-description {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px !important;
+  opacity: 0.95 !important;
+  margin-bottom: 0px !important;
+}
+
 .stakeholder-contact-link {
   color: #fff;
   text-decoration: none;
