@@ -1,0 +1,163 @@
+Archived interactive map blocks for Kawal BRT
+=========================================
+
+1) HTML block to restore the interactive map section in index.html
+
+<section class="map-section" id="Peta">
+  <div class="container">
+    <div class="section-label">Peta Rute dan Sebaran Halte</div>
+    <h2 class="section-title">Peta Rute Bus, Lokasi Perhentian <span class="italic-term">On-Corridor</span>, <span
+        class="italic-term">Off-Corridor</span>, dan <span class="italic-term">End Station</span></h2>
+
+    <p style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:24px;">
+      Peta di bawah menampilkan 780 titik perhentian <span class="italic-term">on-corridor</span>, <span
+        class="italic-term">off-corridor</span>, dan <span class="italic-term">end-station</span> yang direncanakan
+      di seluruh Kawasan Metropolitan Cekungan Bandung, berdasarkan dokumen LARAP BBMA BRT. Klik titik perhentian mana
+      saja untuk melihat nama, jenis, dan wilayah administratifnya. Peta ini juga menampilkan rute BRT yang direncanakan.
+    </p>
+
+    <div class="halte-map-filters" style="
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 14px;
+        background: var(--warm-stone);
+        border: 1px solid var(--border-light);
+        border-radius: 10px;
+        overflow: visible;
+      ">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 18px;">
+        <span style="font-size:12px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Filter:</span>
+        <button id="halte-filter-semua" class="halte-filter-btn">Semua</button>
+        <button id="halte-priority-2026" class="halte-filter-btn">&#9733; Prioritas 2026</button>
+        <button id="halte-toggle-haltes" class="halte-filter-btn">Sembunyikan Halte</button>
+        <div style="flex:1;min-width:8px;"></div>
+        <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+          <label for="halte-wilayah-filter" style="font-size:12px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;">Wilayah:</label>
+          <select id="halte-wilayah-filter" style="font-size:12px;font-family:inherit;padding:5px 10px;border:1px solid var(--border-light);border-radius:6px;background:white;color:var(--text-dark);cursor:pointer;">
+            <option value="">Semua Wilayah</option>
+            <option value="Kota Bandung">Kota Bandung</option>
+            <option value="Kab Bandung">Kab Bandung</option>
+            <option value="Kab Bandung Barat">Kab Bandung Barat</option>
+            <option value="Kota Cimahi">Kota Cimahi</option>
+            <option value="Kab Sumedang">Kab Sumedang</option>
+          </select>
+        </div>
+        <span id="halte-filter-count" style="font-size:12px;color:var(--text-soft);white-space:nowrap;padding:4px 10px;background:white;border:1px solid var(--border-light);border-radius:20px;">780 perhentian ditampilkan</span>
+      </div>
+      <div style="border-top:1px solid var(--border-light);"></div>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 18px;">
+        <div class="halte-filter-dropdown nav-dropdown" id="halte-stop-filter-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Halte</span>
+            <span class="filter-dropdown-state" id="halte-stop-dropdown-label">Semua Halte</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu" id="halte-stop-dropdown-menu">
+            <div class="dropdown-group">
+              <div class="dropdown-group-heading">On-Corridor</div>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="On-Corridor Type A"><span class="route-color" style="background:#D82B00"></span>Type A <span class="dropdown-item-count">(23)</span></label>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="On-Corridor Type B"><span class="route-color" style="background:#007A3D"></span>Type B <span class="dropdown-item-count">(1)</span></label>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="On-Corridor Type C"><span class="route-color" style="background:#B8860B"></span>Type C <span class="dropdown-item-count">(2)</span></label>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="On-Corridor Type D"><span class="route-color" style="background:#6A5ACD"></span>Type D <span class="dropdown-item-count">(8)</span></label>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="On-Corridor Type E"><span class="route-color" style="background:#8B0000"></span>Type E <span class="dropdown-item-count">(1)</span></label>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="On-Corridor Type F"><span class="route-color" style="background:#2F4F4F"></span>Type F <span class="dropdown-item-count">(3)</span></label>
+            </div>
+            <div class="dropdown-group">
+              <div class="dropdown-group-heading">Off-Corridor</div>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="Bus Pole"><span class="route-color" style="background:#00568E"></span>Bus Pole <span class="dropdown-item-count">(501)</span></label>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="Small Shelter"><span class="route-color" style="background:#00A651"></span>Small Shelter <span class="dropdown-item-count">(209)</span></label>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="Big Shelter"><span class="route-color" style="background:#FFCA0A;border:1.5px solid #B8860B"></span>Big Shelter <span class="dropdown-item-count">(9)</span></label>
+              <label class="dropdown-item"><input type="checkbox" data-halte-type-filter="End-Station"><span class="route-color" style="background:#addd00"></span>End Station <span class="dropdown-item-count">(23)</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="halte-filter-dropdown nav-dropdown" id="halte-route-filter-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Rute</span>
+            <span class="filter-dropdown-state" id="halte-route-dropdown-label">Semua Rute</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu" id="halte-route-dropdown-menu">
+            <button type="button" id="halte-route-toggle-all" class="dropdown-menu-action">Semua Rute</button>
+            <div class="dropdown-menu-divider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="halte-map-shell">
+      <button type="button" id="halte-map-fullscreen-btn" class="halte-map-fullscreen-btn" aria-label="Buka peta layar penuh" title="Layar penuh">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M8 3H3v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M16 3h5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M8 21H3v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M16 21h5v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Layar penuh</span>
+      </button>
+      <div id="halte-map" style="width: 100%;height: 520px;border-radius: 12px;border: 1px solid var(--border-light);overflow: hidden;background: #E8E3D8;position: relative;z-index: 0;"></div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-top:12px;">
+      <p style="font-size:12px;color:var(--text-soft);margin:0;font-style:italic;">
+        Sumber: Data titik perhentian merupakan informasi resmi dan terbuka yang diterbitkan dalam dokumen LARAP <i>Off-Corridor</i> BBMA BRT (Dohwa&ndash;Lenggogeni, Maret 2025) dan diolah oleh Transport for Bandung supaya dapat digunakan dalam visualisasi peta. Data rute BRT bersumber dari dokumen ESIA (Kemenhub, 2025) dan LARAP <i>Off-Corridor</i> yang dibuat ulang oleh Transport for Bandung menggunakan data jaringan jalan OpenStreetMap. Data rute dapat memiliki kesalahan karena terbatasnya akses informasi &middot; Peta dasar: &copy; OpenStreetMap Contributors.
+      </p>
+    </div>
+  </div>
+</section>
+
+2) JS block to restore data-driven layers in halte-map.js
+
+const pointLayerConfigs = [
+  { id: 'off-corridor', name: 'Halte Off-Corridor', filePath: 'dataset/Off-Corridor-Stops/Off-Corridor-Stops.geojson', defaultEnabled: true, typeStyles: { 'Bus Pole': { radius: 5, color: '#00568E', fillColor: '#00568E', fillOpacity: 0.85, weight: 1.5 }, 'Small Shelter': { radius: 6, color: '#007A3D', fillColor: '#00A651', fillOpacity: 0.85, weight: 1.5 }, 'Big Shelter': { radius: 7, color: '#B8860B', fillColor: '#FFCA0A', fillOpacity: 0.95, weight: 2 } }, fallbackStyle: { radius: 5, color: '#888888', fillColor: '#aaaaaa', fillOpacity: 0.7, weight: 1 } },
+  { id: 'on-corridor', name: 'Halte On-Corridor', filePath: 'dataset/On-Corridor-Stops/On-Corridor-Stops.geojson', defaultEnabled: true, typeStyles: { 'On-Corridor Type A': { radius: 9, color: '#d82b00', fillColor: '#d82b00', fillOpacity: 0.9, weight: 2 }, 'On-Corridor Type B': { radius: 9, color: '#007A3D', fillColor: '#00A651', fillOpacity: 0.9, weight: 2 }, 'On-Corridor Type C': { radius: 9, color: '#B8860B', fillColor: '#FFCA0A', fillOpacity: 0.9, weight: 2 }, 'On-Corridor Type D': { radius: 9, color: '#6A5ACD', fillColor: '#9370DB', fillOpacity: 0.9, weight: 2 }, 'On-Corridor Type E': { radius: 9, color: '#8B0000', fillColor: '#FF6347', fillOpacity: 0.9, weight: 2 }, 'On-Corridor Type F': { radius: 9, color: '#2F4F4F', fillColor: '#708090', fillOpacity: 0.9, weight: 2 } }, fallbackStyle: { radius: 9, color: '#00568E', fillColor: '#5BACD4', fillOpacity: 0.8, weight: 1.5 } },
+  { id: 'end-station', name: 'Halte End Station', filePath: 'dataset/End-Stations/End-Stations.geojson', defaultEnabled: true, typeStyles: { 'End-Station': { radius: 9, color: '#addd00', fillColor: '#addd00', fillOpacity: 0.9, weight: 2 } }, fallbackStyle: { radius: 9, color: '#00568E', fillColor: '#5BACD4', fillOpacity: 0.8, weight: 1.5 } }
+];
+
+const lineLayerConfigs = [
+  { id: 'brt-01', name: 'BRT 01: Cibiru–Kalapa', color: '#734D29', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 01_ Cibiru → Kalapa.kml', 'dataset/BRT-Route/BRT 01_ Kalapa → Cibiru.kml'] },
+  { id: 'brt-02', name: 'BRT 02: Lembang–Kalapa', color: '#287518', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 02_ Kalapa → Lembang.kml', 'dataset/BRT-Route/BRT 02_ Lembang → Kalapa.kml'] },
+  { id: 'brt-03', name: 'BRT 03: Leuwipanjang–Dago via Dipatiukur', color: '#2E3192', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 03_ Dago → Dipatiukur → Leuwipanjang.kml', 'dataset/BRT-Route/BRT 03_ Leuwipanjang → Dipatiukur → Dago.kml'] },
+  { id: 'brt-04', name: 'BRT 04: Elang–Riau', color: '#BCCF83', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 04_ Elang → Riau.kml', 'dataset/BRT-Route/BRT 04_ Riau → Elang.kml'] },
+  { id: 'brt-05', name: 'BRT 05: Ciroyom–Antapani–Pajajaran', color: '#C9A15C', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 05_ Antapani → Pajajaran → Ciroyom.kml', 'dataset/BRT-Route/BRT 05_ Ciroyom → Pajajaran → Antapani.kml'] },
+  { id: 'brt-06', name: 'BRT 06: Cibaduyut–Leuwipanjang–Dago', color: '#4246C3', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 06_ Cibaduyut → Leuwipanjang → Dago.kml', 'dataset/BRT-Route/BRT 06_ Dago → Leuwipanjang → Cibaduyut.kml'] },
+  { id: 'brt-07', name: 'BRT 07: Padalarang–Alun-alun Bandung', color: '#B61B24', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 07_ Alun-alun Bandung → Padalarang.kml', 'dataset/BRT-Route/BRT 07_ Padalarang → Alun-alun Bandung.kml'] },
+  { id: 'brt-08', name: 'BRT 08: Cimahi–Cicaheum', color: '#DC2833', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 08_ Cicaheum → Cimahi.kml', 'dataset/BRT-Route/BRT 08_ Cimahi → Cicaheum.kml'] },
+  { id: 'brt-09', name: 'BRT 09: Ledeng–Antapani', color: '#1B6FA8', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 09_ Antapani → Ledeng.kml', 'dataset/BRT-Route/BRT 09_ Ledeng → Antapani.kml'] },
+  { id: 'brt-10', name: 'BRT 10: Cicaheum–Kalapa via Binong', color: '#9BC02C', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 10_ Cicaheum → Kalapa.kml', 'dataset/BRT-Route/BRT 10_ Kalapa → Cicaheum.kml'] },
+  { id: 'brt-11', name: 'BRT 11: Tegalluar–Stasiun Hall', color: '#915C87', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 11_ Stasiun Hall → Tegalluar.kml', 'dataset/BRT-Route/BRT 11_ Tegalluar → Stasiun Hall.kml'] },
+  { id: 'brt-12', name: 'BRT 12: Soreang–Terminal Tegallega', color: '#009246', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 12_ Soreang → Terminal Tegallega.kml', 'dataset/BRT-Route/BRT 12_ Terminal Tegallega → Soreang.kml'] },
+  { id: 'brt-13', name: 'BRT 13: Jatinangor–Elang', color: '#C51CA4', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 13_ Elang → Jatinangor.kml', 'dataset/BRT-Route/BRT 13_ Jatinangor → Elang.kml'] },
+  { id: 'brt-14', name: 'BRT 14: Majalaya–Baleendah–Leuwipanjang', color: '#ED3B10', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 14_ Leuwipanjang → Baleendah → Majalaya.kml', 'dataset/BRT-Route/BRT 14_ Majalaya → Baleendah → Leuwipanjang.kml'] },
+  { id: 'brt-15', name: 'BRT 15: Banjaran–Baleendah–BEC', color: '#562B63', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 15_ BEC → Baleendah → Banjaran.kml', 'dataset/BRT-Route/BRT 15_ Banjaran → Baleendah → BEC.kml'] },
+  { id: 'brt-16', name: 'BRT 16: Sarijadi–Antapani', color: '#5BB8C2', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 16_ Antapani → Sarijadi.kml', 'dataset/BRT-Route/BRT 16_ Sarijadi → Antapani.kml'] },
+  { id: 'brt-17', name: 'BRT 17: Cicaheum–Sarijadi', color: '#8A6849', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 17_ Cicaheum → Sarijadi.kml', 'dataset/BRT-Route/BRT 17_ Sarijadi → Cicaheum.kml'] },
+  { id: 'brt-18', name: 'BRT 18: Jatinangor–Dipatiukur', color: '#A9188C', weight: 3.5, opacity: 0.85, defaultEnabled: false, kmlFiles: ['dataset/BRT-Route/BRT 18_ Dipatiukur → Jatinangor.kml', 'dataset/BRT-Route/BRT 18_ Jatinangor → Dipatiukur.kml'] }
+];
+
+And the original initHalteMap logic to restore:
+
+function initHalteMap() {
+  const el = document.getElementById(MAP_ID);
+  if (!el) return;
+
+  halteMap = L.map(MAP_ID, { zoomControl: true }).setView(MAP_CENTER, MAP_ZOOM);
+  const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Contributors',
+    maxZoom: 19,
+  }).addTo(halteMap);
+
+  tiles.on('tileload', function (e) {
+    e.tile.style.filter = 'grayscale(100%)';
+  });
+
+  pointLayerConfigs.forEach(config => loadPointLayer(config));
+  lineLayerConfigs.filter(c => c.defaultEnabled).forEach(config => loadLineLayer(config));
+  bindFilterControls();
+  bindHalteMapFullscreenControl();
+}
