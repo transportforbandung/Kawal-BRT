@@ -12,10 +12,89 @@
   const MAP_ZOOM = 11;
   const MAP_ID = 'halte-map';
 
-  // Interactive map data loading is temporarily disabled.
-  // The archived interactive blocks are stored in dump.txt for manual restoration later.
-  const pointLayerConfigs = [];
-  const lineLayerConfigs = [];
+  // Point layer configs — add more objects here for additional halte datasets
+  const pointLayerConfigs = [
+    {
+      id: 'off-corridor',
+      name: 'Halte Off-Corridor',
+      filePath: 'dataset/Off-Corridor-Stops/Off-Corridor-Stops.geojson',
+      defaultEnabled: true,
+      // Style per Type value. Fallback used when Type is unrecognised.
+      typeStyles: {
+        'Bus Pole': { radius: 5, color: '#00568E', fillColor: '#00568E', fillOpacity: 0.85, weight: 1.5 },
+        'Small Shelter': { radius: 6, color: '#007A3D', fillColor: '#00A651', fillOpacity: 0.85, weight: 1.5 },
+        'Big Shelter': { radius: 7, color: '#B8860B', fillColor: '#FFCA0A', fillOpacity: 0.95, weight: 2 },
+      },
+      fallbackStyle: { radius: 5, color: '#888888', fillColor: '#aaaaaa', fillOpacity: 0.7, weight: 1 },
+    },
+    {
+      id: 'on-corridor',
+      name: 'Halte On-Corridor',
+      filePath: 'dataset/On-Corridor-Stops/On-Corridor-Stops.geojson',
+      defaultEnabled: true,
+      typeStyles: {
+        'On-Corridor Type A': { radius: 9, color: '#d82b00', fillColor: '#d82b00', fillOpacity: 0.9, weight: 2 },
+        'On-Corridor Type B': { radius: 9, color: '#007A3D', fillColor: '#00A651', fillOpacity: 0.9, weight: 2 },
+        'On-Corridor Type C': { radius: 9, color: '#B8860B', fillColor: '#FFCA0A', fillOpacity: 0.9, weight: 2 },
+        'On-Corridor Type D': { radius: 9, color: '#6A5ACD', fillColor: '#9370DB', fillOpacity: 0.9, weight: 2 },
+        'On-Corridor Type E': { radius: 9, color: '#8B0000', fillColor: '#FF6347', fillOpacity: 0.9, weight: 2 },
+        'On-Corridor Type F': { radius: 9, color: '#2F4F4F', fillColor: '#708090', fillOpacity: 0.9, weight: 2 },
+      },
+      fallbackStyle: { radius: 9, color: '#00568E', fillColor: '#5BACD4', fillOpacity: 0.8, weight: 1.5 },
+    },
+    {
+      id: 'end-station',
+      name: 'Halte End Station',
+      filePath: 'dataset/End-Stations/End-Stations.geojson',
+      defaultEnabled: true,
+      typeStyles: {
+        'End-Station': { radius: 9, color: '#addd00', fillColor: '#addd00', fillOpacity: 0.9, weight: 2 }
+      },
+      fallbackStyle: { radius: 9, color: '#00568E', fillColor: '#5BACD4', fillOpacity: 0.8, weight: 1.5 },
+    },
+  ];
+
+  // Line layer configs — BRT routes loaded from KML files in dataset/BRT-Route/.
+  // Each route has two directions (A→B and B→A) loaded as separate KML files.
+  // Format: 'kmlFiles' is an array of KML paths to merge into a single layer.
+  const lineLayerConfigs = [
+    { id: 'brt-01', name: 'BRT 01: Cibiru–Kalapa', color: '#734D29', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 01_ Cibiru → Kalapa.kml', 'dataset/BRT-Route/BRT 01_ Kalapa → Cibiru.kml'] },
+    { id: 'brt-02', name: 'BRT 02: Lembang–Kalapa', color: '#287518', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 02_ Kalapa → Lembang.kml', 'dataset/BRT-Route/BRT 02_ Lembang → Kalapa.kml'] },
+    { id: 'brt-03', name: 'BRT 03: Leuwipanjang–Dago via Dipatiukur', color: '#2E3192', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 03_ Dago → Dipatiukur → Leuwipanjang.kml', 'dataset/BRT-Route/BRT 03_ Leuwipanjang → Dipatiukur → Dago.kml'] },
+    { id: 'brt-04', name: 'BRT 04: Elang–Riau', color: '#BCCF83', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 04_ Elang → Riau.kml', 'dataset/BRT-Route/BRT 04_ Riau → Elang.kml'] },
+    { id: 'brt-05', name: 'BRT 05: Ciroyom–Antapani–Pajajaran', color: '#C9A15C', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 05_ Antapani → Pajajaran → Ciroyom.kml', 'dataset/BRT-Route/BRT 05_ Ciroyom → Pajajaran → Antapani.kml'] },
+    { id: 'brt-06', name: 'BRT 06: Cibaduyut–Leuwipanjang–Dago', color: '#4246C3', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 06_ Cibaduyut → Leuwipanjang → Dago.kml', 'dataset/BRT-Route/BRT 06_ Dago → Leuwipanjang → Cibaduyut.kml'] },
+    { id: 'brt-07', name: 'BRT 07: Padalarang–Alun-alun Bandung', color: '#B61B24', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 07_ Alun-alun Bandung → Padalarang.kml', 'dataset/BRT-Route/BRT 07_ Padalarang → Alun-alun Bandung.kml'] },
+    { id: 'brt-08', name: 'BRT 08: Cimahi–Cicaheum', color: '#DC2833', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 08_ Cicaheum → Cimahi.kml', 'dataset/BRT-Route/BRT 08_ Cimahi → Cicaheum.kml'] },
+    { id: 'brt-09', name: 'BRT 09: Ledeng–Antapani', color: '#1B6FA8', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 09_ Antapani → Ledeng.kml', 'dataset/BRT-Route/BRT 09_ Ledeng → Antapani.kml'] },
+    { id: 'brt-10', name: 'BRT 10: Cicaheum–Kalapa via Binong', color: '#9BC02C', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 10_ Cicaheum → Kalapa.kml', 'dataset/BRT-Route/BRT 10_ Kalapa → Cicaheum.kml'] },
+    { id: 'brt-11', name: 'BRT 11: Tegalluar–Stasiun Hall', color: '#915C87', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 11_ Stasiun Hall → Tegalluar.kml', 'dataset/BRT-Route/BRT 11_ Tegalluar → Stasiun Hall.kml'] },
+    { id: 'brt-12', name: 'BRT 12: Soreang–Terminal Tegallega', color: '#009246', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 12_ Soreang → Terminal Tegallega.kml', 'dataset/BRT-Route/BRT 12_ Terminal Tegallega → Soreang.kml'] },
+    { id: 'brt-13', name: 'BRT 13: Jatinangor–Elang', color: '#C51CA4', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 13_ Elang → Jatinangor.kml', 'dataset/BRT-Route/BRT 13_ Jatinangor → Elang.kml'] },
+    { id: 'brt-14', name: 'BRT 14: Majalaya–Baleendah–Leuwipanjang', color: '#ED3B10', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 14_ Leuwipanjang → Baleendah → Majalaya.kml', 'dataset/BRT-Route/BRT 14_ Majalaya → Baleendah → Leuwipanjang.kml'] },
+    { id: 'brt-15', name: 'BRT 15: Banjaran–Baleendah–BEC', color: '#562B63', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 15_ BEC → Baleendah → Banjaran.kml', 'dataset/BRT-Route/BRT 15_ Banjaran → Baleendah → BEC.kml'] },
+    { id: 'brt-16', name: 'BRT 16: Sarijadi–Antapani', color: '#5BB8C2', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 16_ Antapani → Sarijadi.kml', 'dataset/BRT-Route/BRT 16_ Sarijadi → Antapani.kml'] },
+    { id: 'brt-17', name: 'BRT 17: Cicaheum–Sarijadi', color: '#8A6849', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 17_ Cicaheum → Sarijadi.kml', 'dataset/BRT-Route/BRT 17_ Sarijadi → Cicaheum.kml'] },
+    { id: 'brt-18', name: 'BRT 18: Jatinangor–Dipatiukur', color: '#A9188C', weight: 3.5, opacity: 0.85, defaultEnabled: false,
+      kmlFiles: ['dataset/BRT-Route/BRT 18_ Dipatiukur → Jatinangor.kml', 'dataset/BRT-Route/BRT 18_ Jatinangor → Dipatiukur.kml'] },
+  ];
 
   // ─── State ────────────────────────────────────────────────────────────────
 
@@ -86,6 +165,13 @@
       e.tile.style.filter = 'grayscale(100%)';
     });
 
+    // Load all configured layers
+    pointLayerConfigs.forEach(config => loadPointLayer(config));
+    // Only auto-load line layers that default to enabled; others are lazy-loaded on click
+    lineLayerConfigs.filter(c => c.defaultEnabled).forEach(config => loadLineLayer(config));
+
+    // Wire up filter controls once map is ready
+    bindFilterControls();
     bindHalteMapFullscreenControl();
   }
   function isMobileViewport() {
