@@ -1,0 +1,19 @@
+<svg viewBox="0 0 200 280" width="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="280" fill="#F0EBE0" rx="6"/>
+  <rect x="0" y="0" width="22" height="280" fill="#C8C0AA"/>
+  <text x="11" y="145" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#7A6E5A" transform="rotate(-90,11,145)">TROTOAR</text>
+  <rect x="178" y="0" width="22" height="280" fill="#C8C0AA"/>
+  <text x="189" y="145" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#7A6E5A" transform="rotate(90,189,145)">TROTOAR</text>
+  <rect x="22" y="0" width="156" height="280" fill="#D4CDBE"/>
+  <rect x="22" y="0" width="52" height="280" fill="#D4F5E2"/>
+  <rect x="72" y="10" width="5" height="260" fill="#007A3D" rx="2.5"/>
+  <line x1="131" y1="0" x2="131" y2="280" stroke="white" stroke-width="2" stroke-dasharray="12 7"/>
+  <rect x="27" y="104" width="40" height="72" fill="#00A651" rx="5"/>
+  <text x="47" y="138" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" font-weight="700" fill="white">BUS</text>
+  <text x="47" y="150" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" font-weight="700" fill="white">BRT</text>
+  <text x="47" y="28" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700" fill="#007A3D">&#x2191; JALUR BUS</text>
+  <text x="105" y="40" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" fill="#6B7280">kendaraan</text>
+  <text x="105" y="52" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" fill="#6B7280">pribadi</text>
+  <text x="155" y="40" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" fill="#6B7280">kendaraan</text>
+  <text x="155" y="52" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" fill="#6B7280">pribadi</text>
+</svg>

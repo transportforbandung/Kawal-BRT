@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Perbandingan V/C Ratio per ruas jalan pada jam puncak pagi</title>
+  <desc id="desc">Tabel perbandingan rasio volume terhadap kapasitas jalan sebelum dan setelah BRT beroperasi pada tujuh ruas jalan.</desc>
+  <style>
+    .title { font: 700 22px 'IBM Plex Sans', sans-serif; fill: #2E2A26; }
+    .header { font: 700 14px 'IBM Plex Sans', sans-serif; fill: #FFFFFF; }
+    .road { font: 500 14px 'IBM Plex Sans', sans-serif; fill: #2E2A26; }
+    .value { font: 500 15px 'IBM Plex Sans', sans-serif; fill: #2E2A26; }
+    .value-good { font: 700 15px 'IBM Plex Sans', sans-serif; fill: #007A3D; }
+    .value-warning { font: 700 15px 'IBM Plex Sans', sans-serif; fill: #D4600C; }
+    .badge { font: 700 14px 'IBM Plex Sans', sans-serif; fill: #FFFFFF; }
+    .note { font: 400 13px 'IBM Plex Sans', sans-serif; fill: #7A6E5A; }
+  </style>
+
+  <rect width="1200" height="430" fill="#FDFAF5"/>
+  <text x="40" y="38" class="title">Perbandingan V/C Ratio per ruas - jam puncak pagi</text>
+
+  <rect x="40" y="62" width="1120" height="42" fill="#2E5040"/>
+  <text x="60" y="88" class="header">Ruas Jalan</text>
+  <text x="490" y="88" text-anchor="middle" class="header">V/C Sekarang</text>
+  <text x="615" y="88" text-anchor="middle" class="header">LOS</text>
+  <text x="790" y="88" text-anchor="middle" class="header">V/C dengan BRT</text>
+  <text x="1010" y="88" text-anchor="middle" class="header">LOS</text>
+
+  <rect x="40" y="104" width="1120" height="42" fill="#FFFFFF"/>
+  <rect x="40" y="146" width="1120" height="42" fill="#F7F2E7"/>
+  <rect x="40" y="188" width="1120" height="42" fill="#FFFFFF"/>
+  <rect x="40" y="230" width="1120" height="42" fill="#F7F2E7"/>
+  <rect x="40" y="272" width="1120" height="42" fill="#FFFFFF"/>
+  <rect x="40" y="314" width="1120" height="42" fill="#F7F2E7"/>
+  <rect x="40" y="356" width="1120" height="42" fill="#FFF5F5"/>
+
+  <g fill="none" stroke="#E0D8D0" stroke-width="1">
+    <path d="M40 62H1160M40 104H1160M40 146H1160M40 188H1160M40 230H1160M40 272H1160M40 314H1160M40 356H1160M40 398H1160"/>
+    <path d="M40 62V398M430 62V398M550 62V398M680 62V398M900 62V398M1160 62V398"/>
+  </g>
+
+  <text x="60" y="130" class="road">Jl. Asia Afrika (segmen 4)</text>
+  <text x="490" y="130" text-anchor="middle" class="value">0,75</text>
+  <rect x="598" y="116" width="34" height="24" rx="5" fill="#D89B28"/><text x="615" y="133" text-anchor="middle" class="badge">D</text>
+  <text x="790" y="130" text-anchor="middle" class="value-good">0,58</text>
+  <rect x="993" y="116" width="34" height="24" rx="5" fill="#E2B93B"/><text x="1010" y="133" text-anchor="middle" class="badge">C</text>
+
+  <text x="60" y="172" class="road">Jl. Jend. Sudirman (segmen 1)</text>
+  <text x="490" y="172" text-anchor="middle" class="value">0,97</text>
+  <rect x="598" y="158" width="34" height="24" rx="5" fill="#D4600C"/><text x="615" y="175" text-anchor="middle" class="badge">E</text>
+  <text x="790" y="172" text-anchor="middle" class="value-good">0,74</text>
+  <rect x="993" y="158" width="34" height="24" rx="5" fill="#E2B93B"/><text x="1010" y="175" text-anchor="middle" class="badge">C</text>
+
+  <text x="60" y="214" class="road">Jl. Rajawali Barat</text>
+  <text x="490" y="214" text-anchor="middle" class="value">0,80</text>
+  <rect x="598" y="200" width="34" height="24" rx="5" fill="#D4600C"/><text x="615" y="217" text-anchor="middle" class="badge">E</text>
+  <text x="790" y="214" text-anchor="middle" class="value-good">0,62</text>
+  <rect x="993" y="200" width="34" height="24" rx="5" fill="#E2B93B"/><text x="1010" y="217" text-anchor="middle" class="badge">C</text>
+
+  <text x="60" y="256" class="road">Jl. Kebon Jati (1)</text>
+  <text x="490" y="256" text-anchor="middle" class="value">0,97</text>
+  <rect x="598" y="242" width="34" height="24" rx="5" fill="#D4600C"/><text x="615" y="259" text-anchor="middle" class="badge">E</text>
+  <text x="790" y="256" text-anchor="middle" class="value-good">0,75</text>
+  <rect x="993" y="242" width="34" height="24" rx="5" fill="#E2B93B"/><text x="1010" y="259" text-anchor="middle" class="badge">C</text>
+
+  <text x="60" y="298" class="road">Jl. Otto Iskandar Dinata (1)</text>
+  <text x="490" y="298" text-anchor="middle" class="value">0,96</text>
+  <rect x="598" y="284" width="34" height="24" rx="5" fill="#D4600C"/><text x="615" y="301" text-anchor="middle" class="badge">E</text>
+  <text x="790" y="298" text-anchor="middle" class="value-good">0,74</text>
+  <rect x="993" y="284" width="34" height="24" rx="5" fill="#E2B93B"/><text x="1010" y="301" text-anchor="middle" class="badge">C</text>
+
+  <text x="60" y="340" class="road">Jl. Jakarta</text>
+  <text x="490" y="340" text-anchor="middle" class="value">1,03</text>
+  <rect x="598" y="326" width="34" height="24" rx="5" fill="#B8500A"/><text x="615" y="343" text-anchor="middle" class="badge">F</text>
+  <text x="790" y="340" text-anchor="middle" class="value-good">0,79</text>
+  <rect x="993" y="326" width="34" height="24" rx="5" fill="#D89B28"/><text x="1010" y="343" text-anchor="middle" class="badge">D</text>
+
+  <text x="60" y="382" class="road">Jl. Jend. Sudirman (4)</text>
+  <text x="60" y="396" class="note">perlu perhatian</text>
+  <text x="490" y="382" text-anchor="middle" class="value">1,00</text>
+  <rect x="598" y="368" width="34" height="24" rx="5" fill="#B8500A"/><text x="615" y="385" text-anchor="middle" class="badge">F</text>
+  <text x="790" y="382" text-anchor="middle" class="value-warning">0,97</text>
+  <rect x="993" y="368" width="34" height="24" rx="5" fill="#D4600C"/><text x="1010" y="385" text-anchor="middle" class="badge">E</text>
+
+  <text x="40" y="420" class="note">Sumber: ANDALALIN BBMA BRT, 2024. Volume dihitung dalam satuan mobil penumpang (PCU/hour).</text>
+</svg>

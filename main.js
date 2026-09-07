@@ -30,6 +30,15 @@ function initNav() {
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileNav = document.querySelector('.nav-mobile');
 
+  const closeMobileNav = () => {
+    if (!hamburger || !mobileNav) return;
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+    hamburger.querySelector('.icon-menu').style.display = 'block';
+    hamburger.querySelector('.icon-close').style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', () => {
       const isOpen = mobileNav.classList.toggle('open');
@@ -41,11 +50,7 @@ function initNav() {
 
     window.addEventListener('resize', () => {
       if (window.innerWidth > 900) {
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-        hamburger.querySelector('.icon-menu').style.display  = 'block';
-        hamburger.querySelector('.icon-close').style.display = 'none';
-        document.body.style.overflow = '';
+        closeMobileNav();
       }
     });
   }
@@ -60,8 +65,8 @@ function initNav() {
     });
   });
 
-  /* Keep mobile drawer open for same-page anchor links, but close for cross-page links */
-  document.querySelectorAll('.nav-mobile a[href*="#"]').forEach(link => {
+  /* Close the drawer after every mobile navigation, including same-page anchors. */
+  document.querySelectorAll('.nav-mobile a').forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
       if (!href) return;
@@ -70,26 +75,22 @@ function initNav() {
       // same origin and same normalized pathname → fragment navigation on same page
       if (url.origin === location.origin && normalize(url.pathname) === normalize(location.pathname)) {
         e.preventDefault();
+        closeMobileNav();
         const id = url.hash.replace('#', '');
         if (id) {
           const target = document.getElementById(id) || document.querySelector(`[name="${id}"]`);
-          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (target) {
+            target.setAttribute('tabindex', '-1');
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            target.focus({ preventScroll: true });
+          }
         } else {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         // update hash without reloading
         history.replaceState(null, '', url.hash || '#');
-        // keep drawer open and preserve body overflow state
-        if (mobileNav.classList.contains('open')) document.body.style.overflow = 'hidden';
       } else {
-        // navigating to a different page — close the mobile drawer to allow navigation
-        mobileNav.classList.remove('open');
-        if (hamburger) {
-          hamburger.setAttribute('aria-expanded', false);
-          hamburger.querySelector('.icon-menu').style.display  = 'block';
-          hamburger.querySelector('.icon-close').style.display = 'none';
-        }
-        document.body.style.overflow = '';
+        closeMobileNav();
       }
     });
   });
@@ -106,7 +107,13 @@ function initNav() {
     });
 
     menu?.addEventListener('click', e => {
-      e.stopPropagation();
+      const link = e.target.closest('a');
+      if (link) {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      } else {
+        e.stopPropagation();
+      }
     });
 
     document.addEventListener('click', () => {

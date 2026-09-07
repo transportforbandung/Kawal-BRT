@@ -1,0 +1,16 @@
+<svg viewBox="0 0 280 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:220px;height:auto;display:block;margin:0 auto;">
+  <rect x="8" y="18" width="200" height="64" fill="#00A651" rx="8"/>
+  <rect x="17" y="26" width="22" height="18" fill="#AAFFC8" rx="3" opacity="0.7"/>
+  <rect x="44" y="26" width="22" height="18" fill="#AAFFC8" rx="3" opacity="0.7"/>
+  <rect x="71" y="26" width="22" height="18" fill="#AAFFC8" rx="3" opacity="0.7"/>
+  <rect x="98" y="26" width="22" height="18" fill="#AAFFC8" rx="3" opacity="0.7"/>
+  <rect x="125" y="26" width="22" height="18" fill="#AAFFC8" rx="3" opacity="0.7"/>
+  <rect x="152" y="26" width="22" height="18" fill="#AAFFC8" rx="3" opacity="0.7"/>
+  <rect x="181" y="22" width="24" height="54" fill="#007A3D" rx="0 8 8 0"/>
+  <rect x="185" y="28" width="16" height="20" fill="#AAFFC8" rx="2" opacity="0.6"/>
+  <circle cx="40" cy="82" r="14" fill="#004020"/><circle cx="40" cy="82" r="6" fill="#007A3D"/>
+  <circle cx="160" cy="82" r="14" fill="#004020"/><circle cx="160" cy="82" r="6" fill="#007A3D"/>
+  <text x="208" y="44" font-family="'IBM Plex Sans',sans-serif" font-size="24" font-weight="800" fill="#007A3D">84</text>
+  <text x="208" y="62" font-family="'IBM Plex Sans',sans-serif" font-size="13" fill="#5E8070">penumpang</text>
+  <text x="208" y="78" font-family="'IBM Plex Sans',sans-serif" font-size="13" fill="#5E8070">per bus</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg width="100%" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="280" fill="#F0EBE0" rx="8"/>
+  <rect x="0" y="0" width="38" height="280" fill="#C8C0AA"/>
+  <rect x="262" y="0" width="38" height="280" fill="#C8C0AA"/>
+  <rect x="38" y="0" width="224" height="280" fill="#D4CDBE"/>
+  <line x1="150" y1="0" x2="150" y2="280" stroke="white" stroke-width="2.5" stroke-dasharray="14 8"/>
+  <rect x="2" y="10" width="34" height="52" fill="#E8A87C" rx="3" opacity="0.9"/>
+  <text x="19" y="32" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="8" font-weight="700" fill="#7A3A08">PKL</text>
+  <text x="19" y="44" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#7A3A08">di trotoar</text>
+  <rect x="42" y="12" width="50" height="44" fill="#D4600C" rx="4" opacity="0.85"/>
+  <text x="67" y="33" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700" fill="white">PARKIR</text>
+  <text x="67" y="47" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="8" fill="rgba(255,255,255,0.85)">badan jalan</text>
+  <rect x="42" y="78" width="50" height="54" fill="#B8500A" rx="4" opacity="0.9"/>
+  <text x="67" y="101" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700" fill="white">ANGKOT</text>
+  <text x="67" y="115" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="8" fill="rgba(255,255,255,0.85)">ngetem</text>
+  <rect x="102" y="78" width="40" height="54" fill="none" stroke="#D4600C" stroke-width="1.5" stroke-dasharray="5 3" rx="3"/>
+  <text x="122" y="93" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="8" fill="#D4600C">&#x2191; ruang</text>
+  <text x="122" y="106" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="8" fill="#D4600C">tersisa</text>
+  <rect x="208" y="98" width="50" height="54" fill="#D4600C" rx="4" opacity="0.75"/>
+  <text x="233" y="121" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700" fill="white">PARKIR</text>
+  <text x="233" y="135" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="8" fill="rgba(255,255,255,0.85)">badan jalan</text>
+  <rect x="264" y="160" width="34" height="52" fill="#E8A87C" rx="3" opacity="0.9"/>
+  <text x="281" y="182" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="8" font-weight="700" fill="#7A3A08">PKL</text>
+  <text x="281" y="196" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#7A3A08">di trotoar</text>
+  <text x="19" y="230" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" fill="#7A6E5A" transform="rotate(-90,19,230)">TROTOAR</text>
+  <text x="281" y="100" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" fill="#7A6E5A" transform="rotate(90,281,100)">TROTOAR</text>
+</svg>
