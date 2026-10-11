@@ -18,10 +18,15 @@
     BS14B: 'assets/Median BS_BS14B Stadion Sidolig.png',
     BS15B: 'assets/Median BS_BS15B IBCC.png',
     BS16: 'assets/Median BS_BS 16 Cicadas.png',
-    BS26: 'assets/Median BS_BS26 Rajawali Timur.png',
+    BS29: 'assets/Median BS_BS29 Rajawali Timur.png',
     BS30: 'assets/Median BS_BS30 Ciroyom.png',
     BS31: 'assets/Median BS_BS31 Trinitas.png',
     BS32: 'assets/Median BS_BS32 RS Kebon Jati.png',
+  };
+  const OFF_CORRIDOR_PLAN_IMAGES = {
+    'Bus Pole': 'assets/off-corridor-pole.png',
+    'Small Shelter': 'assets/off-corridor-small-shelter.png',
+    'Big Shelter': 'assets/off-corridor-big-shelter.png',
   };
 
   // Point layer configs — add more objects here for additional halte datasets
@@ -437,7 +442,7 @@
     const type = p.Type || '—';
     const kepemilikan = p.Kepemilikan || p.Milik || '—';
     const wilAdmin = p.Wil_Admin || '—';
-    const planImage = p.ID && ON_CORRIDOR_PLAN_IMAGES[p.ID];
+    const planImage = ON_CORRIDOR_PLAN_IMAGES[p.ID] || OFF_CORRIDOR_PLAN_IMAGES[type];
 
     // Type badge colour mirrors the circleMarker palette
     const typeBadgeColor = {
