@@ -2092,6 +2092,27 @@ tr:nth-child(even) {
   line-height: 1.25;
 }
 
+.halte-popup-plan-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.halte-popup-plan {
+  display: block;
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  background: #f8f7f4;
+}
+
+.halte-popup-credit {
+  padding: 6px 10px;
+  color: #6c757d;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: right;
+}
+
 .halte-popup-meta {
   padding: 10px 14px 12px;
   display: flex;

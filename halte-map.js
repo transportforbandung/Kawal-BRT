@@ -11,6 +11,18 @@
   const MAP_CENTER = [-6.9104, 107.6183];
   const MAP_ZOOM = 11;
   const MAP_ID = 'halte-map';
+  const ON_CORRIDOR_PLAN_IMAGES = {
+    BS1: 'assets/Median BS_BS1 Stasiun Hall.png',
+    BS2: 'assets/Median BS_BS2 Pasar Baru.png',
+    BS13A: 'assets/Median BS_BS13A Pasar Kosambi.png',
+    BS14B: 'assets/Median BS_BS14B Stadion Sidolig.png',
+    BS15B: 'assets/Median BS_BS15B IBCC.png',
+    BS16: 'assets/Median BS_BS 16 Cicadas.png',
+    BS26: 'assets/Median BS_BS26 Rajawali Timur.png',
+    BS30: 'assets/Median BS_BS30 Ciroyom.png',
+    BS31: 'assets/Median BS_BS31 Trinitas.png',
+    BS32: 'assets/Median BS_BS32 RS Kebon Jati.png',
+  };
 
   // Point layer configs — add more objects here for additional halte datasets
   const pointLayerConfigs = [
@@ -34,7 +46,7 @@
       defaultEnabled: true,
       typeStyles: {
         'Tepi Jalan': { radius: 9, color: '#00568E', fillColor: '#5BACD4', fillOpacity: 0.9, weight: 2 },
-        'Median Jalan': { radius: 9, color: '#007A3D', fillColor: '#00A651', fillOpacity: 0.9, weight: 2 },
+        'Median Jalan': { radius: 9, color: '#C45A00', fillColor: '#F28C28', fillOpacity: 0.9, weight: 2 },
       },
       fallbackStyle: { radius: 9, color: '#00568E', fillColor: '#5BACD4', fillOpacity: 0.8, weight: 1.5 },
     },
@@ -425,6 +437,7 @@
     const type = p.Type || '—';
     const kepemilikan = p.Kepemilikan || p.Milik || '—';
     const wilAdmin = p.Wil_Admin || '—';
+    const planImage = p.ID && ON_CORRIDOR_PLAN_IMAGES[p.ID];
 
     // Type badge colour mirrors the circleMarker palette
     const typeBadgeColor = {
@@ -432,7 +445,7 @@
       'Small Shelter': '#00A651',
       'Big Shelter': '#B8860B',
       'Tepi Jalan': '#00568E',
-      'Median Jalan': '#007A3D',
+      'Median Jalan': '#C45A00',
       'End-Station': '#addd00',
     }[type] || '#888888';
 
@@ -442,6 +455,12 @@
           <span class="halte-popup-type-badge" style="background:${typeBadgeColor}">${type}</span>
           <div class="halte-popup-name">${nama}</div>
         </div>
+        ${planImage ? `
+          <a class="halte-popup-plan-link" href="${encodeURI(planImage)}" target="_blank" rel="noopener noreferrer" aria-label="Buka gambar rencana halte ${nama} di tab baru">
+            <img class="halte-popup-plan" src="${encodeURI(planImage)}" alt="Rencana halte ${nama}" loading="lazy">
+          </a>
+          <div class="halte-popup-credit">Kredit: PIU BRT Mastran Cekungan Bandung</div>
+        ` : ''}
         <div class="halte-popup-meta">
           <div class="halte-popup-row">
             <span class="halte-popup-label">Kewenangan Jalan</span>
