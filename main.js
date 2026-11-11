@@ -145,11 +145,69 @@ function initFaq() {
   });
 }
 
+function initCarousels() {
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const track = carousel.querySelector('[data-carousel-track]');
+    const slides = [...carousel.querySelectorAll('[data-carousel-slide]')];
+    const previous = carousel.querySelector('[data-carousel-prev]');
+    const next = carousel.querySelector('[data-carousel-next]');
+    const dots = [...carousel.querySelectorAll('[data-carousel-dot]')];
+
+    if (!track || !slides.length || !previous || !next || dots.length !== slides.length) return;
+
+    let activeIndex = 0;
+    const updateControls = () => {
+      previous.disabled = activeIndex === 0;
+      next.disabled = activeIndex === slides.length - 1;
+      dots.forEach((dot, index) => {
+        if (index === activeIndex) {
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    const showSlide = index => {
+      activeIndex = Math.max(0, Math.min(index, slides.length - 1));
+      track.scrollTo({ left: track.clientWidth * activeIndex, behavior: 'smooth' });
+      updateControls();
+    };
+
+    previous.addEventListener('click', () => showSlide(activeIndex - 1));
+    next.addEventListener('click', () => showSlide(activeIndex + 1));
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+
+    track.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showSlide(activeIndex - 1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showSlide(activeIndex + 1);
+      }
+    });
+
+    track.addEventListener('scroll', () => {
+      activeIndex = Math.min(
+        slides.length - 1,
+        Math.round(track.scrollLeft / track.clientWidth)
+      );
+      updateControls();
+    }, { passive: true });
+
+    updateControls();
+  });
+}
+
 /* ── Bootstrap ───────────────────────────────────────────────────────
-   Load includes → wire nav → wire FAQ.
+   Load includes → wire nav, FAQ, and carousels.
    ===================================================================== */
 document.addEventListener('DOMContentLoaded', async () => {
   await loadIncludes();
   initNav();
   initFaq();
+  initCarousels();
 });

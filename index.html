@@ -347,14 +347,48 @@
           <h3>Jalur Utama Berinfrastruktur Khusus</h3>
         </div>
 
-        <div class="img-placeholder" style="padding: 0%;">
-          <img src="/assets/on-corridor-brt.png"
-            alt="Peta rencana koridor BRT di Kota Bandung beserta halte-halte on-corridor" loading="lazy"
-            decoding="async" style="max-width: 100%;">
+        <div class="corridor-carousel" data-carousel role="region" aria-roledescription="carousel"
+          aria-label="Visualisasi jalur dan halte on-corridor">
+          <div class="corridor-carousel-track" data-carousel-track tabindex="0"
+            aria-label="Galeri gambar, gunakan tombol panah kiri dan kanan untuk berpindah">
+            <div class="corridor-carousel-slide" data-carousel-slide role="group" aria-roledescription="slide"
+              aria-label="3 dari 4">
+              <img src="/assets/on-corridor-brt-lane-type.png"
+                alt="Visualisasi tipe jalur BRT di koridor" loading="lazy" decoding="async">
+            </div>
+            <div class="corridor-carousel-slide" data-carousel-slide role="group" aria-roledescription="slide"
+              aria-label="4 dari 4">
+              <img src="/assets/on-corridor-brt-lane-position.png"
+                alt="Visualisasi posisi jalur BRT di koridor" loading="lazy" decoding="async">
+            </div>
+            <div class="corridor-carousel-slide" data-carousel-slide role="group" aria-roledescription="slide"
+              aria-label="1 dari 4">
+              <img src="/assets/on-corridor-brt-stations-lane-type.png"
+                alt="Visualisasi tipe halte berdasarkan jalur BRT" loading="lazy" decoding="async">
+            </div>
+            <div class="corridor-carousel-slide" data-carousel-slide role="group" aria-roledescription="slide"
+              aria-label="2 dari 4">
+              <img src="/assets/on-corridor-brt-stations-lane-position.png"
+                alt="Visualisasi posisi halte di sepanjang jalur BRT" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="corridor-carousel-controls">
+            <button type="button" class="corridor-carousel-arrow" data-carousel-prev aria-label="Gambar sebelumnya">
+              &#8592;
+            </button>
+            <div class="corridor-carousel-dots" aria-label="Pilih gambar">
+              <button type="button" data-carousel-dot aria-label="Tampilkan gambar 1" aria-current="true"></button>
+              <button type="button" data-carousel-dot aria-label="Tampilkan gambar 2"></button>
+              <button type="button" data-carousel-dot aria-label="Tampilkan gambar 3"></button>
+              <button type="button" data-carousel-dot aria-label="Tampilkan gambar 4"></button>
+            </div>
+            <button type="button" class="corridor-carousel-arrow" data-carousel-next aria-label="Gambar berikutnya">
+              &#8594;
+            </button>
+          </div>
         </div>
-        <p style="font-size:14px;color:var(--text-soft);margin-bottom:14px;font-style:italic;">Koridor BRT dan
-          halte-halte di dalamnya, berdasarkan Dokumen ESIA halaman 21-22. Gambar dibuat ulang oleh Transport for
-          Bandung pada April 2026. PENTING: klasifikasi halte dalam gambar ini kemungkinan tidak lagi akurat, mohon merujuk pada peta interaktif di bawah bagian ini untuk melihat klasifikasi jenis halte.</p>
+        <p style="font-size:14px;color:var(--text-soft);margin-bottom:14px;font-style:italic;">Visualisasi posisi dan
+          tipe jalur BRT serta halte <i>on-corridor</i>.</p>
 
         <div class="scope-grid" style="margin-bottom: 14px;">
           <div class="scope-description">
@@ -419,18 +453,19 @@
               <div class="stop-ph-card">
                 <div class="stop-ph-img">
                   <img src="/assets/oncorridor-type-c-render.png"
-                    alt="Tipe perhentian on-corridor tipe c, dengan halte di tengah" loading="lazy" decoding="async"
+                    alt="Halte on-corridor dengan halte pulau di tengah jalan" loading="lazy" decoding="async"
                     style="max-width: 100%;">
                 </div>
-                <div class="stop-ph-desc">Halte <i>on-corridor</i> tipe c yang terletak di tengah jalan.</div>
+                <div class="stop-ph-desc">Halte <i>on-corridor</i> dengan halte pulau di tengah jalan.</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Platform types A-F -->
+        <!-- Platform layouts by position -->
         <div class="platform-types-wrap">
-          <div class="platform-types-header">6 Tipe Halte On-Corridor Berdasarkan Posisinya &mdash; berdasarkan DED
+          <div class="platform-types-header">2 Layout Halte On-Corridor Berdasarkan Posisinya
+            &mdash; berdasarkan DED
             MASTRAN
             (Dohwa&ndash;Lenggogeni, 2024)</div>
           <div class="platform-types-grid">
@@ -438,11 +473,8 @@
             <div class="platform-card">
               <div class="platform-card-header">
                 <div>
-                  <span class="platform-type-id">Tipe A</span>
-                  <div class="platform-type-config">1 atau lebih jalur khusus BRT + 2 lajur kendaraan di jalan satu arah
-                  </div>
+                  <span class="platform-type-id">Tepi Jalan</span>
                 </div>
-                <span class="platform-pos-tag curb">Tepi Jalan</span>
               </div>
               <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
                   xmlns="http://www.w3.org/2000/svg">
@@ -473,240 +505,50 @@
                     fill="#5E8070">&#8593;
                     lajur 2</text>
                 </svg></div>
-              <div class="platform-card-desc">Jalan satu arah dengan 3 atau lebih lajur. Jalur dan halte BRT berada di
-                kiri jalan. Terdapat separator fisik yang memisahkan jalur BRT dari 2 lajur kendaraan lainnya.</div>
+              <div class="platform-card-desc">Satu atau lebih jalur khusus BRT di kiri arus lalu lintas kendaraan biasa. Hanya terdapat satu halte di tepi jalan.</div>
             </div>
 
             <div class="platform-card">
               <div class="platform-card-header">
                 <div>
-                  <span class="platform-type-id">Tipe B</span>
-                  <div class="platform-type-config">1 lajur kendaraan + halte pulau + 1 jalur BRT + 2 lajur kendaraan di
-                    jalan satu arah</div>
+                  <span class="platform-type-id">Median Jalan</span>
+                  <div class="platform-type-config">1 lajur kendaraan + halte pulau + 1 lajur/jalur BRT + 1 atau lebih lajur kendaraan</div>
                 </div>
-                <span class="platform-pos-tag median">Median</span>
               </div>
               <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
                   xmlns="http://www.w3.org/2000/svg">
                   <rect width="320" height="310" fill="#F0EBE0" rx="4" />
-                  <rect x="38" y="0" width="254" height="310" fill="#D4CDBE" />
-                  <rect x="126" y="0" width="52" height="310" fill="#D4F5E2" />
-                  <rect x="90" y="0" width="32" height="310" fill="#C8C0AA" />
-                  <rect x="0" y="0" width="38" height="310" fill="#C8C0AA" /><text x="19" y="232" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(-90,19,232)">TROTOAR</text>
-                  <rect x="292" y="0" width="28" height="310" fill="#C8C0AA" /><text x="306" y="232"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(90,306,232)">TROTOAR</text>
-                  <rect x="90" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
-                  <rect x="90" y="48" width="32" height="130" fill="#C8EFDB" />
-                  <rect x="91" y="49" width="30" height="128" fill="#EAF7EF" />
-                  <rect x="90" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" />
-                  <rect x="118" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="106" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
-                    fill="#007A3D">HALTE</text>
-                  <rect x="131" y="48" width="42" height="130" fill="#00A651" rx="4" /><text x="152" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
-                    fill="white">BUS BRT</text>
-                  <rect x="122" y="0" width="4" height="310" fill="#007A3D" rx="2" />
-                  <rect x="178" y="0" width="4" height="310" fill="#007A3D" rx="2" />
-                  <line x1="232" y1="0" x2="232" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
-                  <text x="64" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
-                    fill="#5E8070">&#8593; lajur 1</text><text x="152" y="18" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700" fill="#007A3D">&#8593;
-                    JALUR
-                    BUS</text><text x="207" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif"
-                    font-size="7" fill="#5E8070">&#8593; lajur 2</text><text x="262" y="18" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">&#8593; lajur 3</text>
-                </svg></div>
-              <div class="platform-card-desc">Jalan satu arah dengan 4 lajur. Lajur 1 untuk kendaraan pribadi, halte
-                berada di antara lajur 1 dan jalur BRT, jalur BRT di lajur kedua (lengkap dengan separator fisik),
-                ditambah 2 lajur kendaraan pribadi di kanan.</div>
-            </div>
-
-            <div class="platform-card">
-              <div class="platform-card-header">
-                <div>
-                  <span class="platform-type-id">Tipe C</span>
-                  <div class="platform-type-config">2 lajur kendaraan + halte pulau + 1 jalur BRT + 1 lajur kendaraan di
-                    jalan satu arah</div>
-                </div>
-                <span class="platform-pos-tag median">Median</span>
-              </div>
-              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
-                  <rect x="30" y="0" width="250" height="310" fill="#D4CDBE" />
-                  <rect x="170" y="0" width="52" height="310" fill="#D4F5E2" />
-                  <rect x="134" y="0" width="32" height="310" fill="#C8C0AA" />
-                  <rect x="0" y="0" width="30" height="310" fill="#C8C0AA" /><text x="15" y="232" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(-90,15,232)">TROTOAR</text>
-                  <rect x="280" y="0" width="40" height="310" fill="#C8C0AA" /><text x="300" y="232"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(90,300,232)">TROTOAR</text>
-                  <rect x="134" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
-                  <rect x="134" y="48" width="32" height="130" fill="#C8EFDB" />
-                  <rect x="135" y="49" width="30" height="128" fill="#EAF7EF" />
-                  <rect x="134" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" />
-                  <rect x="162" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="150" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
-                    fill="#007A3D">HALTE</text>
-                  <rect x="175" y="48" width="42" height="130" fill="#00A651" rx="4" /><text x="196" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
-                    fill="white">BUS BRT</text>
-                  <rect x="166" y="0" width="4" height="310" fill="#007A3D" rx="2" />
-                  <rect x="222" y="0" width="4" height="310" fill="#007A3D" rx="2" />
-                  <line x1="82" y1="0" x2="82" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" /><text
-                    x="56" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
-                    fill="#5E8070">&#8593; lajur 1</text><text x="108" y="18" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">&#8593; lajur 2</text><text
-                    x="196" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
-                    font-weight="700" fill="#007A3D">&#8593; JALUR BUS</text><text x="253" y="18" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">&#8593; lajur 4</text>
-                </svg></div>
-              <div class="platform-card-desc">Jalan satu arah dengan 4 lajur. Dua lajur kendaraan pribadi di kiri, halte
-                pulau di antara lajur 2 dan jalur BRT (dilengkapi separator fisik), 1 lajur kendaraan pribadi di kanan.
-              </div>
-            </div>
-
-            <div class="platform-card">
-              <div class="platform-card-header">
-                <div>
-                  <span class="platform-type-id">Tipe D</span>
-                  <div class="platform-type-config">1 lajur BRT + 1 lajur kendaraan tiap arah, jalan dua arah</div>
-                </div>
-                <span class="platform-pos-tag curb">Tepi Jalan</span>
-              </div>
-              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
-                  <rect x="46" y="0" width="224" height="310" fill="#D4CDBE" />
-                  <rect x="46" y="0" width="56" height="310" fill="#D4F5E2" />
-                  <rect x="214" y="0" width="56" height="310" fill="#D4F5E2" />
-                  <rect x="0" y="0" width="46" height="310" fill="#C8C0AA" /><text x="23" y="232" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(-90,23,232)">TROTOAR</text>
-                  <rect x="270" y="0" width="50" height="310" fill="#C8C0AA" /><text x="295" y="232"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(90,295,232)">TROTOAR</text>
-                  <rect x="14" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
-                  <rect x="14" y="48" width="32" height="130" fill="#C8EFDB" />
-                  <rect x="15" y="49" width="30" height="128" fill="#EAF7EF" />
-                  <rect x="42" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="30" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
-                    fill="#007A3D">HALTE</text>
-                  <rect x="270" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
-                  <rect x="270" y="48" width="32" height="130" fill="#C8EFDB" />
-                  <rect x="271" y="49" width="30" height="128" fill="#EAF7EF" />
-                  <rect x="270" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="286" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
-                    fill="#007A3D">HALTE</text>
-                  <rect x="51" y="48" width="46" height="130" fill="#00A651" rx="4" /><text x="74" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
-                    fill="white">BUS BRT</text>
-                  <rect x="219" y="48" width="46" height="130" fill="#00A651" rx="4" /><text x="242" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
-                    fill="white">BUS BRT</text>
-                  <line x1="102" y1="0" x2="102" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
-                  <line x1="214" y1="0" x2="214" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
-                  <rect x="156" y="0" width="4" height="310" fill="white" rx="1.5" /><text x="74" y="18"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
-                    fill="#007A3D">&#8593; LAJUR BUS</text><text x="129" y="18" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">&#8593; lajur</text><text
-                    x="187" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
-                    fill="#5E8070">&#8595;
-                    lajur</text><text x="242" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif"
-                    font-size="7" font-weight="700" fill="#007A3D">&#8595; LAJUR BUS</text>
-                </svg></div>
-              <div class="platform-card-desc">Jalan dua arah dengan garis putih solid sebagai pemisah arah. BRT di tepi
-                kiri tiap arah, dengan marka jalan (tanpa separator fisik). Halte di kedua trotoar luar.</div>
-            </div>
-
-            <div class="platform-card">
-              <div class="platform-card-header">
-                <div>
-                  <span class="platform-type-id">Tipe E</span>
-                  <div class="platform-type-config">1 jalur BRT + 1 lajur &#8593; + 1 lajur berlawanan, 2 arah</div>
-                </div>
-                <span class="platform-pos-tag curb">Tepi Jalan</span>
-              </div>
-              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
-                  <rect x="52" y="0" width="202" height="310" fill="#D4CDBE" />
-                  <rect x="52" y="0" width="58" height="310" fill="#D4F5E2" />
-                  <rect x="0" y="0" width="52" height="310" fill="#C8C0AA" /><text x="26" y="232" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(-90,26,232)">TROTOAR</text>
-                  <rect x="254" y="0" width="66" height="310" fill="#C8C0AA" /><text x="287" y="232"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(90,287,232)">TROTOAR</text>
-                  <rect x="20" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
-                  <rect x="20" y="48" width="32" height="130" fill="#C8EFDB" />
-                  <rect x="21" y="49" width="30" height="128" fill="#EAF7EF" />
-                  <rect x="48" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="36" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
-                    fill="#007A3D">HALTE</text>
-                  <rect x="57" y="48" width="48" height="130" fill="#00A651" rx="4" /><text x="81" y="117"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
-                    fill="white">BUS BRT</text>
-                  <rect x="110" y="0" width="4" height="310" fill="#007A3D" rx="2" />
-                  <rect x="182" y="0" width="4" height="310" fill="white" rx="1.5" /><text x="81" y="18"
-                    text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
-                    fill="#007A3D">&#8593; JALUR BUS</text><text x="148" y="18" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">&#8593; lajur 1</text><text
-                    x="220" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
-                    fill="#5E8070">&#8595;
-                    lajur 2</text>
-                </svg></div>
-              <div class="platform-card-desc">Jalan dua arah 3 lajur total. BRT di tepi kiri bersama 1 lajur searah, 1
-                lajur arah berlawanan di kanan, dipisahkan garis putih solid.</div>
-            </div>
-
-            <div class="platform-card">
-              <div class="platform-card-header">
-                <div>
-                  <span class="platform-type-id">Tipe F</span>
-                  <div class="platform-type-config">1 jalur BRT + 2 lajur &#8593; + 2 lajur berlawanan, 2 arah</div>
-                </div>
-                <span class="platform-pos-tag curb">Tepi Jalan</span>
-              </div>
-              <div class="platform-card-diagram"><svg viewBox="0 0 320 310" width="100%"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect width="320" height="310" fill="#F0EBE0" rx="4" />
-                  <rect x="44" y="0" width="248" height="310" fill="#D4CDBE" />
-                  <rect x="44" y="0" width="56" height="310" fill="#D4F5E2" />
+                  <rect x="44" y="0" width="232" height="310" fill="#D4CDBE" />
+                  <rect x="142" y="0" width="52" height="310" fill="#D4F5E2" />
+                  <rect x="106" y="0" width="32" height="310" fill="#C8C0AA" />
                   <rect x="0" y="0" width="44" height="310" fill="#C8C0AA" /><text x="22" y="232" text-anchor="middle"
                     font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
                     transform="rotate(-90,22,232)">TROTOAR</text>
-                  <rect x="292" y="0" width="28" height="310" fill="#C8C0AA" /><text x="306" y="232"
+                  <rect x="276" y="0" width="44" height="310" fill="#C8C0AA" /><text x="298" y="232"
                     text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="6.5" fill="#7A6E5A"
-                    transform="rotate(90,306,232)">TROTOAR</text>
-                  <rect x="12" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
-                  <rect x="12" y="48" width="32" height="130" fill="#C8EFDB" />
-                  <rect x="13" y="49" width="30" height="128" fill="#EAF7EF" />
-                  <rect x="40" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="28" y="117"
+                    transform="rotate(90,298,232)">TROTOAR</text>
+                  <rect x="106" y="38" width="32" height="11" fill="#00A651" rx="2.5" />
+                  <rect x="106" y="48" width="32" height="130" fill="#C8EFDB" />
+                  <rect x="107" y="49" width="30" height="128" fill="#EAF7EF" />
+                  <rect x="106" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" />
+                  <rect x="134" y="48" width="4" height="130" fill="#FFCA0A" opacity="0.85" /><text x="122" y="117"
                     text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700"
                     fill="#007A3D">HALTE</text>
-                  <rect x="49" y="48" width="46" height="130" fill="#00A651" rx="4" /><text x="72" y="117"
+                  <rect x="147" y="48" width="42" height="130" fill="#00A651" rx="4" /><text x="168" y="117"
                     text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="9" font-weight="700"
                     fill="white">BUS BRT</text>
-                  <rect x="100" y="0" width="4" height="310" fill="#007A3D" rx="2" />
-                  <line x1="150" y1="0" x2="150" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
-                  <rect x="196" y="0" width="4" height="310" fill="white" rx="1.5" />
-                  <line x1="246" y1="0" x2="246" y2="310" stroke="white" stroke-width="2" stroke-dasharray="12 7" />
-                  <text x="72" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
-                    font-weight="700" fill="#007A3D">&#8593; JALUR BUS</text><text x="127" y="18" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">&#8593; lajur 1</text><text
-                    x="173" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
-                    fill="#5E8070">&#8593;
-                    lajur 2</text><text x="223" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif"
-                    font-size="7" fill="#5E8070">&#8595; lajur 3</text><text x="269" y="18" text-anchor="middle"
-                    font-family="'IBM Plex Sans',sans-serif" font-size="7" fill="#5E8070">&#8595; lajur 4</text>
+                  <rect x="138" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <rect x="194" y="0" width="4" height="310" fill="#007A3D" rx="2" />
+                  <text x="75" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7"
+                    fill="#5E8070">&#8593; lajur 1</text><text x="168" y="18" text-anchor="middle"
+                    font-family="'IBM Plex Sans',sans-serif" font-size="7" font-weight="700" fill="#007A3D">&#8593;
+                    JALUR
+                    BUS</text><text x="229" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif"
+                    font-size="7" fill="#5E8070">&#8593; lajur 2</text>
                 </svg></div>
-              <div class="platform-card-desc">Jalan dua arah 5 lajur total. BRT di tepi kiri bersama 2 lajur searah, 2
-                lajur arah berlawanan di kanan.</div>
+              <div class="platform-card-desc">Jalan satu arah dengan 3 lajur total: 2 lajur kendaraan pribadi dan 1
+                jalur BRT. Halte pulau berada di antara lajur kendaraan dan jalur BRT yang dilengkapi separator fisik.
+              </div>
             </div>
 
           </div><!-- /platform-types-grid -->
