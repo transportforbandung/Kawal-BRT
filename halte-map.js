@@ -34,7 +34,7 @@
     {
       id: 'off-corridor',
       name: 'Halte Off-Corridor',
-      filePath: 'dataset/Off-Corridor-Stops/Off-Corridor-Stops.geojson',
+      filePath: 'dataset/Off-Corridor-Stops/Off-Corridor-Stops.shp',
       defaultEnabled: true,
       // Style per Type value. Fallback used when Type is unrecognised.
       typeStyles: {
@@ -47,7 +47,7 @@
     {
       id: 'on-corridor',
       name: 'Halte On-Corridor',
-      filePath: 'dataset/On-Corridor-Stops/On-Corridor-Stops.geojson',
+      filePath: 'dataset/On-Corridor-Stops/On-Corridor-Stops.shp',
       defaultEnabled: true,
       typeStyles: {
         'Tepi Jalan': { radius: 9, color: '#00568E', fillColor: '#5BACD4', fillOpacity: 0.9, weight: 2 },
@@ -58,7 +58,7 @@
     {
       id: 'end-station',
       name: 'Halte End Station',
-      filePath: 'dataset/End-Stations/End-Stations.geojson',
+      filePath: 'dataset/End-Stations/End-Stations.shp',
       defaultEnabled: true,
       typeStyles: {
         'End-Station': { radius: 9, color: '#addd00', fillColor: '#addd00', fillOpacity: 0.9, weight: 2 }
@@ -241,6 +241,35 @@
     return data;
   }
 
+  async function fetchShapefile(filePath) {
+    if (dataCache.has(filePath)) return dataCache.get(filePath);
+    if (typeof window.shp !== 'function') {
+      throw new Error('The shapefile parser did not load');
+    }
+
+    const data = await window.shp(filePath);
+    if (data?.type !== 'FeatureCollection' || !Array.isArray(data.features)) {
+      throw new Error(`Unexpected shapefile data in ${filePath}`);
+    }
+
+    data.features.forEach(feature => {
+      const properties = feature.properties || {};
+      if (typeof properties.ID === 'string') {
+        properties.ID = properties.ID.trim();
+      }
+      if (properties.Kepemilikan === undefined && properties.Kepemilika !== undefined) {
+        properties.Kepemilikan = properties.Kepemilika;
+      }
+      if (properties.priority_2026 === undefined && properties.priority_2 !== undefined) {
+        properties.priority_2026 = properties.priority_2;
+      }
+      feature.properties = properties;
+    });
+
+    dataCache.set(filePath, data);
+    return data;
+  }
+
   // ─── KML fetch + parse helper ─────────────────────────────────────────────
   // Parses KML <LineString> coordinates inside <MultiGeometry> or standalone.
   // Returns an array of coordinate arrays: [ [[lat,lng], …], … ]
@@ -271,7 +300,7 @@
   async function loadPointLayer(config) {
     let data;
     try {
-      data = await fetchGeoJSON(config.filePath);
+      data = await fetchShapefile(config.filePath);
     } catch (err) {
       console.warn(`[halte-map] Could not load ${config.filePath}:`, err.message);
       return;
