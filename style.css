@@ -911,12 +911,107 @@ footer {
   margin-bottom: 16px;
 }
 
+.funding-section {
+  background: var(--warm-cream);
+}
+
+.funding-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.funding-col-label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+
+.funding-col-title {
+  font-size: 20px;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.funding-col-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-mid);
+}
+
 .funding-breakdown {
   background: var(--warm-stone);
   border: 1px solid var(--border-light);
   border-radius: 14px;
   padding: 22px 24px;
   margin-top: 24px;
+}
+
+/* PSO share: one whole split into parts (segmented bar + legend) */
+.pso-split {
+  display: flex;
+  gap: 2px;
+  height: 28px;
+}
+
+.pso-seg {
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-width: 3px;
+  border-radius: 4px;
+}
+
+.pso-c1 { background: #2a78d6; }
+.pso-c2 { background: #eb6834; }
+.pso-c3 { background: #1baf7a; }
+.pso-c4 { background: #eda100; }
+.pso-c5 { background: #e87ba4; }
+.pso-c6 { background: #008300; }
+
+.pso-legend {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+}
+
+.pso-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.pso-swatch {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.pso-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.pso-pct {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--text-mid);
+  font-variant-numeric: tabular-nums;
+}
+
+.pso-note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-soft);
+  margin-top: 18px;
 }
 
 .funding-breakdown-label {
@@ -3590,6 +3685,7 @@ tr:nth-child(even) {
   .about-grid,
   .scope-grid,
   .gov-grid,
+  .funding-grid,
   .faq-layout,
   .why-grid,
   .social-grid {
@@ -3908,6 +4004,10 @@ tr:nth-child(even) {
    Mobile refinements (≤640px)
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 640px) {
+
+  .pso-legend {
+    grid-template-columns: 1fr;
+  }
 
   /* Gutters: section (16px) + container (4px) ≈ 20px page edge */
   .container {
