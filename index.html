@@ -44,7 +44,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E4RECYBVH3"></script>
@@ -80,9 +80,9 @@
       </div>
       <div class="hero-map">
         <div class="map-card">
-          <img src="/assets/brt-visual.gif"
-            alt="Gambar bergerak dalam format GIF, menampilkan visualisasi halte, jalur khusus, dan kondisinya saat sudah beroperasi"
-            loading="lazy" decoding="async" style="max-width: 100%;">
+          <img src="/assets/brt-visual.webp" width="480" height="580"
+            alt="Gambar bergerak menampilkan visualisasi halte, jalur khusus, dan kondisinya saat sudah beroperasi"
+            fetchpriority="high" decoding="async" style="max-width: 100%; height: auto;">
         </div>
       </div>
     </div>
@@ -353,22 +353,22 @@
             aria-label="Galeri gambar, gunakan tombol panah kiri dan kanan untuk berpindah">
             <div class="corridor-carousel-slide" data-carousel-slide role="group" aria-roledescription="slide"
               aria-label="3 dari 4">
-              <img src="/assets/on-corridor-brt-lane-type.png"
+              <img src="/assets/on-corridor-brt-lane-type.webp" width="2400" height="1260"
                 alt="Visualisasi tipe jalur BRT di koridor" loading="lazy" decoding="async">
             </div>
             <div class="corridor-carousel-slide" data-carousel-slide role="group" aria-roledescription="slide"
               aria-label="4 dari 4">
-              <img src="/assets/on-corridor-brt-lane-position.png"
+              <img src="/assets/on-corridor-brt-lane-position.webp" width="2400" height="1260"
                 alt="Visualisasi posisi jalur BRT di koridor" loading="lazy" decoding="async">
             </div>
             <div class="corridor-carousel-slide" data-carousel-slide role="group" aria-roledescription="slide"
               aria-label="1 dari 4">
-              <img src="/assets/on-corridor-brt-stations-lane-type.png"
+              <img src="/assets/on-corridor-brt-stations-lane-type.webp" width="2400" height="1260"
                 alt="Visualisasi tipe halte berdasarkan jalur BRT" loading="lazy" decoding="async">
             </div>
             <div class="corridor-carousel-slide" data-carousel-slide role="group" aria-roledescription="slide"
               aria-label="2 dari 4">
-              <img src="/assets/on-corridor-brt-stations-lane-position.png"
+              <img src="/assets/on-corridor-brt-stations-lane-position.webp" width="2400" height="1260"
                 alt="Visualisasi posisi halte di sepanjang jalur BRT" loading="lazy" decoding="async">
             </div>
           </div>
@@ -443,18 +443,18 @@
             <div class="stop-ph-cards">
               <div class="stop-ph-card">
                 <div class="stop-ph-img">
-                  <img src="/assets/oncorridor-medium-double.png"
+                  <img src="/assets/oncorridor-medium-double.webp" width="978" height="511"
                     alt="Jenis halte on-corridor dengan tipe medium double" loading="lazy" decoding="async"
-                    style="max-width: 100%;">
+                    style="max-width: 100%; height: auto;">
                 </div>
                 <div class="stop-ph-desc">Halte <i>on-corridor</i> ukuran <i>medium double</i> yang terletak di sisi
                   jalan.</div>
               </div>
               <div class="stop-ph-card">
                 <div class="stop-ph-img">
-                  <img src="/assets/oncorridor-type-c-render.png"
+                  <img src="/assets/oncorridor-type-c-render.webp" width="600" height="337"
                     alt="Halte on-corridor dengan halte pulau di tengah jalan" loading="lazy" decoding="async"
-                    style="max-width: 100%;">
+                    style="max-width: 100%; height: auto;">
                 </div>
                 <div class="stop-ph-desc">Halte <i>on-corridor</i> dengan halte pulau di tengah jalan.</div>
               </div>
@@ -758,27 +758,27 @@
               <div class="stop-ph-cards">
                 <div class="stop-ph-card">
                   <div class="stop-ph-img">
-                    <img src="/assets/off-corridor-pole.png"
+                    <img src="/assets/off-corridor-pole.webp" width="642" height="377"
                       alt="Tipe perhentian off-corridor pole, menampilkan sebuah papan informasi berbentuk totem dengan nama halte dan informasi rute"
-                      loading="lazy" decoding="async" style="max-width: 100%;">
+                      loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
                     <div class="stop-ph-label"><strong>Pole</strong></div>
                   </div>
                   <div class="stop-ph-desc">Perhentian sederhana tanpa atap, dipasang di pinggir jalan.</div>
                 </div>
                 <div class="stop-ph-card">
                   <div class="stop-ph-img">
-                    <img src="/assets/off-corridor-small-shelter.png"
+                    <img src="/assets/off-corridor-small-shelter.webp" width="620" height="394"
                       alt="Tipe perhentian off-corridor halte kecil, menampilkan sebuah bangunan kecil dengan atap untuk perlindungan dari cuaca"
-                      loading="lazy" decoding="async" style="max-width: 100%;">
+                      loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
                     <div class="stop-ph-label"><strong>Shelter Kecil</strong></div>
                   </div>
                   <div class="stop-ph-desc">Bangunan halte kecil dengan atap untuk perlindungan dari cuaca.</div>
                 </div>
                 <div class="stop-ph-card">
                   <div class="stop-ph-img">
-                    <img src="/assets/off-corridor-big-shelter.png"
+                    <img src="/assets/off-corridor-big-shelter.webp" width="579" height="392"
                       alt="Tipe perhentian off-corridor halte besar, menampilkan sebuah bangunan besar dengan atap untuk perlindungan dari cuaca"
-                      loading="lazy" decoding="async" style="max-width: 100%;">
+                      loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
                     <div class="stop-ph-label"><strong>Shelter Besar</strong></div>
                   </div>
                   <div class="stop-ph-desc">Fasilitas lebih memadai, di titik-titik dengan permintaan tinggi.</div>
@@ -830,8 +830,8 @@
         penuh.
       </div>
       <div class="img-placeholder" style="padding: 0%;">
-        <img src="/assets/off-corridor-brt.png" alt="Peta rute BRT di Cekungan Bandung" loading="lazy" decoding="async"
-          style="max-width: 100%;">
+        <img src="/assets/off-corridor-brt.webp" width="2400" height="1600" alt="Peta rute BRT di Cekungan Bandung" loading="lazy" decoding="async"
+          style="max-width: 100%; height: auto;">
       </div>
       <p style="font-size:14px;color:var(--text-soft);margin-bottom:14px;font-style:italic;">Visualisasi 18 rute BRT
         yang melayani 5 kota dan kabupaten di Cekungan Bandung.</p>
@@ -1360,7 +1360,7 @@
         <div class="busspec-card">
           <div class="busspec-header">
             <div class="busspec-icon">
-              <img src="assets/bus-green-icon.svg" alt="White bus icon on green background">
+              <img src="assets/bus-green-icon.svg" loading="lazy" decoding="async" alt="White bus icon on green background">
             </div>
             <div>
               <div class="busspec-name">Bus Besar 1 (12 meter)</div>
@@ -1384,7 +1384,7 @@
         <div class="busspec-card">
           <div class="busspec-header">
             <div class="busspec-icon">
-              <img src="assets/bus-green-icon.svg" alt="White bus icon on green background">
+              <img src="assets/bus-green-icon.svg" loading="lazy" decoding="async" alt="White bus icon on green background">
             </div>
             <div>
               <div class="busspec-name">Bus Besar 2 (12 meter)</div>
@@ -1407,7 +1407,7 @@
         <div class="busspec-card">
           <div class="busspec-header">
             <div class="busspec-icon">
-              <img src="assets/bus-green-icon.svg" alt="White bus icon on green background">
+              <img src="assets/bus-green-icon.svg" loading="lazy" decoding="async" alt="White bus icon on green background">
             </div>
             <div>
               <div class="busspec-name">Bus Sedang (9 meter)</div>
@@ -1431,7 +1431,7 @@
         <div class="busspec-card">
           <div class="busspec-header">
             <div class="busspec-icon">
-              <img src="assets/bus-green-icon.svg" alt="White bus icon on green background">
+              <img src="assets/bus-green-icon.svg" loading="lazy" decoding="async" alt="White bus icon on green background">
             </div>
             <div>
               <div class="busspec-name">Mikrobus</div>
@@ -1502,7 +1502,7 @@
         <!-- Cicaheum -->
         <div style="background:var(--white);border:1.5px solid var(--border-light);border-radius:16px;overflow:hidden;">
           <div style="height:180px;overflow:hidden;position:relative;">
-            <img src="assets/depo-cicaheum.jpg" alt="Foto Terminal Cicaheum yang akan menjadi Depo BRT"
+            <img loading="lazy" decoding="async" src="assets/depo-cicaheum.webp" width="680" height="325" alt="Foto Terminal Cicaheum yang akan menjadi Depo BRT"
               style="width:100%;height:100%;object-fit:cover;display:block;">
             <div
               style="position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top, rgba(0,60,30,0.85) 0%, transparent 100%);">
@@ -1541,7 +1541,7 @@
         <!-- Leuwipanjang -->
         <div style="background:var(--white);border:1.5px solid var(--border-light);border-radius:16px;overflow:hidden;">
           <div style="height:180px;overflow:hidden;position:relative;">
-            <img src="assets/depo-leuwipanjang.jpg" alt="Foto Terminal Leuwipanjang yang akan menjadi Depo BRT"
+            <img loading="lazy" decoding="async" src="assets/depo-leuwipanjang.webp" width="1333" height="622" alt="Foto Terminal Leuwipanjang yang akan menjadi Depo BRT"
               style="width:100%;height:100%;object-fit:cover;display:block;">
             <div
               style="position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top, rgba(0,40,80,0.85) 0%, transparent 100%);">
@@ -1580,7 +1580,7 @@
         <!-- Cinunuk -->
         <div style="background:var(--white);border:1.5px solid var(--border-light);border-radius:16px;overflow:hidden;">
           <div style="height:180px;overflow:hidden;position:relative;">
-            <img src="assets/depo-cinunuk.jpg" alt="Foto rencana Depo Cinunuk"
+            <img loading="lazy" decoding="async" src="assets/depo-cinunuk.webp" width="369" height="210" alt="Foto rencana Depo Cinunuk"
               style="width:100%;height:100%;object-fit:cover;display:block;">
             <div
               style="position:absolute;bottom:0;left:0;right:0;padding:14px 20px;background:linear-gradient(to top, rgba(0,60,30,0.85) 0%, transparent 100%);">
@@ -1798,10 +1798,10 @@
                 <div class="gov-level">Multilateral</div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/World Bank Logo.svg" alt="World Bank Logo">
+                    <img src="assets/logo/World Bank Logo.svg" loading="lazy" decoding="async" alt="World Bank Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/AFD Logo.svg" alt="AFD Logo">
+                    <img src="assets/logo/AFD Logo.svg" loading="lazy" decoding="async" alt="AFD Logo">
                   </div>
                 </div>
                 <div class="gov-name">Bank Dunia + Agence Fran&ccedil;aise de D&eacute;veloppement (AFD)</div>
@@ -1815,22 +1815,22 @@
                 <div class="gov-level">Daerah &mdash; Pemerintah Provinsi, Kota, dan Kabupaten</div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Jawa Barat Logo.svg" alt="Jawa Barat Logo">
+                    <img src="assets/logo/Jawa Barat Logo.svg" loading="lazy" decoding="async" alt="Jawa Barat Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kota Bandung Logo.svg" alt="Kota Bandung Logo">
+                    <img src="assets/logo/Kota Bandung Logo.svg" loading="lazy" decoding="async" alt="Kota Bandung Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kota Cimahi Logo.svg" alt="Kota Cimahi Logo">
+                    <img src="assets/logo/Kota Cimahi Logo.svg" loading="lazy" decoding="async" alt="Kota Cimahi Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kabupaten Bandung Logo.svg" alt="Kabupaten Bandung Logo">
+                    <img src="assets/logo/Kabupaten Bandung Logo.svg" loading="lazy" decoding="async" alt="Kabupaten Bandung Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kabupaten Bandung Barat Logo.svg" alt="Kabupaten Bandung Barat Logo">
+                    <img src="assets/logo/Kabupaten Bandung Barat Logo.svg" loading="lazy" decoding="async" alt="Kabupaten Bandung Barat Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kabupaten Sumedang Logo.svg" alt="Kabupaten Sumedang Logo">
+                    <img src="assets/logo/Kabupaten Sumedang Logo.svg" loading="lazy" decoding="async" alt="Kabupaten Sumedang Logo">
                   </div>
                 </div>
                 <div class="gov-name">Enam Pemerintah Daerah di Jawa Barat</div>
@@ -1848,7 +1848,7 @@
                 <div class="gov-level">Nasional &mdash; Pemilik Proyek</div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kemenhub Logo.svg" alt="Kemenhub Logo">
+                    <img src="assets/logo/Kemenhub Logo.svg" loading="lazy" decoding="async" alt="Kemenhub Logo">
                   </div>
                 </div>
                 <div class="gov-name">Kementerian Perhubungan RI (Ditjen Perhubungan Darat / PMU)</div>
@@ -1861,7 +1861,7 @@
                 <div class="gov-level">Nasional &mdash; Pengelola Pinjaman</div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kemenkeu Logo.svg" alt="Kemenkeu Logo">
+                    <img src="assets/logo/Kemenkeu Logo.svg" loading="lazy" decoding="async" alt="Kemenkeu Logo">
                   </div>
                 </div>
                 <div class="gov-name">Kementerian Keuangan RI</div>
@@ -1874,13 +1874,13 @@
                 <div class="gov-level">Provinsi &mdash; Koordinator &amp; Operator Transisi</div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Jawa Barat Logo.svg" alt="Pemprov Jabar Logo">
+                    <img src="assets/logo/Jawa Barat Logo.svg" loading="lazy" decoding="async" alt="Pemprov Jabar Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Dishub Jabar Logo.svg" alt="Dishub Jabar Logo">
+                    <img src="assets/logo/Dishub Jabar Logo.svg" loading="lazy" decoding="async" alt="Dishub Jabar Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Jasa Sarana Logo.svg" alt="PT Jasa Sarana Logo">
+                    <img src="assets/logo/Jasa Sarana Logo.svg" loading="lazy" decoding="async" alt="PT Jasa Sarana Logo">
                   </div>
                 </div>
                 <div class="gov-name">Pemerintah Provinsi Jawa Barat &middot; Dishub Jabar &middot; PT Jasa Sarana</div>
@@ -1894,19 +1894,19 @@
                 <div class="gov-level">Kota/Kabupaten &mdash; 5 Daerah</div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kota Bandung Logo.svg" alt="Kota Bandung Logo">
+                    <img src="assets/logo/Kota Bandung Logo.svg" loading="lazy" decoding="async" alt="Kota Bandung Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kota Cimahi Logo.svg" alt="Kota Cimahi Logo">
+                    <img src="assets/logo/Kota Cimahi Logo.svg" loading="lazy" decoding="async" alt="Kota Cimahi Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kabupaten Bandung Logo.svg" alt="Kabupaten Bandung Logo">
+                    <img src="assets/logo/Kabupaten Bandung Logo.svg" loading="lazy" decoding="async" alt="Kabupaten Bandung Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kabupaten Bandung Barat Logo.svg" alt="Kabupaten Bandung Barat Logo">
+                    <img src="assets/logo/Kabupaten Bandung Barat Logo.svg" loading="lazy" decoding="async" alt="Kabupaten Bandung Barat Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Kabupaten Sumedang Logo.svg" alt="Kabupaten Sumedang Logo">
+                    <img src="assets/logo/Kabupaten Sumedang Logo.svg" loading="lazy" decoding="async" alt="Kabupaten Sumedang Logo">
                   </div>
                 </div>
                 <div class="gov-name">Kota Bandung &middot; Kota Cimahi &middot; Kabupaten Bandung &middot; Kabupaten
@@ -1939,10 +1939,10 @@
               <div class="consultant-category">PrMC &mdash; Program Management Consultant</div>
               <div class="gov-logos">
                 <div class="gov-logo-box">
-                  <img src="assets/logo/ARUP Logo.svg" alt="ARUP Logo">
+                  <img src="assets/logo/ARUP Logo.svg" loading="lazy" decoding="async" alt="ARUP Logo">
                 </div>
                 <div class="gov-logo-box">
-                  <img src="assets/logo/Perentjana Djaja Logo.svg" alt="Perentjana Djaja Logo">
+                  <img src="assets/logo/Perentjana Djaja Logo.svg" loading="lazy" decoding="async" alt="Perentjana Djaja Logo">
                 </div>
               </div>
               <div class="consultant-name">ARUP + Perentjana Djaja</div>
@@ -1953,13 +1953,13 @@
               <div class="consultant-category">PMC &mdash; Project Management Consultant</div>
               <div class="gov-logos">
                 <div class="gov-logo-box">
-                  <img src="assets/logo/egis Logo.svg" alt="Egis Logo">
+                  <img src="assets/logo/egis Logo.svg" loading="lazy" decoding="async" alt="Egis Logo">
                 </div>
                 <div class="gov-logo-box">
-                  <img src="assets/logo/Avenew Indonesia Logo.svg" alt="Avenew Indonesia Logo">
+                  <img src="assets/logo/Avenew Indonesia Logo.svg" loading="lazy" decoding="async" alt="Avenew Indonesia Logo">
                 </div>
                 <div class="gov-logo-box">
-                  <img src="assets/logo/Yooshin Logo.svg" alt="Yooshin Engineering Logo">
+                  <img src="assets/logo/Yooshin Logo.svg" loading="lazy" decoding="async" alt="Yooshin Engineering Logo">
                 </div>
               </div>
               <div class="consultant-name">Egis + Avenew Indonesia + Yooshin Engineering</div>
@@ -1970,10 +1970,10 @@
               <div class="consultant-category">Konsultan DED &amp; Pengawas</div>
               <div class="gov-logos">
                 <div class="gov-logo-box">
-                  <img src="assets/logo/Dohwa Logo.svg" alt="Dohwa Engineering Logo">
+                  <img src="assets/logo/Dohwa Logo.svg" loading="lazy" decoding="async" alt="Dohwa Engineering Logo">
                 </div>
                 <div class="gov-logo-box">
-                  <img src="assets/logo/Lenggogeni Logo.svg" alt="Lenggogeni Logo">
+                  <img src="assets/logo/Lenggogeni Logo.svg" loading="lazy" decoding="async" alt="Lenggogeni Logo">
                 </div>
               </div>
               <div class="consultant-name">Dohwa Engineering + Lenggogeni</div>
@@ -1985,7 +1985,7 @@
               </div>
               <div class="gov-logos">
                 <div class="gov-logo-box">
-                  <img src="assets/logo/Winsolusi Logo.svg" alt="Winsolusi Konsultan Logo">
+                  <img src="assets/logo/Winsolusi Logo.svg" loading="lazy" decoding="async" alt="Winsolusi Konsultan Logo">
                 </div>
               </div>
               <div class="consultant-name">Winsolusi Konsultan</div>
@@ -2001,10 +2001,10 @@
                 <div class="contractor-scope"><span class="italic-term">On-Corridor</span></div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Abipraya Logo.svg" alt="Abipraya Logo">
+                    <img src="assets/logo/Abipraya Logo.svg" loading="lazy" decoding="async" alt="Abipraya Logo">
                   </div>
                   <div class="gov-logo-box">
-                    <img src="assets/logo/SBS Logo.svg" alt="Sumber Bangun Sentosa Logo">
+                    <img src="assets/logo/SBS Logo.svg" loading="lazy" decoding="async" alt="Sumber Bangun Sentosa Logo">
                   </div>
                 </div>
                 <div class="contractor-name">KSO Brantas Abipraya (Persero) + Sumber Bangun Sentosa</div>
@@ -2018,7 +2018,7 @@
                 <div class="contractor-scope"><span class="italic-term">Off-Corridor</span></div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/SBS Logo.svg" alt="Sumber Bangun Sentosa Logo">
+                    <img src="assets/logo/SBS Logo.svg" loading="lazy" decoding="async" alt="Sumber Bangun Sentosa Logo">
                   </div>
                 </div>
                 <div class="contractor-name">Sumber Bangun Sentosa</div>
@@ -2031,7 +2031,7 @@
                 <div class="contractor-scope">Depo Leuwipanjang</div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Abadi Prima Intikarya Logo.svg" alt="Abadi Prima Intikarya Logo">
+                    <img src="assets/logo/Abadi Prima Intikarya Logo.svg" loading="lazy" decoding="async" alt="Abadi Prima Intikarya Logo">
                   </div>
                 </div>
                 <div class="contractor-name">Abadi Prima Intikarya</div>
@@ -2043,7 +2043,7 @@
                 <div class="contractor-scope">Depo Cicaheum</div>
                 <div class="gov-logos">
                   <div class="gov-logo-box">
-                    <img src="assets/logo/Pilar Dasar Membangun Logo.svg" alt="Pilar Dasar Membangun Logo">
+                    <img src="assets/logo/Pilar Dasar Membangun Logo.svg" loading="lazy" decoding="async" alt="Pilar Dasar Membangun Logo">
                   </div>
                 </div>
                 <div class="contractor-name">Pilar Dasar Membangun</div>
@@ -2617,9 +2617,9 @@ selesai. Alih-alih menyerahkannya kepada BUMD permanen yang melibatkan 5 kota/ka
   <div data-include="footer.html"></div>
 
   <!-- ── Scripts ── -->
-  <script src="https://unpkg.com/shpjs@6.2.0/dist/shp.js"></script>
-  <script src="main.js"></script>
-  <script src="halte-map.js"></script>
+  <script defer src="https://unpkg.com/shpjs@6.2.0/dist/shp.js"></script>
+  <script defer src="main.js"></script>
+  <script defer src="halte-map.js"></script>
 
 </body>
 

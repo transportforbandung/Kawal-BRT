@@ -34,7 +34,7 @@
     {
       id: 'off-corridor',
       name: 'Halte Off-Corridor',
-      filePath: 'dataset/Off-Corridor-Stops/Off-Corridor-Stops.shp',
+      filePath: 'dataset/Off-Corridor-Stops/Off-Corridor-Stops.zip',
       defaultEnabled: true,
       // Style per Type value. Fallback used when Type is unrecognised.
       typeStyles: {
@@ -47,7 +47,7 @@
     {
       id: 'on-corridor',
       name: 'Halte On-Corridor',
-      filePath: 'dataset/On-Corridor-Stops/On-Corridor-Stops.shp',
+      filePath: 'dataset/On-Corridor-Stops/On-Corridor-Stops.zip',
       defaultEnabled: true,
       typeStyles: {
         'Tepi Jalan': { radius: 9, color: '#00568E', fillColor: '#5BACD4', fillOpacity: 0.9, weight: 2 },
@@ -58,7 +58,7 @@
     {
       id: 'end-station',
       name: 'Halte End Station',
-      filePath: 'dataset/End-Stations/End-Stations.shp',
+      filePath: 'dataset/End-Stations/End-Stations.zip',
       defaultEnabled: true,
       typeStyles: {
         'End-Station': { radius: 9, color: '#addd00', fillColor: '#addd00', fillOpacity: 0.9, weight: 2 }
