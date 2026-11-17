@@ -3763,6 +3763,11 @@ tr:nth-child(even) {
 
 .halte-map-shell {
   position: relative;
+  /* Keep Leaflet's panes/controls (z-index 400–1000) and the fullscreen
+     button inside the map, so they can't paint over the sticky nav
+     (z-index 100) or the mobile menu drawer. */
+  z-index: 0;
+  isolation: isolate;
 }
 
 .halte-map-shell #halte-map {
@@ -3896,5 +3901,150 @@ tr:nth-child(even) {
 @media (max-width: 480px) {
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Mobile refinements (≤640px)
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* Gutters: section (16px) + container (4px) ≈ 20px page edge */
+  .container {
+    padding: 0 4px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 40px 20px 0;
+    min-height: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 8.5vw, 44px);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions a {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .map-card {
+    height: auto;
+    padding: 12px;
+  }
+
+  /* ── Stats band: tidy 2-column grid ── */
+  .stats-band {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 8px 16px;
+  }
+
+  .stat-item {
+    padding: 16px 8px;
+    border-right: none;
+  }
+
+  .stat-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    border-bottom: none;
+  }
+
+  .stat-num {
+    white-space: nowrap;
+  }
+
+  /* ── Pill + heading rows ── */
+  .scope-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .scope-tag {
+    white-space: nowrap;
+  }
+
+  /* ── Route tables → stacked cards ── */
+  .routes-table {
+    overflow-x: visible;
+  }
+
+  .routes-table thead {
+    display: none;
+  }
+
+  .routes-table table,
+  .routes-table tbody {
+    display: block;
+  }
+
+  .routes-table tr {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 10px;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .routes-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .routes-table td {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .routes-table .route-no {
+    white-space: nowrap;
+  }
+
+  .routes-table .route-note {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-mid);
+  }
+
+  .routes-table .route-note:empty {
+    display: none;
+  }
+
+  /* ── Status cards: badge above full-width label ── */
+  .status-grid .consultant-card > div:first-child {
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  /* ── Depot cards without a photo: drop the empty 180px block ── */
+  .depot-cards-grid > div > div:first-child:not(:has(img)) {
+    height: auto !important;
+  }
+
+  .depot-cards-grid > div > div:first-child:not(:has(img)) > div {
+    position: static !important;
+    background: var(--brand-green-dark) !important;
+  }
+
+  /* ── Green FAQ / contact box ── */
+  .faq-cta-box {
+    padding: 24px 20px;
+  }
+
+  /* ── Map uses more of tall phones ── */
+  #halte-map,
+  .halte-map-shell #halte-map {
+    height: min(70vh, 460px);
   }
 }
