@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create and edit BRT routes by connecting stops with OpenStreetMap routing.">
+  <title>BRT Route Editor</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/tools/routes_editor/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">KAWAL BRT · LOCAL TOOL</p>
+      <h1>Route editor</h1>
+    </div>
+    <p class="local-badge"><span aria-hidden="true"></span> Saved on this computer</p>
+  </header>
+
+  <main class="workspace">
+    <aside class="sidebar" aria-label="Route editor controls">
+      <section class="panel">
+        <h2>Route file</h2>
+        <label for="saved-routes">Edit a saved route</label>
+        <div class="inline-control">
+          <select id="saved-routes">
+            <option value="">New route</option>
+          </select>
+          <button id="load-route" class="button button-secondary" type="button">Load</button>
+        </div>
+        <label for="route-name">Route name</label>
+        <input id="route-name" type="text" maxlength="80" placeholder="e.g. BRT 19: Cibiru – Dago">
+        <label for="route-ref">Route ref (read from route name)</label>
+        <input id="route-ref" type="text" readonly placeholder="Enter a name containing BRT and its number">
+        <p id="file-hint" class="help-text">Save creates GeoJSON and KML files and writes the route ref into selected stop DBFs. ZIP archives are not changed.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Choose stops</h2>
+        <p class="help-text">Click stops in order, then choose the intended road candidate near each stop. This lets you select the correct carriageway when a median separates lanes.</p>
+        <label for="stop-radius">Stop buffer / maximum road snap distance (meters)</label>
+        <input id="stop-radius" type="number" min="1" max="100" step="1" value="12">
+        <p class="help-text">Default is 12 m. If no road is inside the circle, increase the buffer and try again.</p>
+        <div id="road-choices" class="road-choices" hidden aria-live="polite">
+          <h3>Choose the intended road</h3>
+          <p id="road-choice-stop" class="help-text"></p>
+          <div id="road-choice-list" class="road-choice-list"></div>
+          <button id="cancel-road-choice" class="button button-secondary" type="button">Cancel stop</button>
+        </div>
+        <label for="stop-search">Find a stop</label>
+        <input id="stop-search" type="search" placeholder="Search by stop name">
+        <fieldset class="filters">
+          <legend>Show stops</legend>
+          <label><input type="checkbox" data-group="On-Corridor" checked> On-corridor</label>
+          <label><input type="checkbox" data-group="Off-Corridor" checked> Off-corridor</label>
+          <label><input type="checkbox" data-group="End-Station" checked> End stations</label>
+        </fieldset>
+        <div class="button-row">
+          <button id="undo-stop" class="button button-secondary" type="button" disabled>Undo last stop</button>
+          <button id="clear-route" class="button button-danger" type="button">Clear route</button>
+        </div>
+      </section>
+
+      <section class="panel route-panel">
+        <div class="section-heading">
+          <h2>Route stops</h2>
+          <span id="stop-count" class="count-badge">0</span>
+        </div>
+        <ol id="stop-list" class="stop-list" aria-live="polite">
+          <li class="empty-state">Click a stop on the map to start.</li>
+        </ol>
+        <div class="route-stats">
+          <div><span>Distance</span><strong id="route-distance">—</strong></div>
+          <div><span>Driving estimate</span><strong id="route-duration">—</strong></div>
+        </div>
+      </section>
+
+      <section class="panel panel-actions">
+        <button id="save-route" class="button button-primary" type="button" disabled>Save route to project</button>
+        <p id="status" class="status" role="status" aria-live="polite">Loading stops…</p>
+      </section>
+      <p class="attribution">Routing: OSRM demo server · Map data © OpenStreetMap contributors</p>
+    </aside>
+
+    <section class="map-area" aria-label="Map">
+      <div id="map" role="application" aria-label="Map of bus stops. Click stops to build a route."></div>
+      <div class="map-hint">Click two or more stops in travel order to draw a road route.</div>
+      <div id="map-error" class="map-error" hidden></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/tools/routes_editor/app.js"></script>
+</body>
+</html>

@@ -247,7 +247,10 @@
       throw new Error('The shapefile parser did not load');
     }
 
-    const data = await window.shp(filePath);
+    // shpjs builds sidecar URLs (.shp/.dbf/.prj/.cpg) with `new URL(base)` and
+    // no base URL, so a relative path throws "Invalid URL". Resolve it first.
+    const absoluteUrl = new URL(filePath, document.baseURI).href;
+    const data = await window.shp(absoluteUrl);
     if (data?.type !== 'FeatureCollection' || !Array.isArray(data.features)) {
       throw new Error(`Unexpected shapefile data in ${filePath}`);
     }
