@@ -11,18 +11,26 @@
   const MAP_CENTER = [-6.9104, 107.6183];
   const MAP_ZOOM = 11;
   const MAP_ID = 'halte-map';
-  const ON_CORRIDOR_PLAN_IMAGES = {
-    BS1: 'assets/Median BS_BS1 Stasiun Hall.png',
-    BS2: 'assets/Median BS_BS2 Pasar Baru.png',
-    BS13A: 'assets/Median BS_BS13A Pasar Kosambi.png',
-    BS14B: 'assets/Median BS_BS14B Stadion Sidolig.png',
-    BS15B: 'assets/Median BS_BS15B IBCC.png',
-    BS16: 'assets/Median BS_BS 16 Cicadas.png',
-    BS29: 'assets/Median BS_BS29 Rajawali Timur.png',
-    BS30: 'assets/Median BS_BS30 Ciroyom.png',
-    BS31: 'assets/Median BS_BS31 Trinitas.png',
-    BS32: 'assets/Median BS_BS32 RS Kebon Jati.png',
-  };
+  // On-corridor top-view renders live at assets/<code>-top-render.{webp,png}, where <code> is
+  // the stop ID zero-padded to two digits (dataset "BS6A" -> file "BS06A"). The popup shows the
+  // light 800px WebP; clicking it opens the full-resolution PNG.
+  const ON_CORRIDOR_TYPES = new Set(['Tepi Jalan', 'Median Jalan']);
+  const ON_CORRIDOR_RENDER_CODES = new Set([
+    'BS01', 'BS02', 'BS03', 'BS04', 'BS05', 'BS06A', 'BS06B', 'BS07', 'BS08', 'BS09', 'BS10',
+    'BS11', 'BS12', 'BS13A', 'BS13B', 'BS14A', 'BS14B', 'BS15A', 'BS15B', 'BS16', 'BS17',
+    'BS18', 'BS19', 'BS20', 'BS21', 'BS22', 'BS23', 'BS24', 'BS25', 'BS26', 'BS27', 'BS28',
+    'BS29', 'BS30', 'BS31', 'BS32', 'BS33', 'BS34',
+  ]);
+  function getOnCorridorRender(p) {
+    const match = (p.ID || '').trim().toUpperCase().match(/^BS(\d+)([A-Z]?)$/);
+    if (!match) return null;
+    const code = `BS${match[1].padStart(2, '0')}${match[2]}`;
+    if (!ON_CORRIDOR_RENDER_CODES.has(code)) return null;
+    return {
+      preview: `assets/${code}-top-render.webp`,
+      full: `assets/${code}-top-render.png`,
+    };
+  }
   const OFF_CORRIDOR_PLAN_IMAGES = {
     'Bus Pole': 'assets/off-corridor-pole.png',
     'Small Shelter': 'assets/off-corridor-small-shelter.png',
@@ -474,7 +482,10 @@
     const type = p.Type || '—';
     const kepemilikan = p.Kepemilikan || p.Milik || '—';
     const wilAdmin = p.Wil_Admin || '—';
-    const planImage = ON_CORRIDOR_PLAN_IMAGES[p.ID] || OFF_CORRIDOR_PLAN_IMAGES[type];
+    const offCorridorImage = OFF_CORRIDOR_PLAN_IMAGES[type];
+    const planImage = ON_CORRIDOR_TYPES.has(type)
+      ? getOnCorridorRender(p)
+      : offCorridorImage && { preview: offCorridorImage, full: offCorridorImage };
 
     // Type badge colour mirrors the circleMarker palette
     const typeBadgeColor = {
@@ -493,8 +504,8 @@
           <div class="halte-popup-name">${nama}</div>
         </div>
         ${planImage ? `
-          <a class="halte-popup-plan-link" href="${encodeURI(planImage)}" target="_blank" rel="noopener noreferrer" aria-label="Buka gambar rencana halte ${nama} di tab baru">
-            <img class="halte-popup-plan" src="${encodeURI(planImage)}" alt="Rencana halte ${nama}" loading="lazy">
+          <a class="halte-popup-plan-link" href="${encodeURI(planImage.full)}" target="_blank" rel="noopener noreferrer" aria-label="Buka gambar rencana halte ${nama} di tab baru">
+            <img class="halte-popup-plan" src="${encodeURI(planImage.preview)}" alt="Rencana halte ${nama}" loading="lazy">
           </a>
           <div class="halte-popup-credit">Kredit: PIU BRT Mastran Cekungan Bandung</div>
         ` : ''}

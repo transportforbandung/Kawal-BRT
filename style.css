@@ -1920,6 +1920,40 @@ footer {
   padding: 12px 14px 8px;
 }
 
+/* Landscape road-configuration diagrams: side by side on desktop, stacked below 900px.
+   On very narrow phones the diagram scrolls sideways instead of shrinking past legibility. */
+.platform-types-grid--wide {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Share header / diagram / description rows across the two cards so the diagrams line up */
+.platform-types-grid--wide .platform-card {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+}
+
+@media (max-width: 900px) {
+  .platform-types-grid--wide {
+    grid-template-columns: 1fr;
+  }
+}
+
+.platform-types-grid--wide .platform-card-diagram {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.platform-config-svg {
+  display: block;
+  width: 100%;
+  min-width: 380px;
+  max-width: 440px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .platform-card-desc {
   padding: 0 14px 10px;
   font-size: 12px;
