@@ -13,7 +13,7 @@
 
   <!-- ============ PANEL A ============ -->
   <text x="40" y="38" font-size="17" font-weight="700" fill="#1F2937">A. Tanpa halte median</text>
-  <text x="40" y="58" font-size="12.5" fill="#4B5563">Jalan satu arah, empat lajur kendaraan</text>
+  <text x="40" y="58" font-size="12.5" fill="#4B5563">Jalan satu arah, empat lajur kendaraan (contoh: Jl. Kebon Jati)</text>
 
   <!-- trotoar -->
   <rect x="40" y="76" width="70" height="160" fill="#EDE6DA"/>
@@ -49,7 +49,7 @@
   <!-- panah penyeberangan -->
   <line x1="95" y1="197" x2="645" y2="197" stroke="#C2410C" stroke-width="3.5" marker-end="url(#panah)"/>
   <rect x="236" y="160" width="268" height="24" rx="5" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
-  <text x="370" y="177" font-size="12.5" font-weight="700" fill="#9A3412" text-anchor="middle">Sekali menyeberang: 4 lajur (± 14 m)</text>
+  <text x="370" y="177" font-size="12.5" font-weight="700" fill="#9A3412" text-anchor="middle">Sekali menyeberang: 4 lajur (± 16,7 m)</text>
 
   <text x="40" y="262" font-size="12" fill="#374151">Pejalan kaki dan penumpang harus menyeberangi seluruh badan jalan tanpa tempat berhenti.</text>
 
