@@ -7,6 +7,9 @@ rencana_penggabungan: >
   sebagai satu bagian "##" setelah "Jalur tepi tidak selalu berarti gagal" dan sebelum
   "Apa artinya bagi penumpang?". Semua subjudul memakai "###" agar langsung sesuai.
   Rujukan di bawah garis pemisah bisa dipindahkan ke daftar "Bahan rujukan" draf utama.
+  File ini kini memuat dua bagian opini: (1) dorongan lebih banyak jalur dan halte
+  median, dan (2) komunikasi publik dan pengelolaan konstruksi (MRLL, koordinasi
+  dengan proyek galian lain). Opini kedua bisa diletakkan tepat setelah opini pertama.
 catatan_penulis: >
   Bagian ini merupakan opini Transport for Bandung, bukan penjelasan teknis netral.
   Bagian bertanda [CEK] perlu diverifikasi sebelum terbit. Jangan mengutip detail DED
@@ -19,6 +22,16 @@ catatan_penulis: >
 Kami mengikuti proyek BRT Cekungan Bandung sejak sekitar 2022. Selama itu, kami melihat sendiri bahwa proyek ini lahir dari kajian dan perencanaan yang panjang, mulai dari studi kelayakan, analisis dampak lingkungan dan lalu lintas, hingga desain teknis terperinci. Karena itu, kami menolak anggapan bahwa proyek ini asal-asalan atau tanpa perencanaan.
 
 Namun, mendukung sebuah proyek tidak berarti berhenti bertanya. Saat ini, hanya 10 dari 38 halte *on-corridor* yang berada di median jalan, sementara 28 halte lainnya berada di tepi jalan. Kami menilai sebagian ruas yang kini memakai jalur dan halte tepi sebenarnya lebih cocok memakai konfigurasi median. Bagian ini menjelaskan alasan kami.
+
+### Terasa macet saat dibangun, bermasalah saat beroperasi
+
+Saat ini, keberatan terhadap halte median paling sering lahir dari pengalaman di jalan. Pembangunan halte di tengah jalan menutup sebagian badan jalan dengan pagar proyek, alat berat, dan tumpukan material. Kendaraan harus menyempit dan mengitari area kerja, lalu antrean memanjang. Wajar jika banyak orang menyimpulkan bahwa halte median membuat jalan macet.
+
+Namun, kesan ini lahir dari masa konstruksi, bukan masa operasi. Pagar proyek akan dibongkar, dan lajur yang kini tertutup akan kembali terbuka. Masa konstruksi berlangsung dalam hitungan bulan, sedangkan jalur dan halte BRT akan beroperasi selama bertahun-tahun. Karena itu, desain koridor seharusnya dinilai dari cara kerjanya selama masa operasi yang panjang tersebut, bukan dari kesan selama pembangunan.
+
+Jalur tepi menunjukkan pola yang berkebalikan. Pembangunannya tidak terlalu mencolok karena pekerjaan menempati tepi jalan dan trotoar, tanpa "pulau" yang memecah arus kendaraan. Masalahnya justru muncul setelah BRT beroperasi: angkot yang berhenti di jalur bus, truk yang bongkar muat di depan toko, kendaraan yang keluar-masuk gang, dan kendaraan belok kiri yang memotong jalur BRT. Gangguan ini tidak hilang bersama pagar proyek. Gangguan ini muncul setiap hari selama BRT beroperasi, dan sering kali tampak seperti kemacetan biasa, sehingga jarang ada yang mengaitkannya dengan pilihan desain jalur.
+
+Dengan kata lain, halte median menempatkan sebagian besar ketidaknyamanan pada masa konstruksi yang sementara, sedangkan jalur tepi menunda ketidaknyamanan ke masa operasi yang jauh lebih panjang. Bagian-bagian berikut menguraikan masalah tersebut satu per satu.
 
 ### Tidak semua jalur tepi bermasalah
 
@@ -103,6 +116,53 @@ Proyek ini sendiri sudah menunjukkannya. Halte median Rajawali Timur berdiri di 
 
 Kami tidak meragukan bahwa perencana telah mengkaji setiap ruas. Yang belum kami temukan adalah penjelasan terbuka mengapa setiap halte ditempatkan di tepi jalan, khususnya di ruas yang padat akses dan cukup lebar untuk jalur median. Dokumen proyek menyebut prinsip umum, yaitu halte median di jalan yang lebar dan halte tepi di ruas dengan trotoar yang memadai. Namun, belum ada penjelasan bagaimana prinsip ini diterapkan pada setiap halte. Kami berharap pemangku kepentingan proyek membuka pertimbangan tersebut, setidaknya untuk halte-halte di Jalan Otto Iskandar Dinata, Jalan Jenderal Sudirman, dan Jalan Naripan.
 
+## Opini: proyek yang baik juga harus dikomunikasikan dan dikelola dengan baik
+
+Bagian sebelumnya mempersoalkan pilihan desain. Bagian ini mempersoalkan hal lain, yaitu cara proyek ini dijelaskan kepada publik dan cara pembangunannya dikelola di jalan. Kami tetap mendukung BRT Cekungan Bandung. Justru karena itu, kami khawatir kesan buruk selama pembangunan akan menggerus dukungan publik terhadap layanan yang belum sempat beroperasi.
+
+### Desain yang tidak dijelaskan akan dianggap asal-asalan
+
+Warga yang melintas hanya melihat bangunan setengah jadi di tengah jalan, lajur yang menyempit, dan antrean kendaraan. Tanpa penjelasan, wajar jika warga menyimpulkan bahwa proyek ini tidak direncanakan dengan baik. Padahal, seperti yang kami uraikan di bagian sebelumnya, proyek ini lahir dari kajian yang panjang.
+
+Masalahnya, kajian itu belum sampai ke publik dalam bentuk yang mudah dipahami. Dokumen seperti ESIA dan Analisis Dampak Lalu Lintas (Andalalin) memang ada, tetapi berupa laporan teknis setebal ratusan halaman, dan ESIA ditulis dalam bahasa Inggris. Kami belum menemukan materi ringkas berbahasa Indonesia yang menjelaskan mengapa sebuah halte berada di median, mengapa halte lain berada di tepi jalan, dan bagaimana penumpang akan mencapainya. ESIA sendiri merencanakan penyebaran informasi melalui buletin, selebaran, unggahan di situs web, pertemuan dengan warga, serta pemasangan dokumen di lokasi proyek yang mudah terlihat. Rencana ini perlu benar-benar dijalankan, dan isinya perlu menjawab pertanyaan yang sebenarnya muncul di masyarakat, bukan sekadar mengumumkan bahwa proyek sedang berjalan. [CEK: apakah ada kanal resmi (situs, media sosial) yang sudah memuat penjelasan desain]
+
+### Rekayasa lalu lintas: lengkap di atas kertas
+
+Dokumen proyek sebenarnya sudah memuat rencana manajemen dan rekayasa lalu lintas selama konstruksi (MRLL) yang cukup rinci. Andalalin merekomendasikan, antara lain:
+
+- **Informasi sebelum pekerjaan dimulai**, melalui spanduk dan media digital, termasuk lama waktu pekerjaan, serta pembaruan informasi di peta digital seperti Google Maps agar pengguna jalan bisa mempertimbangkan rute sebelum melewati area konstruksi.
+- **Rambu yang menyarankan pengguna jalan menghindari ruas** yang sedang dibangun.
+- **Rambu petunjuk rute alternatif sebelum memasuki kawasan koridor**, agar pengguna jalan "sudah tersosialisasi dengan baik sebelum pekerjaan dilaksanakan".
+- **Pengalihan arus di tingkat kawasan** dari keempat arah. Kendaraan dari barat, misalnya, dapat dialihkan melalui Jalan Pajajaran atau Jalan Soekarno-Hatta, dan kendaraan dari timur melalui Jalan Surapati atau Jalan Ibrahim Adjie dan Jalan Gatot Subroto.
+- **Pekerjaan yang tidak dilakukan bersamaan di ruas yang sama**, agar tidak terjadi penyempitan berlapis.
+- **Kendaraan berat proyek yang hanya beroperasi pada pukul 22.00 hingga 04.00.**
+
+ESIA menambahkan sosialisasi melalui spanduk dan selebaran kepada sopir angkot, pengguna jalan, dan pemilik usaha **sebelum** konstruksi dimulai, informasi akses sementara dan rute alternatif, survei persepsi dan analisis media terhadap keluhan warga, serta mekanisme pengaduan dengan tenggat dan penanggung jawab yang jelas. ESIA juga menilai risiko kemacetan selama konstruksi sebagai risiko yang **substansial**, dan risiko itu baru turun menjadi sedang jika seluruh langkah mitigasi dijalankan secara konsisten dan efektif. ESIA bahkan sudah menyebut ruas yang paling kritis, yaitu Jalan Ahmad Yani, Jalan Jenderal Sudirman, Jalan Kebon Jati, dan Jalan BKR.
+
+### Di lapangan: informasi datang setelah macet
+
+Yang kami lihat di lapangan berbeda. Informasi yang terpasang umumnya hanya pemberitahuan bahwa ada pekerjaan konstruksi, dan letaknya di dekat lokasi proyek. Pengguna jalan baru mengetahui ada pekerjaan setelah mereka terjebak dalam antrean, ketika sudah tidak ada pilihan untuk berbalik arah. Kami belum melihat rambu rute alternatif di tingkat kawasan, sebelum pengguna jalan memasuki koridor, seperti yang Andalalin rekomendasikan. [CEK: dokumentasi foto rambu di lokasi proyek dan pengecekan Google Maps/Waze pada ruas yang sedang dibangun]
+
+Pola ini terlihat dari pemberitaan. Pada September 2026, pembangunan halte median di Cicadas memicu antrean panjang dan keluhan warga. Wali Kota Bandung menyebut potensi kemacetan ini sudah diperkirakan sejak awal, lalu meminta sosialisasi, termasuk jadwal pekerjaan, dilakukan lebih masif. Anggota DPRD Jawa Barat juga mendorong sosialisasi lokasi proyek dan jalur alternatif agar warga bisa mengatur perjalanan. Jika kemacetan sudah diperkirakan sejak awal, sosialisasi seharusnya juga dimulai sejak awal, bukan setelah warga mengeluh. [CEK: tanggal dan kutipan dari berita fokusjabar, BandungOKE, jabarprov.go.id, dan PRFM]
+
+Akibatnya, halte median menanggung kesan sebagai penyebab macet. Seperti yang kami uraikan di awal, kesan ini sebenarnya lahir dari masa konstruksi, dan sebagian besar bisa dikurangi dengan MRLL yang dijalankan sesuai rencana.
+
+### Proyek lain ikut menggerus citra BRT
+
+BRT bukan satu-satunya pekerjaan yang membongkar jalan Bandung. Pemerintah kota juga menjalankan proyek penurunan kabel udara ke bawah tanah (*ducting*), sementara penyedia jaringan menggali jalan untuk utilitas, dan saluran drainase ikut diperbaiki di berbagai ruas. Pekerjaan galian ini berulang kali dikeluhkan karena memicu kemacetan dan meninggalkan permukaan jalan yang tidak rata. Wali Kota bahkan sempat memberi tenggat kepada kontraktor galian utilitas, dan anggota DPRD Kota Bandung menilai mekanisme perizinan galian tidak sinkron. [CEK: ruas mana saja yang beririsan dengan koridor BRT, dan sumber berita yang akan dikutip]
+
+Bagi pengguna jalan, semua pekerjaan ini tampak sama: pagar proyek, galian, dan antrean. Galian kabel atau drainase yang berlarut-larut di dekat koridor dengan mudah dianggap sebagai bagian dari proyek BRT. Dampaknya terjadi secara langsung, karena dua pekerjaan di ruas yang sama berarti penyempitan berlapis, persis seperti yang Andalalin minta untuk dihindari. Dampaknya juga terjadi secara tidak langsung, karena kekesalan terhadap galian yang tidak rapi ikut melekat pada BRT.
+
+ESIA sudah mengantisipasi bahwa sebagian utilitas, seperti kabel listrik, pipa, dan tiang, perlu dipindahkan untuk proyek BRT, dengan koordinasi antarinstansi dan sosialisasi sebelum pemindahan. Prinsip yang sama perlu berlaku untuk seluruh pekerjaan di jalan kota: satu jadwal yang terkoordinasi, sehingga sebuah ruas tidak dibongkar berkali-kali oleh pihak yang berbeda dalam waktu yang berdekatan.
+
+### Yang kami minta: buka, beri tahu lebih awal, dan koordinasikan
+
+1. **Penjelasan desain dalam bahasa yang mudah dipahami**, termasuk alasan posisi setiap halte, cara penumpang mencapainya, dan gambaran kondisi setelah selesai.
+2. **Jadwal pekerjaan per ruas yang diumumkan sebelum pekerjaan dimulai**, melalui spanduk di ujung ruas, media sosial, dan peta digital seperti Google Maps dan Waze.
+3. **Rambu rute alternatif di tingkat kawasan**, jauh sebelum pengguna jalan masuk ke ruas yang terdampak, sesuai rekomendasi Andalalin.
+4. **Koordinasi dengan proyek lain**, seperti galian utilitas dan drainase, dalam satu kalender pekerjaan, agar satu ruas tidak menanggung beberapa pekerjaan sekaligus.
+5. **Laporan terbuka atas pelaksanaan mitigasi**, termasuk hasil survei persepsi, rekapitulasi pengaduan, dan tindak lanjutnya, seperti yang ESIA rencanakan.
+
 ---
 
 ### Bahan rujukan (untuk penulis)
@@ -122,3 +182,21 @@ Kami tidak meragukan bahwa perencana telah mengkaji setiap ruas. Yang belum kami
 - Jalan Dalem Kaum: Tribun Jabar (4 April 2025), *Jalan Dalem Kaum Kota Bandung Dipadati PKL*. https://jabar.tribunnews.com/2025/04/04/jalan-dalem-kaum-kota-bandung-dipadati-pkl-pedagang-bersyukur-tapi-warga-dan-wisatawan-khawatir dan detik, *Jalan Dalem Kaum 'Disulap' Jadi Kawasan Pedestrian*. https://news.detik.com/berita-jawa-barat/d-2894919/jalan-dalem-kaum-disulap-jadi-kawasan-pedestrian
 - doc/Analisis-Penanganan-Dampak-Lalu-Lintas-Pembangunan-Koridor-BRT-dan-Terminus.pdf: III.1.3 (lebar ruas dan trotoar: Jalan Otto Iskandar Dinata, Jalan Jenderal Sudirman, Jalan Naripan, Jalan Rajawali Timur), IV.1.2 (daftar rekayasa lalu lintas per halte dan ruas), rekomendasi masa operasional (44 trayek, penertiban parkir).
 - dataset/On-Corridor-Stops: posisi 38 halte (10 median, 28 tepi jalan).
+
+**Opini kedua (komunikasi dan pengelolaan konstruksi)**
+- doc/Analisis-Penanganan-Dampak-Lalu-Lintas-Pembangunan-Koridor-BRT-dan-Terminus.pdf: IV.1.1 (strategi konstruksi: fabrikasi di workshop, pekerjaan bertahap dan tidak bersamaan di ruas yang sama, tim A dan B, hlm. 243), IV.1.2.1 (zona keselamatan kerja dan kebutuhan rambu, hlm. 244–247), IV.1.2.3 (mitigasi tingkat kawasan dan area konstruksi, rute alternatif dari empat arah, hlm. 252–256), VI.2.2 Rekomendasi pada Masa Konstruksi (spanduk dan media digital termasuk lama pekerjaan, pembaruan Google Maps, rambu "hindari ruas", rambu rute alternatif sebelum memasuki kawasan, kendaraan berat pukul 22.00–04.00, papan informasi dan peringatan dini ±50 m, hlm. 320–322). Catatan: daftar isi menyebutnya V.2.2, judul di badan dokumen VI.2.2.
+- doc/Environmental-and-Social-Impact-Assessment-BBMA-REV.11.pdf: uraian pemindahan utilitas dengan koordinasi dan sosialisasi (hlm. 43); dampak lalu lintas konstruksi, ruas kritis (Jl. A. Yani, Jl. Jend. Sudirman, Jl. Kebon Jati, Jl. BKR), risiko substansial dan daftar mitigasi (hlm. 117–118); pembatasan akses, jadwal konstruksi sekitar 12 bulan, sosialisasi spanduk dan selebaran sebelum konstruksi, survei persepsi, informasi rute alternatif, GRM (hlm. 121–122); 7.2 *Future Engagement and Information Disclosure* (buletin, selebaran, situs web, dokumen di lokasi proyek, hlm. 157).
+- Kemacetan pembangunan halte dan respons pemerintah (September–Oktober 2026):
+  - fokusjabar (11 September 2026), *Halte BRT di Tengah Jalan Picu Kemacetan, Farhan Angkat Bicara*. https://fokusjabar.id/2026/09/11/halte-brt-di-tengah-jalan-picu-kemacetan-farhan-angkat-bicara/
+  - BandungOKE (12 September 2026), *Halte BRT di Tengah Jalan Cicadas Bikin Macet Panjang*. https://bandungoke.com/2026/09/12/halte-brt-di-tengah-jalan-cicadas-bikin-macet-panjang-warga-geram-farhan-janji-kawal/
+  - jabarprov.go.id, *Respon Keluhan Warga, Sosialisasi Pembangunan Halte BRT Kota Bandung akan Lebih Masif*. https://jabarprov.go.id/berita/respon-keluhan-warga-sosialisasi-pembangunan-halte-brt-kota-bandung-akan-lebih-masif-25613
+  - PRFM, *Proyek Halte BRT Picu Potensi Macet, DPRD Jabar Minta Petugas Disiagakan*. https://prfmnews.pikiran-rakyat.com/jawa-barat/pr-1310521318/proyek-halte-brt-picu-potensi-macet-dprd-jabar-minta-petugas-disiagakan
+  - detikJabar, *Proyek Halte BRT Picu Macet di Bandung, Farhan Bakal Tegur Kontraktor*. https://www.detik.com/jabar/berita/d-8721462/proyek-halte-brt-picu-macet-di-bandung-farhan-bakal-tegur-kontraktor
+  - Pikiran Rakyat, *Pembangunan Halte BRT Bandung, Dishub Minta Hindari Jam Sibuk*. https://koran.pikiran-rakyat.com/news/pr-30310495508/pembangunan-halte-brt-bandung-dishub-minta-hindari-jam-sibuk
+- Galian utilitas, *ducting*, dan drainase:
+  - PRFM, *Proyek Galian Bikin Jalan di Bandung Rusak, DPRD Nilai Mekanisme Perizinan Tak Sinkron*. https://prfmnews.pikiran-rakyat.com/bandung-raya/pr-1310022039/proyek-galian-bikin-jalan-di-bandung-rusak-dprd-nilai-mekanisme-perizinan-tak-sinkron
+  - westjavatoday, *Farhan Ultimatum Apjatel, Galian Utilitas di Bandung Harus Tuntas 12 Maret*. https://www.westjavatoday.com/farhan-ultimatum-apjatel-galian-utilitas-di-bandung-harus-tuntas-12-maret
+  - PRFM, *Pemkot Bandung 'Ngegas' Proyek Galian Kabel*. https://prfmnews.pikiran-rakyat.com/bandung-raya/pr-1310338623/awas-macet-pemkot-bandung-ngegas-proyek-galian-kabel-2-kali-lipat-bulan-ini-di-banyak-lokasi
+  - RRI, *Pemkot Bandung Tunda Izin BRT dan Proyek Galian IPT, Farhan Ancam Sanksi Tegas*. https://rri.co.id/bandung/daerah-3t/2301956/pemkot-bandung-tunda-izin-brt-dan-proyek-galian-ipt-farhan-ancam-sanksi-tegas [CEK: isi berita, relevan untuk koordinasi izin]
+  - metrotvnews, *Drainase Bermasalah, Wali Kota Bandung Soroti Potensi Genangan* (drainase terkendala utilitas bawah tanah yang bersinggungan). https://www.metrotvnews.com/read/kqYCdB09-drainase-bermasalah-wali-kota-bandung-soroti-potensi-genangan-dari-aliran-sungai
+  - [CEK: semua tautan berita di atas ditemukan lewat pencarian dan belum dibaca utuh; cocokkan kutipan dan tanggal sebelum terbit]
