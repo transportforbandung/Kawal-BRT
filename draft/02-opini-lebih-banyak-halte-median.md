@@ -20,6 +20,16 @@ Kami mengikuti proyek BRT Cekungan Bandung sejak sekitar 2022. Selama itu, kami 
 
 Namun, mendukung sebuah proyek tidak berarti berhenti bertanya. Saat ini, hanya 10 dari 38 halte *on-corridor* yang berada di median jalan, sementara 28 halte lainnya berada di tepi jalan. Kami menilai sebagian ruas yang kini memakai jalur dan halte tepi sebenarnya lebih cocok memakai konfigurasi median. Bagian ini menjelaskan alasan kami.
 
+### Terasa macet saat dibangun, bermasalah saat beroperasi
+
+Saat ini, keberatan terhadap halte median paling sering lahir dari pengalaman di jalan. Pembangunan halte di tengah jalan menutup sebagian badan jalan dengan pagar proyek, alat berat, dan tumpukan material. Kendaraan harus menyempit dan mengitari area kerja, lalu antrean memanjang. Wajar jika banyak orang menyimpulkan bahwa halte median membuat jalan macet.
+
+Namun, kesan ini lahir dari masa konstruksi, bukan masa operasi. Pagar proyek akan dibongkar, dan lajur yang kini tertutup akan kembali terbuka. Masa konstruksi berlangsung dalam hitungan bulan, sedangkan jalur dan halte BRT akan beroperasi selama bertahun-tahun. Karena itu, desain koridor seharusnya dinilai dari cara kerjanya selama masa operasi yang panjang tersebut, bukan dari kesan selama pembangunan.
+
+Jalur tepi menunjukkan pola yang berkebalikan. Pembangunannya tidak terlalu mencolok karena pekerjaan menempati tepi jalan dan trotoar, tanpa "pulau" yang memecah arus kendaraan. Masalahnya justru muncul setelah BRT beroperasi: angkot yang berhenti di jalur bus, truk yang bongkar muat di depan toko, kendaraan yang keluar-masuk gang, dan kendaraan belok kiri yang memotong jalur BRT. Gangguan ini tidak hilang bersama pagar proyek. Gangguan ini muncul setiap hari selama BRT beroperasi, dan sering kali tampak seperti kemacetan biasa, sehingga jarang ada yang mengaitkannya dengan pilihan desain jalur.
+
+Dengan kata lain, halte median menempatkan sebagian besar ketidaknyamanan pada masa konstruksi yang sementara, sedangkan jalur tepi menunda ketidaknyamanan ke masa operasi yang jauh lebih panjang. Bagian-bagian berikut menguraikan masalah tersebut satu per satu.
+
 ### Tidak semua jalur tepi bermasalah
 
 Kami tidak menuntut seluruh koridor memakai jalur median. Di beberapa ruas, jalur dan halte tepi merupakan pilihan yang masuk akal:
