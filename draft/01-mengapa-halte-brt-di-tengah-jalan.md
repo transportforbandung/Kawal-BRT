@@ -27,17 +27,19 @@ Tulisan ini terdiri atas dua bagian. Bagian pertama menjelaskan alasan di balik 
 
 ## Apa itu BRT?
 
-ITDP (*Institute for Transportation and Development Policy*), organisasi nirlaba yang bergerak di bidang transportasi sejak 1985, menyusun acuan internasional untuk merancang dan menilai koridor BRT yang disebut sebagai *BRT Standard*. Dalam edisi 2024, ITDP mendefinisikan BRT sebagai sistem angkutan cepat berbasis bus dengan kapasitas tinggi yang memberikan layanan cepat, berkualitas, andal, aman, dan hemat biaya.
+ITDP (*Institute for Transportation and Development Policy*), organisasi nirlaba yang bergerak di bidang transportasi sejak 1985, menyusun acuan internasional untuk merancang dan menilai koridor BRT yang disebut sebagai [*BRT Standard*](https://itdp.org/library/standards-and-guides/the-bus-rapid-transit-standard/). Dalam edisi 2024, ITDP mendefinisikan BRT sebagai sistem angkutan cepat berbasis bus dengan kapasitas tinggi yang memberikan layanan cepat, berkualitas, andal, aman, dan hemat biaya.
 
 Ketika membahas posisi halte dan jalur khusus di median jalan, kata kunci yang harus digarisbawahi adalah huruf "R" dalam "BRT", yakni *rapid* atau cepat. Kemacetan dan antrean kendaraan yang berhenti atau berbelok di depan bus menyita banyak waktu perjalanan bus kota biasa. BRT harus mampu mengejar kecepatan dengan menghilangkan sumber-sumber hambatan tersebut.
 
 *BRT Standard* menyebut lima elemen dasar (*BRT Basics*) yang membedakan BRT dari layanan bus biasa:
 
+<!-- Komponen web: draft/komponen-elemen-dasar-brt.html (kelas .brt-basics di style.css). Di halaman web, komponen ini menggantikan daftar di bawah dan memvisualkan syarat minimum pada paragraf berikutnya. -->
+
 1. **Jalur khusus** (*dedicated right-of-way*). Bus melaju di jalurnya sendiri, terpisah dari kendaraan lain, idealnya dengan separator fisik.
 2. **Letak jalur** (*busway alignment*). Jalur bus menempati bagian jalan dengan gangguan paling sedikit, umumnya di tengah jalan.
 3. **Pembayaran di luar bus** (*off-board fare collection*). Penumpang membayar di halte sebelum naik, sehingga bus tidak perlu menunggu penumpang membayar.
 4. **Penanganan persimpangan** (*intersection treatments*). Pengaturan lalu lintas di persimpangan mendahulukan bus, misalnya dengan melarang kendaraan lain berbelok memotong jalur BRT.
-5. **Peron setinggi lantai bus** (*platform-level boarding*). Penumpang, termasuk pengguna kursi roda, dapat naik dan turun tanpa menaiki anak tangga.
+5. **Lantai halte setinggi lantai bus** (*platform-level boarding*). Penumpang, termasuk pengguna kursi roda, dapat naik dan turun tanpa menaiki anak tangga.
 
 ITDP juga menetapkan syarat minimum. Setiap elemen dasar bernilai maksimal 7 poin, sehingga totalnya 35 poin. Sebuah koridor BRT baru memenuhi definisi BRT jika memenuhi empat syarat, yakni memiliki jalur khusus sepanjang minimal 3 km (beserta kriteria pendukung lainnya), meraih minimal 4 poin pada elemen **jalur khusus**, meraih minimal 4 poin pada elemen **letak jalur**, dan meraih total minimal 20 poin dari kelima elemen dasar. Nilai tinggi pada elemen lain tidak bisa menutupi kekurangan pada dua elemen ini. Dengan kata lain, keberadaan jalur khusus saja belum cukup. Letak jalur tersebut di badan jalan ikut menentukan seberapa cepat, andal, dan aman sebuah layanan BRT.
 
@@ -67,7 +69,7 @@ Pengaruh letak jalur tidak berhenti pada elemen *busway alignment*. Beberapa ele
 - **Akses dan keselamatan pejalan kaki** (*pedestrian access and safety*, maksimal 4 poin). Salah satu syaratnya adalah pejalan kaki maksimal menyeberangi dua lajur sebelum mencapai tempat berlindung yang terlindungi secara fisik, seperti trotoar atau median. Halte median dapat berfungsi sebagai tempat berlindung tersebut. Bagian keselamatan di bawah membahas hal ini lebih lanjut.
 - **Pengurangan nilai operasional.** *BRT Standard* juga mengurangi nilai koridor BRT yang sudah beroperasi jika kendaraan lain sering menyerobot jalur BRT (hingga -7 poin), jika kecepatan komersial bus di bawah 20 km/jam (hingga -10 poin), dan jika terjadi kematian pejalan kaki atau pesepeda di sepanjang koridor BRT (hingga -2 poin). Letak jalur yang baik membantu koridor BRT menghindari ketiga pengurangan ini.
 
-## Kasus Bandung: kota dengan banyak jalan satu arah
+## Bandung, kota dengan banyak jalan satu arah
 
 Segmen *on-corridor* BRT Cekungan Bandung menunjukkan dua posisi halte. Sebagian besar halte menempati **tepi jalan** (28 halte), sementara sepuluh halte lainnya berdiri di **median jalan**. Halte median ini berupa "pulau" yang berada di antara lajur kendaraan biasa dan jalur BRT. Perpaduan ini tidak lepas dari kondisi jaringan jalan di pusat kota.
 
@@ -79,7 +81,7 @@ Kondisi ini membatasi pilihan konfigurasi. Pada jalan satu arah, konsultan peren
 2. **Sepasang jalan satu arah dengan jalur BRT di median jalan (5 poin).** Bus melaju searah arus kendaraan lain di jalur yang tidak bersebelahan dengan trotoar.
 3. **Sepasang jalan satu arah dengan jalur BRT di tepi jalan (3 poin).** Bus melaju searah arus lalu lintas di lajur paling kiri yang bersebelahan dengan trotoar.
 
-![Tampak atas tiga konfigurasi BRT pada jalan satu arah, lengkap dengan halte, separator, penyeberangan, dan akses gang](gambar-konfigurasi-jalan-satu-arah.svg)
+![Tampak atas tiga konfigurasi BRT pada jalan satu arah, lengkap dengan halte, separator, penyeberangan, dan akses gang](../assets/svg/gambar-konfigurasi-jalan-satu-arah.svg)
 
 *Gambar: tampak atas ketiga konfigurasi dengan ruang milik jalan yang sama. Pada konfigurasi 1, kedua jalur BRT menempati sisi kanan jalan satu arah dengan halte pulau di antaranya, sehingga kendaraan pribadi tinggal memiliki satu lajur, dan jalur BRT lawan arah berada tepat di tepi trotoar. Pada konfigurasi 2, separator dan halte pulau memisahkan jalur BRT dari lajur kendaraan di kedua sisinya, sehingga kendaraan dari gang tidak perlu memotong jalur BRT. Pada konfigurasi 3, jalur BRT bersebelahan langsung dengan trotoar dan akses bangunan, sehingga muncul titik konflik. Ilustrasi berskala, tetapi ukuran lajur dan halte bersifat indikatif, bukan gambar DED.*
 
@@ -139,9 +141,13 @@ Temuan World Resources Institute (WRI) menunjukkan pentingnya pemisahan ini. Ken
 
 Pada jalan satu arah seperti di Bandung, halte median melayani satu arah perjalanan. Meski begitu, halte pulau ini tetap efisien karena satu bangunan menjalankan tiga fungsi sekaligus:
 
-1. **Peron penumpang**, tempat penumpang menunggu dan naik-turun bus.
+1. **Tempat naik-turun penumpang**, ruang untuk menunggu dan naik-turun bus.
 2. **Pembatas jalur**, yang memisahkan jalur BRT dari lajur kendaraan pribadi di sepanjang area halte.
 3. **Pulau penyeberangan**, tempat pejalan kaki berhenti dengan aman di tengah jalan. Bagian keselamatan di bawah membahas fungsi ini lebih lanjut.
+
+![Tampak atas halte median dengan tiga fungsi bertanda: tempat naik-turun penumpang, pembatas jalur, dan pulau penyeberangan](../assets/svg/gambar-tiga-fungsi-halte-median.svg)
+
+*Gambar: tiga fungsi halte median pada konfigurasi jalur median di jalan satu arah. Garis oranye menunjukkan penyeberangan dua tahap, dan garis abu-abu putus-putus menunjukkan lajur kendaraan yang bergeser di sekitar halte. Ilustrasi, bukan gambar DED.*
 
 Halte tepi jalan hanya menjalankan fungsi pertama. Jalur BRT di depannya tetap membutuhkan separator tersendiri, dan pejalan kaki tetap harus menyeberangi seluruh badan jalan tanpa tempat berhenti.
 
@@ -204,7 +210,7 @@ Penumpang tetap perlu menyeberang jalan, di mana pun letak haltenya. Penumpang y
 
 Ruas koridor BRT di Bandung umumnya memiliki lebar jalur lalu lintas sekitar 10 hingga 17 meter, bahkan lebih di beberapa ruas. Jalan Kebon Jati misalnya, memiliki jalur lalu lintas selebar 16,7 meter dengan empat lajur satu arah, termasuk area parkir di sisi kiri jalan. Di ruas ini, BRT Cekungan Bandung menempatkan halte median, antara lain Halte Stasiun Hall. Menyeberangi empat lajur sekaligus jauh lebih berisiko daripada menyeberangi satu atau dua lajur, lalu berhenti di halte. Penyeberangan empat lajur tanpa tempat berlindung juga tidak memenuhi kriteria "maksimal dua lajur" dalam *BRT Standard*. Dengan angka WRI tadi, perbedaan beberapa meter saja sudah berpengaruh nyata terhadap risiko kecelakaan.
 
-![Perbandingan jarak penyeberangan di jalan satu arah empat lajur, tanpa dan dengan halte median](gambar-jarak-penyeberangan.svg)
+![Perbandingan jarak penyeberangan di jalan satu arah empat lajur, tanpa dan dengan halte median](../assets/svg/gambar-jarak-penyeberangan.svg)
 
 *Gambar: ilustrasi jarak penyeberangan pada jalan satu arah empat lajur seperti Jalan Kebon Jati. Tanpa halte median, pejalan kaki menyeberangi seluruh badan jalan sekaligus. Dengan halte median, penumpang cukup menyeberangi satu lajur untuk mencapai halte, dan pejalan kaki yang ingin terus menyeberang memiliki tempat berhenti di tengah. Ukuran lajur bersifat ilustratif, bukan gambar DED.*
 
@@ -269,11 +275,15 @@ Artinya, rasa "bisa ngebut" di jalan kota hanya muncul sesaat, di sela antrean d
 
 ### Lihat manusianya, bukan kendaraannya
 
-Perbedaan cara pandang ini terlihat jelas saat kita menghitung berapa banyak orang yang dapat melintas di satu lajur jalan. Menurut *Transit Street Design Guide* dari NACTO, satu lajur kendaraan pribadi di jalan kota memindahkan sekitar 600 hingga 1.600 orang per jam. Satu lajur bus khusus dapat memindahkan hingga sekitar 8.000 orang per jam, dan jalur angkutan massal seperti BRT bisa mencapai 10.000 hingga 25.000 orang per jam per arah. Kota bisa saja memiliki mobil yang melaju lebih lambat, tetapi warga yang sampai di tujuan lebih cepat.
+Perbedaan cara pandang ini terlihat jelas saat kita menghitung berapa banyak orang yang dapat melintas di satu lajur jalan. Menurut *Transit Street Design Guide* dari NACTO, satu lajur kendaraan pribadi di jalan kota memindahkan sekitar 600 hingga 1.600 orang per jam. Lajur lalu lintas campuran yang sering dilewati bus memindahkan sekitar 1.000 hingga 2.800 orang per jam. Satu lajur bus bermarka dapat memindahkan sekitar 4.000 hingga 8.000 orang per jam, dan jalur BRT atau trem yang terpisah fisik bisa mencapai 10.000 hingga 25.000 orang per jam per arah. Perbedaan keduanya bukan hanya pada separator. Jalur BRT bekerja sebagai sistem yang lengkap: bus berkapasitas besar, lantai halte setinggi lantai bus, pembayaran di luar bus, dan prioritas di persimpangan. Dengan begitu, waktu berhenti di halte lebih singkat dan lebih banyak bus bisa melintas setiap jam. Kota bisa saja memiliki mobil yang melaju lebih lambat, tetapi warga yang sampai di tujuan lebih cepat.
+
+![Diagram batang kapasitas orang per jam per lajur: kendaraan pribadi, lalu lintas campuran, lajur bus bermarka, dan jalur BRT atau trem](../assets/svg/gambar-kapasitas-orang-per-lajur.svg)
+
+*Gambar: kapasitas tipikal satu lajur jalan menurut NACTO, dalam orang per jam per arah. Angka ini bukan hasil pengukuran di Bandung.*
 
 Dengan demikian, "cepat" dan "lambat" bergantung pada ukuran yang kita pakai: seberapa kencang kendaraan bisa melaju, atau seberapa cepat, aman, dan nyaman seseorang bisa sampai di tujuannya. BRT dengan halte median memakai ukuran kedua. Bus melaju lancar agar penumpang menghemat waktu, dan kendaraan lain melaju lebih pelan di sekitar halte agar penumpang yang sama bisa menyeberang dengan selamat. Keduanya tidak bertentangan.
 
-## Bukti dari kota lain, dan dari kajian Bandung sendiri
+## Pelajaran dari kota lain
 
 Argumen di atas bukan sekadar teori. Sejumlah kota sudah membangun BRT dengan jalur di tengah jalan, dan kajian proyek ini sendiri sudah memodelkan dampaknya.
 
@@ -292,19 +302,25 @@ Kasus Guadalajara sangat relevan. Kota ini sebelumnya hanya memiliki lajur prior
 
 Manfaatnya juga terasa pada waktu tempuh. Kajian ekonomi TransMilenio oleh Echeverry dan rekan-rekan (2005) mencatat bahwa sistem ini memangkas waktu perjalanan penggunanya sebesar 32 persen. Dua tahun setelah TransMilenio beroperasi, rata-rata waktu perjalanan di Bogotá turun dari 44 menjadi 35 menit, dan kecepatan rata-rata mobil bukannya turun, justru naik dari sekitar 27 km/jam menjadi 32 km/jam.
 
-### Kajian Bandung: arus lalu lintas bisa membaik
+### Kajian Bandung: proyeksi lalu lintas 2027 dan asumsinya
 
-Kajian Analisis Dampak Lalu Lintas proyek MASTRAN memodelkan lalu lintas di ruas-ruas koridor BRT untuk tahun 2027 dalam dua skenario, yaitu tanpa BRT dan dengan BRT. Kajian ini memakai rasio volume terhadap kapasitas (*V/C ratio*). Rasio di atas 1,0 berarti volume kendaraan melebihi kapasitas jalan. Tabel berikut menyajikan rata-rata dari nilai per ruas dalam kajian tersebut.
+Kajian Analisis Dampak Lalu Lintas proyek MASTRAN memproyeksikan lalu lintas di ruas-ruas koridor BRT untuk tahun 2027 dalam dua skenario, yaitu tanpa BRT dan dengan BRT. Kajian ini memakai rasio volume terhadap kapasitas (*V/C ratio*). Volume mencakup seluruh kendaraan bermotor di lajur umum dalam satuan mobil penumpang. Rasio 1,0 atau lebih berarti volume kendaraan sudah mencapai atau melampaui kapasitas jalan. Tabel berikut menyajikan rata-rata dari nilai per ruas dalam kajian tersebut.
 
 | Kondisi | Rata-rata V/C jam sibuk pagi | Rata-rata V/C jam sibuk sore | Ruas dengan V/C ≥ 1,0 (pagi) |
 |---|---|---|---|
-| 2024 (kondisi saat ini) | 0,85 | 0,84 | 1 dari 46 |
+| 2024 (tahun perencanaan) | 0,85 | 0,84 | 1 dari 46 |
 | 2027 tanpa BRT | 0,98 | 0,98 | 22 dari 46 |
 | 2027 dengan BRT | 0,65 | 0,64 | 0 dari 46 |
 
-Tanpa BRT, hampir separuh ruas koridor BRT akan melampaui kapasitasnya pada 2027. Dengan BRT dan langkah pendukungnya, kajian ini memperkirakan seluruh ruas berada di bawah kapasitas, bahkan lebih lancar daripada kondisi saat ini. Artinya, desain koridor BRT ini, termasuk halte median, sudah melalui analisis dampak lalu lintas dan berpotensi mengurangi kemacetan.
+![Diagram batang rasio V/C rata-rata dan jumlah ruas yang melampaui kapasitas pada 2024, 2027 tanpa BRT, dan 2027 dengan BRT](../assets/svg/gambar-vc-ratio-andalalin.svg)
 
-Namun, hasil ini bergantung pada sejumlah asumsi yang harus terwujud. Skenario "dengan BRT" mengasumsikan perbaikan fase lampu lalu lintas di persimpangan sepanjang koridor BRT, operasi penuh seluruh rute BRT pada 2027, kenaikan jumlah pengguna angkutan umum, serta kebijakan pembatasan jam operasional kendaraan pribadi di ruas-ruas utama yang menurunkan volume kendaraan pribadi sebesar 20 persen. Kajian tersebut juga menyebut bahwa kebijakan pembatasan ini masih memerlukan studi lebih lanjut. Dengan kata lain, BRT bisa mengurangi kemacetan **jika seluruh rencana berjalan sesuai rencana**, dan hal ini perlu kita kawal bersama.
+*Gambar: rata-rata rasio V/C pada jam sibuk dan jumlah ruas yang melampaui kapasitas pada tahun perencanaan (2024) dan tahun proyeksi (2027), berdasarkan proyeksi kajian Analisis Dampak Lalu Lintas proyek MASTRAN. Skenario dengan BRT bertumpu pada model terdahulu dan angka perencanaan yang kajian ini pakai sebagai asumsi. Di halaman web, gambar ini bisa menggantikan tabel di atas.*
+
+Tanpa BRT, hampir separuh ruas koridor BRT akan melampaui kapasitasnya pada 2027. Skenario dengan BRT menunjukkan seluruh ruas berada di bawah kapasitas, bahkan lebih lancar daripada kondisi 2024. Namun, penurunan ini tidak berasal dari perhitungan atas desain jalur dan halte BRT itu sendiri. Angka tersebut bersumber dari model transportasi lain dan angka perencanaan yang kajian ini masukkan sebagai asumsi.
+
+Kajian ini memakai model zona dan jaringan jalan Cekungan Bandung dari kajian terdahulu, yang peneliti Institut Teknologi Bandung kembangkan. Di atas model tersebut, skenario dengan BRT menambahkan sejumlah asumsi: perbaikan fase lampu lalu lintas di persimpangan sepanjang koridor BRT, operasi penuh seluruh rute BRT pada 2027, kenaikan jumlah pengguna angkutan umum, serta kebijakan pembatasan jam operasional kendaraan pribadi di ruas-ruas utama yang menurunkan volume kendaraan pribadi sebesar 20 persen. Kajian ini tidak menghitung sendiri perpindahan penumpang dari kendaraan pribadi ke bus, dan tidak menjelaskan asal angka 20 persen tersebut. Kajian ini bahkan menyebut bahwa kebijakan pembatasan tersebut masih memerlukan studi lebih lanjut. Selain itu, kajian ini tidak memaparkan perhitungan kapasitas lajur umum setelah sebagian badan jalan menjadi jalur khusus BRT.
+
+Karena itu, angka di atas lebih tepat kita baca sebagai gambaran kondisi lalu lintas jika seluruh asumsi tersebut terwujud, bukan sebagai bukti bahwa jalur dan halte BRT dengan sendirinya mengurai kemacetan. Proyeksinya pun hanya sampai tahun 2027. BRT bisa membantu mengurangi kemacetan **jika seluruh rencana pendukungnya berjalan**, dan hal ini perlu kita kawal bersama.
 
 ## Apa artinya bagi penumpang?
 
@@ -312,6 +328,8 @@ Namun, hasil ini bergantung pada sejumlah asumsi yang harus terwujud. Skenario "
 - Setiap halte median hanya melayani satu arah. Pada jalan satu arah, halte untuk arah pergi dan arah pulang berada di jalan yang berbeda, sehingga penumpang perlu memastikan halte yang sesuai dengan arah tujuan.
 - Penumpang menyeberang ke halte median melalui *pelican crossing*. Tekan tombol, tunggu lampu hijau untuk pejalan kaki, lalu menyeberang.
 - Di ruas median, bus berpotensi menempuh perjalanan lebih cepat dengan waktu tempuh yang lebih dapat diperkirakan.
+
+<!-- Komponen web: draft/komponen-cara-menuju-halte-median.html (ikon di assets/ikon-halte-median/, kelas .access-steps di style.css). -->
 
 ## Yang perlu kita kawal
 
@@ -355,9 +373,24 @@ Kami tidak menuntut seluruh koridor BRT memakai jalur median. Di beberapa ruas, 
 - **Jalan Jakarta.** Jalur khusus BRT di jalan ini hanya berada di bagian dengan aktivitas tepi jalan yang rendah.
 - **Jalan Asia Afrika.** Di kawasan cagar budaya seperti sekitar Gedung Merdeka, jalur tepi menjaga tampilan kawasan bersejarah. Bagian lain Jalan Asia Afrika didominasi perkantoran, sehingga konflik dengan aktivitas tepi jalan relatif kecil.
 
-Kekhawatiran kami tertuju pada **Jalan Otto Iskandardinata, Jalan Jenderal Sudirman, dan Jalan Naripan**. Di ketiga ruas ini, tepi jalan bukan ruang kosong. Toko tekstil di Jalan Otto Iskandardinata, banyak di antaranya pemasok, membutuhkan tempat bongkar muat tepat di depan tokonya. Angkot berhenti di tepi jalan untuk menaikkan dan menurunkan penumpang, dan kajian Analisis Dampak Lalu Lintas sendiri mencatat 44 trayek angkutan umum yang rutenya tumpang tindih dengan koridor BRT. Pengemudi ojek daring juga menunggu dan menjemput penumpang di tepi jalan.
+Kekhawatiran kami tertuju pada **Jalan Otto Iskandardinata, Jalan Jenderal Sudirman, dan Jalan Naripan**. Di ketiga ruas ini, tepi jalan bukan ruang kosong. Toko tekstil, bahan bangunan, karpet, dan wallpaper di Jalan Otto Iskandardinata, banyak di antaranya pemasok, membutuhkan tempat bongkar muat tepat di depan tokonya. Pengemudi ojek daring juga menunggu dan menjemput penumpang di tepi jalan.
 
 Jalur BRT di tepi jalan harus bersaing dengan semua kebutuhan ini di ruang yang sama. Seperti catatan NACTO di bagian sebelumnya, jalur seperti ini hanya bisa bebas dari kendaraan yang berhenti jika pengguna tepi jalan mendapat tempat alternatif. Jalur BRT di median justru menyerahkan tepi jalan kepada mereka. Jika sebuah truk bongkar muat menghalangi lajur tepi, yang tertahan adalah kendaraan pribadi, bukan bus yang mengangkut puluhan penumpang. Menutup akses bongkar muat bagi toko-toko pemasok ini dengan separator sama saja dengan menyiapkan masalah yang tinggal menunggu waktu.
+
+<!-- PLACEHOLDER SURVEI TOKO (20 November 2026). Isi setelah survei lapangan selesai. Jangan terbitkan sebelum angka terisi. -->
+
+Kajian Analisis Dampak Lalu Lintas sudah memberi gambaran awal. Survei parkir di badan jalan pada 16–20 Januari 2024 mencatat bahwa di Jalan Otto Iskandardinata, banyak pemilik toko juga tinggal di tempat usahanya, sehingga kendaraan mereka parkir di badan jalan selama 9 hingga 15 jam, seperti garasi. Kajian yang sama merekomendasikan agar parkir di badan jalan Jalan Jenderal Sudirman dihilangkan atau dipindahkan, sedangkan parkir di Jalan Otto Iskandardinata dikurangi atau dibatasi.
+
+Untuk melengkapi data tersebut, kami menghitung toko di sepanjang segmen jalur BRT tepi di kedua ruas pada [TANGGAL SURVEI]. [CEK: isi tanggal, segmen (dari simpang mana ke simpang mana), dan waktu survei (hari kerja/akhir pekan, jam)]
+
+| Ruas | Segmen | Panjang segmen | Jumlah toko | Toko buka | Toko tutup atau kosong | Bongkar muat teramati | Kepadatan pejalan kaki |
+|---|---|---|---|---|---|---|---|
+| Jalan Otto Iskandardinata | [ISI] | [ISI] | [ISI] | [ISI] | [ISI] | [ISI] | [ISI] |
+| Jalan Jenderal Sudirman | [ISI] | [ISI] | [ISI] | [ISI] | [ISI] | [ISI] | [ISI] |
+
+[PLACEHOLDER: dua sampai tiga kalimat ringkasan temuan survei.] [CEK: survei Jalan Otto Iskandardinata bagian selatan (no. 423–463, ±400 m, hanya sisi yang akan terhalang separator) selesai 20 November 2026 lewat OSM: 36 unit toko, 20 buka, 16 kosong (44%); toko buka didominasi bahan bangunan, wallpaper, karpet, dan interior, yang sama seperti pemasok tekstil butuh bongkar muat di tepi jalan. Survei bagian utara menyusul 21 November 2026, lalu Jalan Jenderal Sudirman. Hipotesis yang akan diuji, belum boleh terbit sebagai fakta: kepadatan toko di kedua ruas kira-kira sama; Jalan Otto Iskandardinata ramai pejalan kaki dan menjadi pusat toko tekstil serta gudang pemasok; sebagian besar toko di Jalan Jenderal Sudirman tutup atau kosong. Jika hipotesis terbukti, sampaikan dua sisi: di Jalan Otto Iskandardinata jalur tepi berbenturan langsung dengan bongkar muat dan arus pejalan kaki saat ini; di Jalan Jenderal Sudirman konfliknya baru muncul ketika toko kembali terisi, sedangkan jalur tepi akan bertahan puluhan tahun]
+
+<!-- AKHIR PLACEHOLDER SURVEI TOKO -->
 
 Trotoarnya pun sudah sempit. Menurut kajian Analisis Dampak Lalu Lintas, trotoar Jalan Otto Iskandardinata hanya selebar 2,4 meter di sisi kiri dan 1,6 meter di sisi kanan, jauh di bawah kebutuhan sekitar 6 meter untuk halte tepi yang memenuhi standar. Di beberapa bagian, pejalan kaki terbantu oleh *five foot way*, yaitu selasar di bawah muka bangunan toko. Di sekitar Pasar Baru, *five foot way* ini menerus, dan bisa jadi kondisi inilah yang menjadi salah satu pertimbangan perencana menempatkan halte median di sana. Namun, di bagian lain jalan, *five foot way* hanya ada di beberapa tempat, sehingga ruang pejalan kaki bergantung pada trotoar yang sempit. Trotoar Jalan Naripan pun hanya berkisar antara 2 hingga 3,1 meter. Di ruas seperti ini, halte tepi hanya bisa berdiri dengan memakan trotoar, atau dengan ukuran yang lebih kecil dari standar.
 
@@ -486,8 +519,14 @@ Semua catatan ini berangkat dari satu tujuan: BRT Cekungan Bandung yang cepat, a
 - index.html: data proyek MASTRAN (21,7 km, 38 halte, lima daerah, pendanaan, MJT) dan diagram layout halte berdasarkan DED MASTRAN (Dohwa–Lenggogeni, 2024).
 
 **Visual**
-- draft/gambar-jarak-penyeberangan.svg (ilustrasi, bukan DED).
-- draft/gambar-konfigurasi-jalan-satu-arah.svg (tampak atas konfigurasi 1, 2, dan 3, berskala 1 m = 8 px, ukuran indikatif, bukan DED).
+- assets/svg/gambar-jarak-penyeberangan.svg (ilustrasi, bukan DED).
+- assets/svg/gambar-konfigurasi-jalan-satu-arah.svg (tampak atas konfigurasi 1, 2, dan 3, berskala 1 m = 8 px, ukuran indikatif, bukan DED).
+- assets/svg/gambar-tiga-fungsi-halte-median.svg (turunan konfigurasi 2, ilustrasi, bukan DED).
+- Logo pada gambar mandiri: assets/logo/tfb-logo-stacked.svg dan assets/kawalbrt-logo.svg.
+- assets/svg/gambar-kapasitas-orang-per-lajur.svg (NACTO, *Designing to Move People*: 600–1.600, 1.000–2.800, 4.000–8.000, 10.000–25.000 orang/jam/arah). [CEK: cocokkan rentang dengan grafik NACTO sebelum terbit]
+- assets/svg/gambar-vc-ratio-andalalin.svg (angka sama dengan tabel V/C di bagian Kajian Bandung).
+- draft/komponen-cara-menuju-halte-median.html dan assets/ikon-halte-median/ (komponen web lima langkah menuju halte median).
+- draft/komponen-elemen-dasar-brt.html (komponen web lima elemen dasar BRT; gaya .brt-basics di style.css).
 - assets/on-corridor-brt-stations-lane-position.webp, assets/oncorridor-medium-double.webp, assets/oncorridor-type-c-render.webp
 
 **Opini: lebih banyak jalur dan halte median**
@@ -504,7 +543,7 @@ Semua catatan ini berangkat dari satu tujuan: BRT Cekungan Bandung yang cepat, a
 - Trotoar Gasibu: detikJabar, *Trotoar Gasibu Dikeluhkan Terlalu Tinggi*. https://www.detik.com/jabar/berita/d-8641541/trotoar-gasibu-dikeluhkan-terlalu-tinggi-lansia-bisa-kesulitan-naik-turun dan bukamata.id, *Trotoar Gasibu Kembali Dibongkar*. https://bukamata.id/baru-saja-rampung-trotoar-gasibu-kembali-dibongkar-gara-gara-dikritik-terlalu-tinggi/
 - Keluhan warga Jalan Jenderal Sudirman: unggahan Threads, 21 Oktober 2026 (jangan menyebut atau mengutip akun tanpa izin). https://www.threads.com/share/_7cqoRWnp
 - Jalan Dalem Kaum: Tribun Jabar (4 April 2025), *Jalan Dalem Kaum Kota Bandung Dipadati PKL*. https://jabar.tribunnews.com/2025/04/04/jalan-dalem-kaum-kota-bandung-dipadati-pkl-pedagang-bersyukur-tapi-warga-dan-wisatawan-khawatir dan detik, *Jalan Dalem Kaum 'Disulap' Jadi Kawasan Pedestrian*. https://news.detik.com/berita-jawa-barat/d-2894919/jalan-dalem-kaum-disulap-jadi-kawasan-pedestrian
-- doc/Analisis-Penanganan-Dampak-Lalu-Lintas-Pembangunan-Koridor-BRT-dan-Terminus.pdf: III.1.3 (lebar ruas dan trotoar: Jalan Otto Iskandardinata, Jalan Jenderal Sudirman, Jalan Naripan, Jalan Rajawali Timur), IV.1.2 (daftar rekayasa lalu lintas per halte dan ruas), rekomendasi masa operasional (44 trayek, penertiban parkir).
+- doc/Analisis-Penanganan-Dampak-Lalu-Lintas-Pembangunan-Koridor-BRT-dan-Terminus.pdf: III.1.3 (lebar ruas dan trotoar: Jalan Otto Iskandardinata, Jalan Jenderal Sudirman, Jalan Naripan, Jalan Rajawali Timur), IV.1.2 (daftar rekayasa lalu lintas per halte dan ruas), rekomendasi masa operasional (penertiban parkir).
 
 **Opini: komunikasi dan pengelolaan konstruksi**
 - doc/Analisis-Penanganan-Dampak-Lalu-Lintas-Pembangunan-Koridor-BRT-dan-Terminus.pdf: IV.1.1 (strategi konstruksi: fabrikasi di workshop, pekerjaan bertahap dan tidak bersamaan di ruas yang sama, tim A dan B, hlm. 243), IV.1.2.1 (zona keselamatan kerja dan kebutuhan rambu, hlm. 244–247), IV.1.2.3 (mitigasi tingkat kawasan dan area konstruksi, rute alternatif dari empat arah, hlm. 252–256), VI.2.2 Rekomendasi pada Masa Konstruksi (spanduk dan media digital termasuk lama pekerjaan, pembaruan Google Maps, rambu "hindari ruas", rambu rute alternatif sebelum memasuki kawasan, kendaraan berat pukul 22.00–04.00, papan informasi dan peringatan dini ±50 m, hlm. 320–322). Catatan: daftar isi menyebutnya V.2.2, judul di badan dokumen VI.2.2.
