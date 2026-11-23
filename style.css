@@ -4749,3 +4749,10 @@ tr:nth-child(even) {
   color: var(--accent-blue);
   margin-bottom: 10px;
 }
+
+/* Slideshow gambar halte median di artikel */
+.article-section .corridor-carousel { margin: 24px 0 8px; background: white; }
+.article-section .corridor-carousel-slide a { display: block; cursor: zoom-in; }
+.article-carousel-caption { font-size: 14px; color: var(--text-soft); font-style: italic; margin-bottom: 24px; }
+
+.article-table-note { font-size: 14px; color: var(--text-soft); font-style: italic; margin-top: -8px; }
